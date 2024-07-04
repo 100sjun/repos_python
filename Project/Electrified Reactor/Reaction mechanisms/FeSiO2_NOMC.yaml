@@ -1,89 +1,111 @@
-description: |-  
-      Ref:- 1.) Wang et al., J. Phys. Chem. C, 2018 pp. 8704-8723
+description: |-
+  Ref:- 1.) Wang et al., J. Phys. Chem. C, 2018 pp. 8704-8723
 
 generator: ck2yaml
 cantera-version: 2.5.0
 date: Wed, 03 Jul 2024
 
-units: {length: m, quantity: mol, activation-energy: J/mol}
+units: { length: m, quantity: mol, activation-energy: J/mol }
 
 phases:
-- name: gas
-  thermo: ideal-gas
-  elements: [O, H, C, N, Ar]
-  species:
-  - gri30.yaml/species: [H2, H, H2O, C, CH, CH2, CH3, CH4, CO, CO2, C2H, C2H2, C2H3, C2H4, C2H5, C2H6, N2, AR, C3H7, C3H8]
-  skip-undeclared-elements: true
-  kinetics: gas
-  reactions:
-  - gri30.yaml/reactions: declared-species
-  transport: mixture-averaged
-  state:
-    T: 300.0
-    P: 1.01325e+05
-    X: {CH4: 1}
-- name: Fe_surf
-  thermo: ideal-surface
-  adjacent-phases: [gas]
-  elements: [Fe, H, C]
-  species: [Fe(S), CH3H(S), H(S), CH3HH(S), HH(S)]
-  kinetics: surface
-  reactions: all
-  state:
-    T: 300.0
-    coverages: {Fe(S): 1}
-  site-density: 4.1e-10
+  - name: gas
+    thermo: ideal-gas
+    elements: [O, H, C, N, Ar]
+    species:
+      - gri30.yaml/species:
+          [
+            H2,
+            H,
+            H2O,
+            C,
+            CH,
+            CH2,
+            CH3,
+            CH4,
+            CO,
+            CO2,
+            C2H,
+            C2H2,
+            C2H3,
+            C2H4,
+            C2H5,
+            C2H6,
+            N2,
+            AR,
+            C3H7,
+            C3H8,
+          ]
+    skip-undeclared-elements: true
+    kinetics: gas
+    reactions:
+      - gri30.yaml/reactions: declared-species
+    transport: mixture-averaged
+    state:
+      T: 300.0
+      P: 1.01325e+05
+      X: { CH4: 1 }
+  - name: Fe_surf
+    thermo: ideal-surface
+    adjacent-phases: [gas]
+    elements: [Fe, H, C]
+    species: [Fe(S), CH3H(S), H(S), CH3HH(S), HH(S)]
+    kinetics: surface
+    reactions: all
+    state:
+      T: 300.0
+      coverages: { Fe(S): 1 }
+    site-density: 4.1e-10
 
 species:
-- name: Fe(S)
-  composition: {Fe: 1}
-  thermo:
-    model: NASA7
-    temperature-ranges: [300.0, 1000.0, 3000.0]
-    data:
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-- name: CH3H(S)
-  composition: {C: 1, H: 4, Fe: 1}
-  thermo:
-    model: NASA7
-    temperature-ranges: [300.0, 1000.0, 3000.0]
-    data:
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-- name: H(S)
-  composition: {H: 1, Fe: 1}
-  thermo:
-    model: NASA7
-    temperature-ranges: [300.0, 1000.0, 3000.0]
-    data:
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-- name: CH3HH(S)
-  composition: {C: 1, H: 5, Fe: 1}
-  thermo:
-    model: NASA7
-    temperature-ranges: [300.0, 1000.0, 3000.0]
-    data:
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-- name: HH(S)
-  composition: {H: 2, Fe: 1}
-  thermo:
-    model: NASA7
-    temperature-ranges: [300.0, 1000.0, 3000.0]
-    data:
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  - name: Fe(S)
+    composition: { Fe: 1 }
+    thermo:
+      model: NASA7
+      temperature-ranges: [300.0, 1000.0, 3000.0]
+      data:
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  - name: CH3H(S)
+    composition: { C: 1, H: 4, Fe: 1 }
+    thermo:
+      model: NASA7
+      temperature-ranges: [300.0, 1000.0, 3000.0]
+      data:
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  - name: H(S)
+    composition: { H: 1, Fe: 1 }
+    thermo:
+      model: NASA7
+      temperature-ranges: [300.0, 1000.0, 3000.0]
+      data:
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  - name: CH3HH(S)
+    composition: { C: 1, H: 5, Fe: 1 }
+    thermo:
+      model: NASA7
+      temperature-ranges: [300.0, 1000.0, 3000.0]
+      data:
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  - name: HH(S)
+    composition: { H: 2, Fe: 1 }
+    thermo:
+      model: NASA7
+      temperature-ranges: [300.0, 1000.0, 3000.0]
+      data:
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 reactions:
-- equation: CH4 + Fe(S) => CH3H(S)  # Reaction 1
-  rate-constant: {A: 6.77e+17, b: 0, Ea: 280000}
-- equation: CH3H(S) => CH3 + H(S)  # Reaction 2
-  rate-constant: {A: 1.55e+13, b: 0, Ea: 224000}
-- equation: CH4 + H(S) => CH3HH(S)  # Reaction 3
-  rate-constant: {A: 3.36e+18, b: 0, Ea: 298000}
-- equation: CH3HH(S) => CH3 + HH(S)  # Reaction 4
-  rate-constant: {A: 4.5e+12, b: 0, Ea: 211000}
-- equation: HH(S) => H2 + Fe(S)  # Reaction 05
-  rate-constant: {A: 5.30e+10, b: 0, Ea: 155000}
+  - equation: CH4 + Fe(S) => CH3H(S) # Reaction 1
+    rate-constant: { A: 6.77e+17, b: 0, Ea: 280000 }
+  - equation: CH3H(S) => CH3 + H(S) # Reaction 2
+    rate-constant: { A: 1.55e+13, b: 0, Ea: 224000 }
+  - equation: CH4 + H(S) => CH3HH(S) # Reaction 3
+    rate-constant: { A: 3.36e+18, b: 0, Ea: 298000 }
+  - equation: CH3HH(S) => CH3 + HH(S) # Reaction 4
+    rate-constant: { A: 4.5e+12, b: 0, Ea: 211000 }
+  - equation: HH(S) => H2 + Fe(S) # Reaction 05
+    rate-constant: { A: 5.30e+10, b: 0, Ea: 155000 }
