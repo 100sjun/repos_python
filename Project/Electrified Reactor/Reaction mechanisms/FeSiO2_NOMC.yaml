@@ -31,7 +31,7 @@ phases:
   reactions: all
   state:
     T: 300.0
-    coverages: {Fe(S): 1.0}
+    coverages: {Fe(S): 1}
   site-density: 4.1e-10
 
 species:
@@ -85,5 +85,5 @@ reactions:
   rate-constant: {A: 3.36e+18, b: 0, Ea: 298000}
 - equation: CH3HH(S) => CH3 + HH(S)  # Reaction 4
   rate-constant: {A: 4.5e+12, b: 0, Ea: 211000}
-- equation: HH(S) => H2 + Fe(S)  # Reaction 5
+- equation: HH(S) => H2 + Fe(S)  # Reaction 05
   rate-constant: {A: 5.30e+10, b: 0, Ea: 155000}
