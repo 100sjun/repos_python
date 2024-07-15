@@ -1,0 +1,6 @@
+generator: ctml2yaml
+cantera-version: 3.0.1
+date: Mon, 15 Jul 2024 22:41:49 +0900
+input-files: [TEST_AR.xml]
+
+phases: []
