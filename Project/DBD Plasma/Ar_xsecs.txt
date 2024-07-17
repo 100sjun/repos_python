@@ -116,7 +116,7 @@ e+Ar=>e+Ars
 
 
 Type: IONIZATION
-e+Ar=>2e+Ar+
+e+Ar=>2e+Ar1p
 15.80
 1. 1.
 ---------------------------
@@ -156,7 +156,7 @@ e+Ar=>2e+Ar+
 
 
 Type: IONIZATION
-e+Ars=>2e+Ar+
+e+Ars=>2e+Ar1p
 4.427
 1. 1.
 ---------------------------
