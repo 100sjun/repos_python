@@ -1,0 +1,16 @@
+ELEMENTS
+e Ar
+END
+
+SPECIES
+e Ar Ar^+
+END
+
+BOLSIG
+Ar
+END
+
+REACTIONS
+e + Ar => e + e + Ar^+   ! Bolsig Ar->Ar^+
+e + Ar^+ + Ar => Ar + Ar ! 1.0d-25
+END
