@@ -13,12 +13,16 @@ END
 
 REACTIONS
 #
-# reactions in volume
+# electron collision reaction
 #
-e + Ar  => e + Ar                   ! Bolsig+ Ar -> Ar
 e + Ar  => e + Ar*                  ! Bolsig+ Ar -> Ar*
 e + Ar* => e + Ar                   ! Bolsig+ Ar* -> Ar
 e + Ar  => e + e + Ar^+             ! Bolsig+ Ar -> Ar^+
 e + Ar* => e + e + Ar^+             ! Bolsig+ Ar* -> Ar^+
+#
+# gas phase reaction
+#
+Ar* + Ar* => e + Ar + Ar^+          ! 5.60d-10
+Ar* + Ar  => Ar + Ar                ! 3.00d-15
 
 END
