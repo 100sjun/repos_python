@@ -1,0 +1,24 @@
+ELEMENTS
+e Ar
+END
+
+SPECIES
+# gas-phase species
+e Ar Ar* Ar^+
+END
+
+BOLSIG
+Ar Ar*
+END
+
+REACTIONS
+#
+# reactions in volume
+#
+e + Ar  => e + Ar                   ! Bolsig+ Ar -> Ar
+e + Ar  => e + Ar*                  ! Bolsig+ Ar -> Ar*
+e + Ar* => e + Ar                   ! Bolsig+ Ar* -> Ar
+e + Ar  => e + e + Ar^+             ! Bolsig+ Ar -> Ar^+
+e + Ar* => e + e + Ar^+             ! Bolsig+ Ar* -> Ar^+
+
+END
