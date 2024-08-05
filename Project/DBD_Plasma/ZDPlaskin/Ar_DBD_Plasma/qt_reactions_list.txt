@@ -4,3 +4,4 @@
 4 bolsig:AR*->AR^+  
 5 AR*+AR*=>E+AR+AR^+
 6 AR*+AR=>AR+AR     
+7 E=>E(W)           

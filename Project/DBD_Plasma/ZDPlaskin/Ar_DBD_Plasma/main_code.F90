@@ -17,7 +17,7 @@ program main
 !
 ! number of pulses
 !
-    integer, parameter              :: ipulses = 2
+    integer, parameter              :: ipulses = 1
 !
 ! filename
 !
