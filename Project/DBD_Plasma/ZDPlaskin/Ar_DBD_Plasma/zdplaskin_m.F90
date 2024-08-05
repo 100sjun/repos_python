@@ -12,7 +12,7 @@
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
-! Mon Aug  5 18:41:59 2024
+! Mon Aug  5 23:28:49 2024
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
@@ -241,7 +241,6 @@ subroutine ZDPlasKin_timestep(time,dtime)
   endif
   call dvode_f90(ZDPlasKin_fex,vode_neq,densav,tsav,tout,vode_itask,vode_istate,vode_options,j_fcn=ZDPlasKin_jex)
   if(vode_istate < 0) then
-    write(*,"(A,1pd11.4)") "    EN =", ZDPlasKin_cfg(3)
     write(*,"(A,1pd11.4)") "    Te =", ZDPlasKin_cfg(4)
     call ZDPlasKin_stop("ZDPlasKin ERROR: DVODE solver issued an error (subroutine ZDPlasKin_timestep)")
   endif
@@ -1120,20 +1119,18 @@ subroutine ZDPlasKin_reac_rates(Time)
                         lreaction_block, rrt
   implicit none
   double precision, intent(in) :: Time
-  double precision :: EN
   double precision :: Te
   DOUBLE PRECISION :: DIFF_RATE
   call ZDPlasKin_bolsig_rates()
-  EN  = ZDPlasKin_cfg(3)
   Te  = ZDPlasKin_cfg(4)
-  DIFF_RATE = EN
+  DIFF_RATE = 0.5 * (4.48D11 * TE/11600)**(0.5)*100
   rrt(1) = bolsig_rates(bolsig_pointer(1))
   rrt(2) = bolsig_rates(bolsig_pointer(2))
   rrt(3) = bolsig_rates(bolsig_pointer(3))
   rrt(4) = bolsig_rates(bolsig_pointer(4))
   rrt(5) = 5.60D-10
   rrt(6) = 3.00D-15
-  rrt(7) = DIFF_RATE
+  rrt(7) = 0
   where( lreaction_block(:) ) rrt(:) = 0.0d0
   return
 end subroutine ZDPlasKin_reac_rates

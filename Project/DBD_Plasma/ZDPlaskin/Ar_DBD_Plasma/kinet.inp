@@ -17,7 +17,6 @@ REACTIONS
 #
 # a piece of Fortran code
 #
-$ use options, only : electron_mobility
 $ double precision  :: diff_rate
 $ diff_rate = 0.5 * (4.48d11 * Te/11600)**(0.5)*100
 #
@@ -35,5 +34,5 @@ Ar* + Ar  => Ar + Ar                ! 3.00d-15
 #
 # surface phase reaction
 #
-e => e(W)                           ! diff_rate
+e => e(W)                           ! 0
 END
