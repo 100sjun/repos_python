@@ -4,5 +4,9 @@
 4 bolsig:AR*->AR^+  
 5 AR*+AR*=>E+AR+AR^+
 6 AR*+AR=>AR+AR     
+<<<<<<< HEAD
 7 E=>E(W)           
 8 AR^+=>AR(W)^+     
+=======
+7 E+E+AR^+=>AR+E    
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc

@@ -8,12 +8,12 @@ program test_extcirc
     integer                     ::  i, icount = 0                                   
     double precision            ::  time, dtime, EN, &                              ! time (s), dtime (s), EN (Td)   
                                     density_old(species_max), Vdr, &                ! density (cm-3), Vdr (cm/s)               
-                                    t1, t2, tc, V, J, MuN, &                             ! V (V), J(A)
+                                    t1, t2, tc, V, J,              &                             ! V (V), J(A)
                                     species_source(species_max), all_neutral, &     ! source (cm-3), all_neutral(cm-3)
                                     source_terms(reactions_max), varstep            ! source terms (cm-3/s)                        ! min value for the timestep
     double precision, parameter ::  time_end = 1e-4
     character(len=99)           ::  filename                            
-    integer, parameter          ::  icount_save = 100
+    integer, parameter          ::  icount_save = 1
 
 ! Print
     write(*,'(/,A,/)') 'AR DBD PLASMA'
@@ -38,7 +38,11 @@ program test_extcirc
 
 ! initialization of variables
     time    = 0.0d0
+<<<<<<< HEAD
     dtime   = 1e-8
+=======
+    dtime   = 5e-7
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
     EN      = 0.0d0
 
 ! Tells Bolsig the value of the reduced field (to do each time EN changes)
@@ -52,10 +56,6 @@ program test_extcirc
 
 ! time cycling
     do while(time .lt. time_end)
-
-!   store previous value of the densities for variation calculation
-        density_old(:) = density(:)
-
 !   det the new field at each step
         call ZDPlasKin_set_conditions(REDUCED_FIELD=EN)
 !	Central routine of the program.
@@ -76,11 +76,14 @@ program test_extcirc
         call ZDPlasKin_set_density('Ar^+', 1.0d13)
     end if
 
+        if (density(species_electrons) > 1.0d6) then
+            call ZDPlasKin_set_density('e', 1.0d6)
+            call ZDPlasKin_set_density('Ar^+', 1.0d6)
+        endif
 !	gives the electron drift velocity
 !	(from Bolsig, knowing the field, the composition and 
 !	temperature of the gas and the density of electrons)
         call ZDPlasKin_get_conditions(ELEC_DRIFT_VELOCITY=Vdr)
-        call ZDPlasKin_get_conditions(ELEC_MOBILITY_N=MuN)
 
 !	Current calculation (considering that the electrons are the only current carriers)
         J  = 1.6d-19 * disk_area * density(species_electrons) * Vdr
@@ -101,7 +104,7 @@ program test_extcirc
 !	write in the output file
             write(1,'(99(1pe14.6))',advance='no') time, dtime, EN,density(:)
             write(1,'(99(1pe14.6))',advance='no') source_terms(:)
-            write(1,'(99(1pe14.6))') V, J, MuN
+            write(1,'(99(1pe14.6))') V, J
         endif
 
         icount = icount + 1

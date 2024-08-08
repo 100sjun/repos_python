@@ -12,7 +12,11 @@
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
+<<<<<<< HEAD
 ! Tue Aug  6 19:39:29 2024
+=======
+! Tue Aug  6 23:21:02 2024
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
@@ -30,7 +34,11 @@ module ZDPlasKin
 !
 ! config
 !
+<<<<<<< HEAD
   integer, parameter :: species_max = 7, species_electrons = 1, species_length = 7, reactions_max = 8, reactions_length = 18
+=======
+  integer, parameter :: species_max = 6, species_electrons = 1, species_length = 7, reactions_max = 7, reactions_length = 18
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   double precision                          :: density(species_max)
   integer                                   :: species_charge(species_max)
   character(species_length)                 :: species_name(species_max)
@@ -106,12 +114,21 @@ module ZDPlasKin
 ! data section
 !
   data species_charge(1:species_max) &
+<<<<<<< HEAD
   /-1, 0, 0, 1,-1, 0, 1/
   data species_name(1:species_max) &
   /"E      ","AR     ","AR*    ","AR^+   ","E(W)   ","AR(W)* ","AR(W)^+"/
   data reaction_sign(1:reactions_max) &
   /"bolsig:AR->AR*    ","bolsig:AR*->AR    ","bolsig:AR->AR^+   ","bolsig:AR*->AR^+  ","AR*+AR*=>E+AR+AR^+","AR*+AR=>AR+AR     ",&
    "E=>E(W)           ","AR^+=>AR(W)^+     "/
+=======
+  /-1, 0, 0, 1,-1, 1/
+  data species_name(1:species_max) &
+  /"E      ","AR     ","AR*    ","AR^+   ","E(W)   ","AR(W)^+"/
+  data reaction_sign(1:reactions_max) &
+  /"bolsig:AR->AR*    ","bolsig:AR*->AR    ","bolsig:AR->AR^+   ","bolsig:AR*->AR^+  ","AR*+AR*=>E+AR+AR^+","AR*+AR=>AR+AR     ",&
+   "E+E+AR^+=>AR+E    "/
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   data bolsig_species(1:bolsig_species_max) &
   /"AR ","AR*"/
 contains
@@ -241,9 +258,12 @@ subroutine ZDPlasKin_timestep(time,dtime)
   endif
   call dvode_f90(ZDPlasKin_fex,vode_neq,densav,tsav,tout,vode_itask,vode_istate,vode_options,j_fcn=ZDPlasKin_jex)
   if(vode_istate < 0) then
+<<<<<<< HEAD
     write(*,"(A,1pd11.4)") "Tgas   =", ZDPlasKin_cfg(1)
     write(*,"(A,1pd11.4)") "    EN =", ZDPlasKin_cfg(3)
     write(*,"(A,1pd11.4)") "    Te =", ZDPlasKin_cfg(4)
+=======
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
     call ZDPlasKin_stop("ZDPlasKin ERROR: DVODE solver issued an error (subroutine ZDPlasKin_timestep)")
   endif
   if( lgas_heating ) ZDPlasKin_cfg(1) = densav(species_max+1)
@@ -857,9 +877,15 @@ subroutine ZDPlasKin_write_file(FILE_SPECIES,FILE_REACTIONS,FILE_SOURCE_MATRIX,F
 300 if( lerror ) call ZDPlasKin_stop("ZDPlasKin ERROR: cannot write to file <" &
                                     // trim(adjustl(FILE_SOURCE_MATRIX)) // "> (subroutine ZDPlasKin_write_file)")
     close(ifile_unit)
+<<<<<<< HEAD
 311 format(211x,7(1x,i9))
 312 format(A1,1x,A18,1x,7(1x,A9))
 313 format(i1,1x,A18,1x,7(1x,1pd9.2))
+=======
+311 format(211x,6(1x,i9))
+312 format(A1,1x,A18,1x,6(1x,A9))
+313 format(i1,1x,A18,1x,6(1x,1pd9.2))
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   endif
   return
 end subroutine ZDPlasKin_write_file
@@ -924,7 +950,11 @@ subroutine ZDPlasKin_write_qtplaskin(time,LFORCE_WRITE)
                                      "<qt_matrix.txt> (subroutine writer_save_qtplaskin)")
     close(ifile_unit)
     open(ifile_unit,file="qt_densities.txt",action="write",err=300)
+<<<<<<< HEAD
     write(ifile_unit,"(1x,A14,7(121x,i1.1))",err=300) "Time_s", ( i, i = 1, species_max )
+=======
+    write(ifile_unit,"(1x,A14,6(121x,i1.1))",err=300) "Time_s", ( i, i = 1, species_max )
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
     lerror = .false.
 300 if( lerror ) call ZDPlasKin_stop("ZDPlasKin ERROR: cannot write to file " // &
                                      "<qt_densities.txt> (subroutine writer_save_qtplaskin)")
@@ -961,7 +991,11 @@ subroutine ZDPlasKin_write_qtplaskin(time,LFORCE_WRITE)
     endif
     if( rtol > qtplaskin_rtol .or. lfirst ) then
       open(ifile_unit,file="qt_densities.txt",access="append")
+<<<<<<< HEAD
       write(ifile_unit,"(1pe15.6,7(1pe13.4))") densav(0,2), densav(1:,2)
+=======
+      write(ifile_unit,"(1pe15.6,6(1pe13.4))") densav(0,2), densav(1:,2)
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
       close(ifile_unit)
       open(ifile_unit,file="qt_conditions.txt",access="append")
       cond(1) = ZDPlasKin_cfg(3)
@@ -1018,9 +1052,14 @@ subroutine ZDPlasKin_reac_source_matrix(reac_rate_local,reac_source_local)
   reac_source_local(2,6) = + reac_rate_local(6) 
   reac_source_local(3,6) = - reac_rate_local(6) 
   reac_source_local(1,7) = - reac_rate_local(7) 
+<<<<<<< HEAD
   reac_source_local(5,7) = + reac_rate_local(7) 
   reac_source_local(4,8) = - reac_rate_local(8) 
   reac_source_local(7,8) = + reac_rate_local(8) 
+=======
+  reac_source_local(2,7) = + reac_rate_local(7) 
+  reac_source_local(4,7) = - reac_rate_local(7) 
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   return
 end subroutine ZDPlasKin_reac_source_matrix
 !-----------------------------------------------------------------------------------------------------------------------------------
@@ -1033,7 +1072,11 @@ subroutine ZDPlasKin_fex(neq,t,y,ydot)
   integer,          intent(in)  :: neq
   double precision, intent(in)  :: t, y(neq)
   double precision, intent(out) :: ydot(neq)
+<<<<<<< HEAD
   if( lgas_heating ) ZDPlasKin_cfg(1) = y(8)
+=======
+  if( lgas_heating ) ZDPlasKin_cfg(1) = y(7)
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   density(:) = y(1:species_max)
   call ZDPlasKin_reac_rates(t)
   rrt(1) = rrt(1) * density(1) * density(2) 
@@ -1042,11 +1085,16 @@ subroutine ZDPlasKin_fex(neq,t,y,ydot)
   rrt(4) = rrt(4) * density(1) * density(3) 
   rrt(5) = rrt(5) * density(3)**2 
   rrt(6) = rrt(6) * density(2) * density(3) 
+<<<<<<< HEAD
   rrt(7) = rrt(7) * density(1) 
   rrt(8) = rrt(8) * density(4) 
+=======
+  rrt(7) = rrt(7) * density(1)**2 * density(4) 
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   ydot(1) = +rrt(3)+rrt(4)+rrt(5)-rrt(7) 
-  ydot(2) = -rrt(1)+rrt(2)-rrt(3)+rrt(5)+rrt(6) 
+  ydot(2) = -rrt(1)+rrt(2)-rrt(3)+rrt(5)+rrt(6)+rrt(7) 
   ydot(3) = +rrt(1)-rrt(2)-rrt(4)-2.d0 * rrt(5)-rrt(6) 
+<<<<<<< HEAD
   ydot(4) = +rrt(3)+rrt(4)+rrt(5)-rrt(8) 
   ydot(5) = +rrt(7) 
   ydot(6) = 0.0d0
@@ -1057,6 +1105,17 @@ subroutine ZDPlasKin_fex(neq,t,y,ydot)
     ydot(8) = ( ZDPlasKin_cfg(14)/k_B + ydot(8) ) / ( sum(density(1:species_max)) - density(species_electrons) ) &
             + eV_to_K * ZDPlasKin_cfg(11) * density(species_electrons)
     ydot(8) = ydot(8) * ZDPlasKin_cfg(13)
+=======
+  ydot(4) = +rrt(3)+rrt(4)+rrt(5)-rrt(7) 
+  ydot(5) = 0.0d0
+  ydot(6) = 0.0d0
+  if( ldensity_constant ) where( density_constant(:) ) ydot(1:species_max) = 0.0d0
+  ydot(7) = 0.0d0
+  if( lgas_heating ) then
+    ydot(7) = ( ZDPlasKin_cfg(14)/k_B + ydot(7) ) / ( sum(density(1:species_max)) - density(species_electrons) ) &
+            + eV_to_K * ZDPlasKin_cfg(11) * density(species_electrons)
+    ydot(7) = ydot(7) * ZDPlasKin_cfg(13)
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   endif
   return
 end subroutine ZDPlasKin_fex
@@ -1071,7 +1130,11 @@ subroutine ZDPlasKin_jex(neq,t,y,ml,mu,pd,nrpd)
   double precision, intent(in)  :: t, y(neq)
   double precision, intent(out) :: pd(nrpd,neq)
   integer                       :: i
+<<<<<<< HEAD
   if( lgas_heating ) ZDPlasKin_cfg(1) = y(8)
+=======
+  if( lgas_heating ) ZDPlasKin_cfg(1) = y(7)
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   density(:) = y(1:species_max)
   call ZDPlasKin_reac_rates(t)
   pd(2,1) = pd(2,1) - rrt(1) * density(2) 
@@ -1102,18 +1165,32 @@ subroutine ZDPlasKin_jex(neq,t,y,ml,mu,pd,nrpd)
   pd(2,3) = pd(2,3) + rrt(6) * density(2) 
   pd(3,2) = pd(3,2) - rrt(6) * density(3) 
   pd(3,3) = pd(3,3) - rrt(6) * density(2) 
+<<<<<<< HEAD
   pd(1,1) = pd(1,1) - rrt(7) 
   pd(5,1) = pd(5,1) + rrt(7) 
   pd(4,4) = pd(4,4) - rrt(8) 
   pd(7,4) = pd(7,4) + rrt(8) 
+=======
+  pd(1,1) = pd(1,1) - rrt(7) * density(1) * density(4) * 2.0d0
+  pd(1,4) = pd(1,4) - rrt(7) * density(1)**2 
+  pd(2,1) = pd(2,1) + rrt(7) * density(1) * density(4) * 2.0d0
+  pd(2,4) = pd(2,4) + rrt(7) * density(1)**2 
+  pd(4,1) = pd(4,1) - rrt(7) * density(1) * density(4) * 2.0d0
+  pd(4,4) = pd(4,4) - rrt(7) * density(1)**2 
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   if( ldensity_constant ) then
     do i = 1, species_max
       if( density_constant(i) ) pd(i,:) = 0.0d0
     enddo
   endif
   if( lgas_heating ) then
+<<<<<<< HEAD
     pd(8,1) = eV_to_K * ZDPlasKin_cfg(11)
     pd(8,:) = pd(8,:) * ZDPlasKin_cfg(13)
+=======
+    pd(7,1) = eV_to_K * ZDPlasKin_cfg(11)
+    pd(7,:) = pd(7,:) * ZDPlasKin_cfg(13)
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   endif
   return
 end subroutine ZDPlasKin_jex
@@ -1126,6 +1203,7 @@ end module ZDPlasKin
 subroutine ZDPlasKin_reac_rates(Time)
   use ZDPlasKin, only : ZDPlasKin_bolsig_rates, bolsig_rates, bolsig_pointer, ZDPlasKin_cfg, ZDPlasKin_get_density_total, &
                         lreaction_block, rrt
+<<<<<<< HEAD
   USE OPTIONS, ONLY : GAS_PRESSURE, DIAMETER, GAP_LENGTH
   implicit none
   double precision, intent(in) :: Time
@@ -1139,14 +1217,24 @@ subroutine ZDPlasKin_reac_rates(Time)
   Te  = ZDPlasKin_cfg(4)
   DIFF_RATE = 1.5D-1 * (1.0D0/GAS_PRESSURE) * (TGAS/273.16D0) * (TE/11600.D0) &
   * ((2.405D0/DIAMETER*2)**2 + (3.141/GAP_LENGTH)**2)
+=======
+  USE OPTIONS, ONLY : MAXV
+  implicit none
+  double precision, intent(in) :: Time
+  call ZDPlasKin_bolsig_rates()
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   rrt(1) = bolsig_rates(bolsig_pointer(1))
   rrt(2) = bolsig_rates(bolsig_pointer(2))
   rrt(3) = bolsig_rates(bolsig_pointer(3))
   rrt(4) = bolsig_rates(bolsig_pointer(4))
   rrt(5) = 5.60D-10
   rrt(6) = 3.00D-15
+<<<<<<< HEAD
   rrt(7) = DIFF_RATE
   rrt(8) = DIFF_RATE
+=======
+  rrt(7) = 1.0D0
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
   where( lreaction_block(:) ) rrt(:) = 0.0d0
   return
 end subroutine ZDPlasKin_reac_rates

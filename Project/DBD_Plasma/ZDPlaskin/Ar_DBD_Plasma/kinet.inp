@@ -6,7 +6,11 @@ SPECIES
 # gas-phase species
 e Ar Ar* Ar^+
 # surface-phase species
+<<<<<<< HEAD
 e(W) Ar(W)* Ar(W)^+
+=======
+e(W) Ar(W)^+
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
 END
 
 BOLSIG
@@ -17,10 +21,14 @@ REACTIONS
 #
 # a piece of Fortran code
 #
+<<<<<<< HEAD
 $ use options, only : gas_pressure, diameter, gap_length
 $ double precision :: diff_rate
 $ diff_rate = 1.5d-1 * (1.0d0/gas_pressure) * (Tgas/273.16d0) * (Te/11600.d0) &
 $                    * ((2.405d0/diameter*2)**2 + (3.141/gap_length)**2)
+=======
+$ use options, only : maxV
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
 #
 # electron collision reaction
 #
@@ -33,9 +41,13 @@ e + Ar* => e + e + Ar^+             ! Bolsig+ Ar* -> Ar^+
 #
 Ar* + Ar* => e + Ar + Ar^+          ! 5.60d-10
 Ar* + Ar  => Ar + Ar                ! 3.00d-15
+<<<<<<< HEAD
 #
 # surface phase reaction
 #
 e => e(W)                           ! diff_rate
 Ar^+ => Ar(W)^+                     ! diff_rate
+=======
+e + e + Ar^+ => Ar + e              ! 1.0d0
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
 END

@@ -3,5 +3,9 @@
 3 AR*    
 4 AR^+   
 5 E(W)   
+<<<<<<< HEAD
 6 AR(W)* 
 7 AR(W)^+
+=======
+6 AR(W)^+
+>>>>>>> b3289e2943d1bf2c37d5d49fe9e2fd77aa03abdc
