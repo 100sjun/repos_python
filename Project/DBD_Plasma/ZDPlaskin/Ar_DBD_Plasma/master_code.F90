@@ -38,8 +38,8 @@ program test_extcirc
 
 ! initialization of variables
     time    = 0.0d0
-    dtime   = 1e-9
-    EN      = 1.0d-5
+    dtime   = 1e-8
+    EN      = 0.0d0
 
 ! Tells Bolsig the value of the reduced field (to do each time EN changes)
     call ZDPlasKin_set_conditions(REDUCED_FIELD=EN)
@@ -64,6 +64,17 @@ program test_extcirc
 !	The results returned are given at time = time + dtime
         call ZDPlasKin_timestep(time,dtime)
         time = time + dtime
+    if (density(species_electrons) < 1.0d0) then
+        call ZDPlasKin_set_density('e', 1.0d0)
+        ! 전하 중성을 유지하기 위해 양이온 밀도도 조정
+        call ZDPlasKin_set_density('Ar^+', 1.0d0)
+    end if
+
+    if (density(species_electrons) > 1.0d13) then
+        call ZDPlasKin_set_density('e', 1.0d13)
+        ! 전하 중성을 유지하기 위해 양이온 밀도도 조정
+        call ZDPlasKin_set_density('Ar^+', 1.0d13)
+    end if
 
 !	gives the electron drift velocity
 !	(from Bolsig, knowing the field, the composition and 

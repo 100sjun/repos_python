@@ -53,8 +53,8 @@ subroutine set_parameters()
 					        'gas temperature, K     =', gas_temperature, 	&
 					        'electrin density, cm-3 =', elec_density,		&
 							'frequency, Hz			=', frequency  
-  write(*,'(A,$)') 'PRESS ENTER TO CONTINUE ...'
-	read(*,*)
+!  write(*,'(A,$)') 'PRESS ENTER TO CONTINUE ...'
+!	read(*,*)
 
 !	compute the gas density knowing the pressure and the temperature
 	disk_area    = 3.1415*diameter**2/4

@@ -1,5 +1,7 @@
-1 E   
-2 AR  
-3 AR* 
-4 AR^+
-5 E(W)
+1 E      
+2 AR     
+3 AR*    
+4 AR^+   
+5 E(W)   
+6 AR(W)* 
+7 AR(W)^+

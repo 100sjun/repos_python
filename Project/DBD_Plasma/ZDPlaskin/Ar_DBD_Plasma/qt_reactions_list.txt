@@ -5,3 +5,4 @@
 5 AR*+AR*=>E+AR+AR^+
 6 AR*+AR=>AR+AR     
 7 E=>E(W)           
+8 AR^+=>AR(W)^+     
