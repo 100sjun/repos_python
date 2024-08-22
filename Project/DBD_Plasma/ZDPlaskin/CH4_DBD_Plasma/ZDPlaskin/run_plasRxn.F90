@@ -41,7 +41,7 @@ program run_plasRxn
   do while(time .lt. time_end)
     call ZDPlasKin_timestep(time,dtime)
     time = time + dtime
-    write(*,'(4(1pe12.4))') time, density(:)
+    write(*,'(4(1pe12.4))') time
   enddo
 !
 ! end

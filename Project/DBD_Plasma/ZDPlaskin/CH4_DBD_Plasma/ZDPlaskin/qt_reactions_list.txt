@@ -235,3 +235,5 @@
 235 bolsig:C3H8(V2)->C2H5CH3^+  
 236 bolsig:C3H8(V1)->C2H6CH2^+  
 237 bolsig:C3H8(V2)->C2H6CH2^+  
+238 bolsig:H2->HH               
+239 bolsig:H2->H2^+             
