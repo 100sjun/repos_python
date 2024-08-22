@@ -1,0 +1,1 @@
+gfortran -o run_plasRxn.exe dvode_f90_m.F90 zdplaskin_m.F90 run_plasRxn.F90 bolsig_x86_64_g.dll

@@ -1,0 +1,237 @@
+  1 bolsig:CH4->CH4(V24)        
+  2 bolsig:CH4->CH4(V13)        
+  3 bolsig:C2H6->C2H6(V24)      
+  4 bolsig:C2H6->C2H6(V13)      
+  5 bolsig:C2H4->C2H4(V1)       
+  6 bolsig:C2H4->C2H4(V2)       
+  7 bolsig:C2H2->C2H2(V5)       
+  8 bolsig:C2H2->C2H2(V2)       
+  9 bolsig:C2H2->C2H2(V13)      
+ 10 bolsig:C3H8->C3H8(V1)       
+ 11 bolsig:C3H8->C3H8(V2)       
+ 12 bolsig:C3H6->C3H6(V)        
+ 13 bolsig:CH4->CH3H            
+ 14 bolsig:CH4->CH2H2           
+ 15 bolsig:CH4->CHH2H           
+ 16 bolsig:CH3->CH2H            
+ 17 bolsig:CH3->CHH2            
+ 18 bolsig:CH2->CHH             
+ 19 bolsig:CH4->CH4^+           
+ 20 bolsig:CH4->HCH3^+          
+ 21 bolsig:CH4->H2CH2^+         
+ 22 bolsig:CH4->H2HCH^+         
+ 23 bolsig:CH3->CH3^+           
+ 24 bolsig:CH3->HCH2^+          
+ 25 bolsig:CH3->H2CH^+          
+ 26 bolsig:CH2->CH2^+           
+ 27 bolsig:CH2->HCH^+           
+ 28 bolsig:CH->CH^+             
+ 29 bolsig:C2H6->C2H5H          
+ 30 bolsig:C2H6->C2H4H2         
+ 31 bolsig:C2H6->C2H3H2H        
+ 32 bolsig:C2H6->C2H2H2H2       
+ 33 bolsig:C2H6->CH4CH2         
+ 34 bolsig:C2H6->CH3CH3         
+ 35 bolsig:C2H5->C2H4H          
+ 36 bolsig:C2H5->C2H3H2         
+ 37 bolsig:C2H5->C2H3HH         
+ 38 bolsig:C2H5->C2H2H2H        
+ 39 bolsig:C2H5->CH4CH          
+ 40 bolsig:C2H5->CH3CH2         
+ 41 bolsig:C2H4->C2H3H          
+ 42 bolsig:C2H4->C2H2H2         
+ 43 bolsig:C2H4->C2H2HH         
+ 44 bolsig:C2H4->CH3CH          
+ 45 bolsig:C2H4->CH2CH2         
+ 46 bolsig:C2H3->C2H2H          
+ 47 bolsig:C2H3->CH2CH          
+ 48 bolsig:C2H2->CHCH           
+ 49 bolsig:C3H8->C3H7H          
+ 50 bolsig:C3H8->C3H6H2         
+ 51 bolsig:C3H8->C3H4H2H2       
+ 52 bolsig:C3H8->C2H6CH2        
+ 53 bolsig:C3H8->C2H5CH3        
+ 54 bolsig:C3H8->C2H4CH4        
+ 55 bolsig:C3H7->C3H6H          
+ 56 bolsig:C3H7->C3H5H2         
+ 57 bolsig:C3H7->C3H4H2H        
+ 58 bolsig:C3H7->C2H4CH3        
+ 59 bolsig:C3H7->C2H3CH4        
+ 60 bolsig:C3H6->C3H5H          
+ 61 bolsig:C3H6->C3H4H2         
+ 62 bolsig:C3H6->C2H4CH2        
+ 63 bolsig:C3H6->C2H3CH3        
+ 64 bolsig:C3H6->C2H2CH4        
+ 65 bolsig:C3H5->C3H4H          
+ 66 bolsig:C3H5->C2H2CH3        
+ 67 bolsig:C3H4->C2H3CH         
+ 68 bolsig:C3H4->C2H2CH2        
+ 69 bolsig:C2H6->C2H6^+         
+ 70 bolsig:C2H6->HC2H5^+        
+ 71 bolsig:C2H6->H2C2H4^+       
+ 72 bolsig:C2H6->H2HC2H3^+      
+ 73 bolsig:C2H6->H2H2C2H2^+     
+ 74 bolsig:C2H6->CH3CH3^+       
+ 75 bolsig:C2H6->CH4CH2^+       
+ 76 bolsig:C2H5->C2H5^+         
+ 77 bolsig:C2H5->HC2H4^+        
+ 78 bolsig:C2H5->H2C2H3^+       
+ 79 bolsig:C2H5->H2HC2H2^+      
+ 80 bolsig:C2H5->CH2CH3^+       
+ 81 bolsig:C2H5->CH3CH2^+       
+ 82 bolsig:C2H5->CH4CH^+        
+ 83 bolsig:C2H4->C2H4^+         
+ 84 bolsig:C2H4->HC2H3^+        
+ 85 bolsig:C2H4->CHCH3^+        
+ 86 bolsig:C2H4->CH2CH2^+       
+ 87 bolsig:C2H4->CH3CH^+        
+ 88 bolsig:C2H3->C2H3^+         
+ 89 bolsig:C2H3->HC2H2^+        
+ 90 bolsig:C2H3->CHCH2^+        
+ 91 bolsig:C2H3->CH2CH^+        
+ 92 bolsig:C2H3->C2H2H^+        
+ 93 bolsig:C2H2->C2H2^+         
+ 94 bolsig:C2H2->CHCH^+         
+ 95 bolsig:C3H8->C3H8^+         
+ 96 bolsig:C3H8->HC3H7^+        
+ 97 bolsig:C3H8->H2C3H6^+       
+ 98 bolsig:C3H8->H2HC3H5^+      
+ 99 bolsig:C3H8->H2H2C3H4^+     
+100 bolsig:C3H8->CH3C2H5^+      
+101 bolsig:C3H8->CH4C2H4^+      
+102 bolsig:C3H8->C2H5CH3^+      
+103 bolsig:C3H8->C2H6CH2^+      
+104 bolsig:C3H7->C3H7^+         
+105 bolsig:C3H7->HC3H6^+        
+106 bolsig:C3H7->H2C3H5^+       
+107 bolsig:C3H7->H2HC3H4^+      
+108 bolsig:C3H7->CH2C2H5^+      
+109 bolsig:C3H7->CH3C2H4^+      
+110 bolsig:C3H7->CH4C2H3^+      
+111 bolsig:C3H7->C2H3CH4^+      
+112 bolsig:C3H7->C2H4CH3^+      
+113 bolsig:C3H7->C2H5CH2^+      
+114 bolsig:C3H7->C2H6CH^+       
+115 bolsig:C3H6->C3H6^+         
+116 bolsig:C3H6->HC3H5^+        
+117 bolsig:C3H6->H2C3H4^+       
+118 bolsig:C3H6->CHC2H5^+       
+119 bolsig:C3H6->CH2C2H4^+      
+120 bolsig:C3H6->CH3C2H3^+      
+121 bolsig:C3H6->CH4C2H2^+      
+122 bolsig:C3H6->C2H2CH4^+      
+123 bolsig:C3H6->C2H3CH3^+      
+124 bolsig:C3H6->C2H4CH2^+      
+125 bolsig:C3H6->C2H5CH^+       
+126 bolsig:C3H5->C3H5^+         
+127 bolsig:C3H5->HC3H4^+        
+128 bolsig:C3H5->CHC2H4^+       
+129 bolsig:C3H5->CH2C2H3^+      
+130 bolsig:C3H5->CH3C2H2^+      
+131 bolsig:C3H5->C2H2CH3^+      
+132 bolsig:C3H5->C2H3CH2^+      
+133 bolsig:C3H5->C2H4CH^+       
+134 bolsig:C3H4->C3H4^+         
+135 bolsig:C3H4->CHC2H3^+       
+136 bolsig:C3H4->CH2C2H2^+      
+137 bolsig:C3H4->C2H2CH2^+      
+138 bolsig:C3H4->C2H3CH^+       
+139 bolsig:CH4(V24)->CH3H       
+140 bolsig:CH4(V13)->CH3H       
+141 bolsig:CH4(V24)->CH2H2      
+142 bolsig:CH4(V13)->CH2H2      
+143 bolsig:CH4(V24)->CHH2H      
+144 bolsig:CH4(V13)->CHH2H      
+145 bolsig:CH4(V24)->CH4^+      
+146 bolsig:CH4(V13)->CH4^+      
+147 bolsig:CH4(V24)->HCH3^+     
+148 bolsig:CH4(V13)->HCH3^+     
+149 bolsig:CH4(V24)->H2CH2^+    
+150 bolsig:CH4(V13)->H2CH2^+    
+151 bolsig:CH4(V24)->H2HCH^+    
+152 bolsig:CH4(V13)->H2HCH^+    
+153 bolsig:C2H6(V24)->C2H5H     
+154 bolsig:C2H6(V13)->C2H5H     
+155 bolsig:C2H6(V24)->C2H4H2    
+156 bolsig:C2H6(V13)->C2H4H2    
+157 bolsig:C2H6(V24)->C2H3H2H   
+158 bolsig:C2H6(V13)->C2H3H2H   
+159 bolsig:C2H6(V24)->C2H2H2H2  
+160 bolsig:C2H6(V13)->C2H2H2H2  
+161 bolsig:C2H6(V24)->CH4CH2    
+162 bolsig:C2H6(V13)->CH4CH2    
+163 bolsig:C2H6(V24)->CH3CH3    
+164 bolsig:C2H6(V13)->CH3CH3    
+165 bolsig:C2H4(V1)->C2H3H      
+166 bolsig:C2H4(V2)->C2H3H      
+167 bolsig:C2H4(V1)->C2H2H2     
+168 bolsig:C2H4(V2)->C2H2H2     
+169 bolsig:C2H4(V1)->C2H2HH     
+170 bolsig:C2H4(V2)->C2H2HH     
+171 bolsig:C2H4(V1)->CH3CH      
+172 bolsig:C2H4(V2)->CH3CH      
+173 bolsig:C2H4(V1)->CH2CH2     
+174 bolsig:C2H4(V2)->CH2CH2     
+175 bolsig:C2H2(V5)->CHCH       
+176 bolsig:C2H2(V2)->CHCH       
+177 bolsig:C2H2(V13)->CHCH      
+178 bolsig:C3H8(V1)->C3H7H      
+179 bolsig:C3H8(V2)->C3H7H      
+180 bolsig:C3H8(V1)->C3H6H2     
+181 bolsig:C3H8(V2)->C3H6H2     
+182 bolsig:C3H8(V1)->C3H4H2H2   
+183 bolsig:C3H8(V2)->C3H4H2H2   
+184 bolsig:C3H8(V1)->C2H6CH2    
+185 bolsig:C3H8(V2)->C2H6CH2    
+186 bolsig:C3H8(V1)->C2H5CH3    
+187 bolsig:C3H8(V2)->C2H5CH3    
+188 bolsig:C3H8(V1)->C2H4CH4    
+189 bolsig:C3H8(V2)->C2H4CH4    
+190 bolsig:C2H6(V24)->C2H6^+    
+191 bolsig:C2H6(V13)->C2H6^+    
+192 bolsig:C2H6(V24)->HC2H5^+   
+193 bolsig:C2H6(V13)->HC2H5^+   
+194 bolsig:C2H6(V24)->H2C2H4^+  
+195 bolsig:C2H6(V13)->H2C2H4^+  
+196 bolsig:C2H6(V24)->H2HC2H3^+ 
+197 bolsig:C2H6(V13)->H2HC2H3^+ 
+198 bolsig:C2H6(V24)->H2H2C2H2^+
+199 bolsig:C2H6(V13)->H2H2C2H2^+
+200 bolsig:C2H6(V24)->CH3CH3^+  
+201 bolsig:C2H6(V13)->CH3CH3^+  
+202 bolsig:C2H6(V24)->CH4CH2^+  
+203 bolsig:C2H6(V13)->CH4CH2^+  
+204 bolsig:C2H4(V1)->C2H4^+     
+205 bolsig:C2H4(V2)->C2H4^+     
+206 bolsig:C2H4(V1)->HC2H3^+    
+207 bolsig:C2H4(V2)->HC2H3^+    
+208 bolsig:C2H4(V1)->CHCH3^+    
+209 bolsig:C2H4(V2)->CHCH3^+    
+210 bolsig:C2H4(V1)->CH2CH2^+   
+211 bolsig:C2H4(V2)->CH2CH2^+   
+212 bolsig:C2H4(V1)->CH3CH^+    
+213 bolsig:C2H4(V2)->CH3CH^+    
+214 bolsig:C2H2(V5)->C2H2^+     
+215 bolsig:C2H2(V2)->C2H2^+     
+216 bolsig:C2H2(V13)->C2H2^+    
+217 bolsig:C2H2(V5)->CHCH^+     
+218 bolsig:C2H2(V2)->CHCH^+     
+219 bolsig:C2H2(V13)->CHCH^+    
+220 bolsig:C3H8(V1)->C3H8^+     
+221 bolsig:C3H8(V2)->C3H8^+     
+222 bolsig:C3H8(V1)->HC3H7^+    
+223 bolsig:C3H8(V2)->HC3H7^+    
+224 bolsig:C3H8(V1)->H2C3H6^+   
+225 bolsig:C3H8(V2)->H2C3H6^+   
+226 bolsig:C3H8(V1)->H2HC3H5^+  
+227 bolsig:C3H8(V2)->H2HC3H5^+  
+228 bolsig:C3H8(V1)->H2H2C3H4^+ 
+229 bolsig:C3H8(V2)->H2H2C3H4^+ 
+230 bolsig:C3H8(V1)->CH3C2H5^+  
+231 bolsig:C3H8(V2)->CH3C2H5^+  
+232 bolsig:C3H8(V1)->CH4C2H4^+  
+233 bolsig:C3H8(V2)->CH4C2H4^+  
+234 bolsig:C3H8(V1)->C2H5CH3^+  
+235 bolsig:C3H8(V2)->C2H5CH3^+  
+236 bolsig:C3H8(V1)->C2H6CH2^+  
+237 bolsig:C3H8(V2)->C2H6CH2^+  

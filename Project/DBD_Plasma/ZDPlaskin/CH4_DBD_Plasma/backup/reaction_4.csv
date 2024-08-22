@@ -1,0 +1,3 @@
+Num,Type,Reaction,ELoss,Species,Formula,Energy(eV),Cross_section(m2)
+4,EFFECTIVE,CH,4.22e-05,e / CH,E + CH -> E + CH,0.0,1e-20
+4,EFFECTIVE,CH,4.22e-05,e / CH,E + CH -> E + CH,200.0,1e-20
