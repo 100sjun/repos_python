@@ -12,7 +12,7 @@
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
-! Mon Aug 26 23:59:11 2024
+! Tue Aug 27 00:13:34 2024
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
@@ -7017,7 +7017,7 @@ subroutine ZDPlasKin_reac_rates(Time)
   double precision, intent(in) :: Time
   double precision :: Tgas
   double precision :: Te
-  DOUBLE PRECISION, PARAMETER :: R = 8.314D-3, FB = 1.0D-1, FI = 1.0D-1, FG = 1.0D0, FRI = 1.0D-6, FCH3 = 1.0D6, FC2H4 = 1.0D-8
+  DOUBLE PRECISION, PARAMETER :: R = 8.314D-3, FB = 7.5D-3, FI = 7.5D-3, FG = 1.0D0, FRI = 7.5D-8, FCH3 = 1.0D6, FC2H4 = 1.0D-8
   call ZDPlasKin_bolsig_rates()
   Tgas = ZDPlasKin_cfg(1)
   Te  = ZDPlasKin_cfg(4)
@@ -7302,14 +7302,14 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(279) = FG*6.90D-10
   rrt(280) = FG*2.25D-10
   rrt(281) = FC2H4*FG*1.50D-9
-  rrt(282) = FG*1.60D-9
+  rrt(282) = FC2H4*FG*1.60D-9
   rrt(283) = FG*1.50D-10
   rrt(284) = FG*1.50D-9
   rrt(285) = FG*1.91D-9
   rrt(286) = FC2H4*FG*4.23D-10
   rrt(287) = FC2H4*FG*1.38D-9
-  rrt(288) = FG*1.23D-9
-  rrt(289) = FG*1.13D-9
+  rrt(288) = FC2H4*FG*1.23D-9
+  rrt(289) = FC2H4*FG*1.13D-9
   rrt(290) = FG*3.30D-11
   rrt(291) = FG*1.00D-11
   rrt(292) = FG*1.36D-10
@@ -7324,13 +7324,13 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(301) = FG*8.40D-10
   rrt(302) = FG*2.31D-10
   rrt(303) = FG*3.97D-10
-  rrt(304) = rrt(282)
+  rrt(304) = FG*1.60D-9
   rrt(305) = FG*6.50D-11
   rrt(306) = FG*1.09D-9
   rrt(307) = FG*1.43D-10
   rrt(308) = rrt(293)
   rrt(309) = FC2H4*FG*1.15D-9
-  rrt(310) = FG*2.47D-10
+  rrt(310) = FC2H4*FG*2.47D-10
   rrt(311) = FG*1.00D-10
   rrt(312) = rrt(291)
   rrt(313) = FG*5.00D-10
@@ -7356,7 +7356,7 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(333) = rrt(309)
   rrt(334) = FG*2.00D-9
   rrt(335) = rrt(328)
-  rrt(336) = FG*3.50D-9
+  rrt(336) = FC2H4*FG*3.50D-9
   rrt(337) = FG*1.14D-10
   rrt(338) = rrt(331)
   rrt(339) = FG*2.30D-9
@@ -7372,8 +7372,8 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(349) = FC2H4*FG*2.21D-9
   rrt(350) = FC2H4*FG*1.81D-9
   rrt(351) = FC2H4*FG*8.82D-10
-  rrt(352) = FG*4.80D-10
-  rrt(353) = FG*4.82D-9
+  rrt(352) = FC2H4*FG*4.80D-10
+  rrt(353) = FC2H4*FG*4.82D-9
   rrt(354) = FG*2.10D-9
   rrt(355) = FG*6.39D-10
   rrt(356) = rrt(284)
@@ -7392,7 +7392,7 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(369) = rrt(367)
   rrt(370) = rrt(334)
   rrt(371) = rrt(334)
-  rrt(372) = FG*5.40D-10
+  rrt(372) = FC2H4*FG*5.40D-10
   rrt(373) = FG*4.08D-18*TGAS**2*EXP(-4163./TGAS)
   rrt(374) = FG*9.97D-11
   rrt(375) = FG*2.51D-15*(TGAS/298.)**4.14*EXP(-52.55/(R*TGAS))
@@ -7437,7 +7437,7 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(414) = FG*9.00D-33*TGAS**6.43
   rrt(415) = FG*2.41D-12
   rrt(416) = FC2H4*FG*5.83D-14*(TGAS/298.)**3.13*EXP(-75.33/(R*TGAS))
-  rrt(417) = FG*4.50D-13*EXP(-98.11/(R*TGAS))
+  rrt(417) = FC2H4*FG*4.50D-13*EXP(-98.11/(R*TGAS))
   rrt(418) = FG*3.01D-12
   rrt(419) = FG*1.61D-15*(TGAS/298.)**3.65*EXP(-38.25/(R*TGAS))
   rrt(420) = FG*1.91D-12
@@ -7473,11 +7473,11 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(450) = FG*1.60D-10
   rrt(451) = FG*1.01D-11*TGAS**0.27*EXP(-140.92/TGAS)
   rrt(452) = FG*2.00D14*EXP(-20000./TGAS)
-  rrt(453) = FG*9.30D-12*EXP(-1207.85/TGAS)
-  rrt(454) = FG*5.00D-13*EXP(-163./(R*TGAS))
-  rrt(455) = FG*4.00D-12*EXP(-272./(R*TGAS))
+  rrt(453) = FC2H4*FG*9.30D-12*EXP(-1207.85/TGAS)
+  rrt(454) = FC2H4*FG*5.00D-13*EXP(-163./(R*TGAS))
+  rrt(455) = FC2H4*FG*4.00D-12*EXP(-272./(R*TGAS))
   rrt(456) = FG*1.58D-5*(TGAS/298.)**(-8.58)*EXP(-84.81/(R*TGAS))
-  rrt(457) = FG*1.20D-12*EXP(-37.66/(R*TGAS))
+  rrt(457) = FC2H4*FG*1.20D-12*EXP(-37.66/(R*TGAS))
   rrt(458) = rrt(409)
   rrt(459) = FG*2.19D-180*TGAS**2.54*EXP(-3400.10/TGAS)
   rrt(460) = FG*1.10D17*EXP(-42470./TGAS)
@@ -7490,7 +7490,7 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(467) = FG*6.74D-18*TGAS**2.19*EXP(-447.91/TGAS)
   rrt(468) = FG*1.25D17*EXP(-237./(R*TGAS))
   rrt(469) = FG*16.0*(TGAS/298.)**(-10.00)*EXP(-150./(R*TGAS))
-  rrt(470) = FG*6.71D-11*EXP(-196./(R*TGAS))
+  rrt(470) = FC2H4*FG*6.71D-11*EXP(-196./(R*TGAS))
   rrt(471) = FG*4.20D-10*EXP(-231./(R*TGAS))
   rrt(472) = FG*2.50D15*EXP(-363./(R*TGAS))
   rrt(473) = FG*4.40D-13*(TGAS/298.)**2.50*EXP(-10.39/(R*TGAS))
@@ -7499,8 +7499,8 @@ subroutine ZDPlasKin_reac_rates(Time)
   rrt(476) = FCH3*FG*1.27D-14*(TGAS/298.)**2.67*EXP(-28.66/(R*TGAS))
   rrt(477) = FG*1.39D-13*(TGAS/298.)**2.38*EXP(-79.49/(R*TGAS))
   rrt(478) = FG*78.80*(TGAS/298.)**(-11.76)*EXP(-98.53/(R*TGAS))
-  rrt(479) = FG*1.26D13*EXP(-140./(R*TGAS))
-  rrt(480) = FG*1.07D2*(TGAS/298.)**(-11.90)*EXP(-135./(R*TGAS))
+  rrt(479) = FC2H4*FG*1.26D13*EXP(-140./(R*TGAS))
+  rrt(480) = FC2H4*FG*1.07D2*(TGAS/298.)**(-11.90)*EXP(-135./(R*TGAS))
   rrt(481) = rrt(388)
   rrt(482) = FG*7.71D13*(TGAS/298.)**0.77*EXP(-128./(R*TGAS))
   rrt(483) = FG*3.16D16*EXP(-331./(R*TGAS))
