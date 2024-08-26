@@ -8,7 +8,7 @@ program run_plasRxn
                                  density_ini_ch4   = 2.46d19,  & ! initial CH4 density, cm-3
                                  density_ini_elec = 1.0d0,&      ! initial electron density, cm-3
                                  reduced_field    = 332       ! reduced electric field
-  double precision            :: time = 0.0d0, time_end1 = 5.0d0, time_end2 = 1.0d1, dtime = 1.0d-4,  EN = 0.0d0,& ! times, s // Reduced Electric field, Td
+  double precision            :: time = 0.0d0, time_end = 5.0d0, dtime = 1.0d-4,  EN = 0.0d0,& ! times, s // Reduced Electric field, Td
                                  t1, t2, tc                       ! calculation time
   integer                     :: i
 !
@@ -41,14 +41,9 @@ program run_plasRxn
 !
 ! time integration
 !
-  do while(time .lt. time_end2)
+  do while(time .lt. time_end)
     call ZDPlasKin_timestep(time,dtime)
     time = time + dtime
-    if (time .lt. time_end1) then
-      call ZDPlasKin_set_conditions(REDUCED_FIELD=reduced_field)
-    else
-      call ZDPlasKin_set_conditions(REDUCED_FIELD=0.0d0)
-    endif
     write(*,'(4(1pe12.4))') time
   enddo
 !
