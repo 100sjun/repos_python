@@ -10,7 +10,7 @@ program run_plasRxn
                                  maxV             = 1.5d04,&      ! maximum electric potential, V
                                  frequency        = 1000,&       ! frequency, Hz
                                  gap_length       = 0.15       ! cm
-  double precision            :: time = 0.0d0, time_end = 5.0d0, dtime = 1.0d-5,  EN = 0.0d0,& ! times, s // Reduced Electric field, Td
+  double precision            :: time = 0.0d0, time_end = 1.0d0, dtime = 1.0d-5,  EN = 0.0d0,& ! times, s // Reduced Electric field, Td
                                  t1, t2, tc                       ! calculation time
   integer                     :: i
 !
