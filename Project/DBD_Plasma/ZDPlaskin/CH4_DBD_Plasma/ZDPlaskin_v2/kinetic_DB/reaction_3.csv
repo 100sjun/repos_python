@@ -1,0 +1,3 @@
+,Unnamed: 0,Num,Type,Reaction,ELoss,Species,Formula,Energy(eV),Cross_section(m2)
+0,0,3,EFFECTIVE,CH2,3.92e-05,e / CH2,E + CH2 -> E + CH2,0.0,1e-20
+1,1,3,EFFECTIVE,CH2,3.92e-05,e / CH2,E + CH2 -> E + CH2,200.0,1e-20
