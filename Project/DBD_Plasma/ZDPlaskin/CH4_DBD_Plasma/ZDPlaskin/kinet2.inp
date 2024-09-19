@@ -16,23 +16,23 @@ REACTIONS
 # Kinetic parameters
 #
 $ double precision, parameter :: R = 8.314d-3
-$ double precision, parameter :: f0= 2.664d-1
+$ double precision, parameter :: f0= 2.754d-1
 # f0 = e + CH4 => e + CH3 + H
-$ double precision, parameter :: f1= 1.240d-1
+$ double precision, parameter :: f1= 4.655d0
 # f1 = CH3 + H => CH4
-$ double precision, parameter :: f2= 1.373d12
+$ double precision, parameter :: f2= 1.707d11
 # f2 = CH3 + CH3 => C2H6
-$ double precision, parameter :: f3= 2.919d2
+$ double precision, parameter :: f3= 3.329d3
 # f3 = C2H6 + e => e + C2H4 + H2
-$ double precision, parameter :: f4= 2.162d-2
+$ double precision, parameter :: f4= 1.070d-3
 # f4 = C2H5 + C2H5 => C4H10
-$ double precision, parameter :: f5= 1.837d-8
+$ double precision, parameter :: f5= 1.614d-7
 # f5 = C2H4 + H2 => C2H5 + H
-$ double precision, parameter :: f6= 5.259d1
+$ double precision, parameter :: f6= 2.376d1
 # f6 = C2H4 + e => C2H2 + e + H2
-$ double precision, parameter :: f7= 7.672d11
+$ double precision, parameter :: f7= 7.657d10
 # f7 = C2H5 + CH3 => C3H8
-$ double precision, parameter :: f8= 1.004d1
+$ double precision, parameter :: f8= 2.011d0
 # f8 = C3H8 + e => C3H8 + H2 + e
 #
 # electron collision reaction
