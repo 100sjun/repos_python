@@ -394,7 +394,7 @@ C3H6
 
 EXCITATION
 CH4 -> CH4(v24)
-0.159 / mass ratio
+0.159 / threshold energy
 -----------------------------
   1.5900e-01  0.0000e+00
   1.5933e-01  1.4961e-22
@@ -473,7 +473,7 @@ CH4 -> CH4(v24)
 
 EXCITATION
 CH4 -> CH4(v13)
-0.37 / mass ratio
+0.37 / threshold energy
 -----------------------------
   3.7000e-01  0.0000e+00
   3.7101e-01  1.3322e-22
@@ -531,7 +531,7 @@ CH4 -> CH4(v13)
 
 EXCITATION
 C2H6 -> C2H6(v24)
-0.16 / mass ratio
+0.16 / threshold energy
 -----------------------------
   1.6000e-01  0.0000e+00
   1.6400e-01  2.5770e-21
@@ -565,7 +565,7 @@ C2H6 -> C2H6(v24)
 
 EXCITATION
 C2H6 -> C2H6(v13)
-0.371 / mass ratio
+0.371 / threshold energy
 -----------------------------
   3.7100e-01  0.0000e+00
   3.9900e-01  9.2500e-22
@@ -592,7 +592,7 @@ C2H6 -> C2H6(v13)
 
 EXCITATION
 C2H4 -> C2H4(v1)
-0.11 / mass ratio
+0.11 / threshold energy
 -----------------------------
   1.1000e-01  0.0000e+00
   1.1800e-01  1.1000e-22
@@ -618,7 +618,7 @@ C2H4 -> C2H4(v1)
 
 EXCITATION
 C2H4 -> C2H4(v2)
-0.36 / mass ratio
+0.36 / threshold energy
 -----------------------------
   3.6000e-01  0.0000e+00
   3.6500e-01  1.2000e-22
@@ -643,7 +643,7 @@ C2H4 -> C2H4(v2)
 
 EXCITATION
 C2H2 -> C2H2(v5)
-0.09 / mass ratio
+0.09 / threshold energy
 -----------------------------
   9.0000e-02  0.0000e+00
   9.1000e-02  3.5230e-20
@@ -668,7 +668,7 @@ C2H2 -> C2H2(v5)
 
 EXCITATION
 C2H2 -> C2H2(v2)
-0.255 / mass ratio
+0.255 / threshold energy
 -----------------------------
   2.5500e-01  0.0000e+00
   3.4300e-01  1.7000e-22
@@ -688,7 +688,7 @@ C2H2 -> C2H2(v2)
 
 EXCITATION
 C2H2 -> C2H2(v13)
-0.407 / mass ratio
+0.407 / threshold energy
 -----------------------------
   4.0700e-01  0.0000e+00
   4.2500e-01  9.6000e-22
@@ -709,7 +709,7 @@ C2H2 -> C2H2(v13)
 
 EXCITATION
 C3H8 -> C3H8(v1)
-0.092 / mass ratio
+0.092 / threshold energy
 -----------------------------
   9.2000e-02  0.0000e+00
   9.6700e-02  9.1650e-22
@@ -746,7 +746,7 @@ C3H8 -> C3H8(v1)
 
 EXCITATION
 C3H8 -> C3H8(v2)
-0.346 / mass ratio
+0.346 / threshold energy
 -----------------------------
   3.4600e-01  0.0000e+00
   3.6400e-01  1.6400e-21
@@ -774,7 +774,7 @@ C3H8 -> C3H8(v2)
 
 EXCITATION
 C3H6 -> C3H6(v)
-0.07 / mass ratio
+0.07 / threshold energy
 -----------------------------
   7.0000e-02  0.0000e+00
   7.4000e-02  2.3055e-20
@@ -817,7 +817,7 @@ C3H6 -> C3H6(v)
 
 EXCITATION
 CH4 -> CH3 H
-8.8 / mass ratio
+8.8 / threshold energy
 -----------------------------
   8.8000e+00  0.0000e+00
   9.0000e+00  9.7183e-25
@@ -845,7 +845,7 @@ CH4 -> CH3 H
 
 EXCITATION
 CH4 -> CH2 H2
-9.4 / mass ratio
+9.4 / threshold energy
 -----------------------------
   9.4000e+00  0.0000e+00
   9.5000e+00  1.8782e-26
@@ -872,7 +872,7 @@ CH4 -> CH2 H2
 
 EXCITATION
 CH4 -> CH H2 H
-12.5 / mass ratio
+12.5 / threshold energy
 -----------------------------
   1.2500e+01  0.0000e+00
   1.3000e+01  3.6790e-25
@@ -895,7 +895,7 @@ CH4 -> CH H2 H
 
 EXCITATION
 CH3 -> CH2 H
-9.5 / mass ratio
+9.5 / threshold energy
 -----------------------------
   9.5000e+00  0.0000e+00
   1.0000e+01  9.6626e-24
@@ -921,7 +921,7 @@ CH3 -> CH2 H
 
 EXCITATION
 CH3 -> CH H2
-10.0 / mass ratio
+10.0 / threshold energy
 -----------------------------
   1.0000e+01  0.0000e+00
   1.1000e+01  9.1218e-24
@@ -946,7 +946,7 @@ CH3 -> CH H2
 
 EXCITATION
 CH2 -> CH H
-8.5 / mass ratio
+8.5 / threshold energy
 -----------------------------
   8.5000e+00  0.0000e+00
   9.0000e+00  1.3154e-23
@@ -974,7 +974,7 @@ CH2 -> CH H
 
 IONIZATION
 CH4 -> CH4^+
-12.63 / mass ratio
+12.63 / threshold energy
 -----------------------------
   1.2630e+01  0.0000e+00
   1.3900e+01  4.8183e-23
@@ -997,7 +997,7 @@ CH4 -> CH4^+
 
 IONIZATION
 CH4 -> H CH3^+
-14.01 / mass ratio
+14.01 / threshold energy
 -----------------------------
   1.4010e+01  0.0000e+00
   1.5000e+01  5.4775e-22
@@ -1018,7 +1018,7 @@ CH4 -> H CH3^+
 
 IONIZATION
 CH4 -> H2 CH2^+
-16.2 / mass ratio
+16.2 / threshold energy
 -----------------------------
   1.6200e+01  0.0000e+00
   1.7000e+01  3.0857e-21
@@ -1037,7 +1037,7 @@ CH4 -> H2 CH2^+
 
 IONIZATION
 CH4 -> H2 H CH^+
-22.2 / mass ratio
+22.2 / threshold energy
 -----------------------------
   2.2200e+01  0.0000e+00
   2.3000e+01  1.9463e-23
@@ -1059,7 +1059,7 @@ CH4 -> H2 H CH^+
 
 IONIZATION
 CH3 -> CH3^+
-9.8 / mass ratio
+9.8 / threshold energy
 -----------------------------
   9.8000e+00  0.0000e+00
   1.0700e+01  6.4950e-23
@@ -1085,7 +1085,7 @@ CH3 -> CH3^+
 
 IONIZATION
 CH3 -> H CH2^+
-14.0 / mass ratio
+14.0 / threshold energy
 -----------------------------
   1.4000e+01  0.0000e+00
   1.5000e+01  0.0000e+00
@@ -1106,7 +1106,7 @@ CH3 -> H CH2^+
 
 IONIZATION
 CH3 -> H2 CH^+
-16.0 / mass ratio
+16.0 / threshold energy
 -----------------------------
   1.6000e+01  0.0000e+00
   1.7000e+01  3.5846e-23
@@ -1125,7 +1125,7 @@ CH3 -> H2 CH^+
 
 IONIZATION
 CH2 -> CH2^+
-10.4 / mass ratio
+10.4 / threshold energy
 -----------------------------
   1.0400e+01  0.0000e+00
   1.1000e+01  8.5540e-23
@@ -1150,7 +1150,7 @@ CH2 -> CH2^+
 
 IONIZATION
 CH2 -> H CH^+
-15.53 / mass ratio
+15.53 / threshold energy
 -----------------------------
   1.5530e+01  0.0000e+00
   1.6000e+01  9.7357e-23
@@ -1170,7 +1170,7 @@ CH2 -> H CH^+
 
 IONIZATION
 CH -> CH^+
-11.3 / mass ratio
+11.3 / threshold energy
 -----------------------------
   1.1300e+01  0.0000e+00
   1.2000e+01  4.9174e-22
@@ -1194,7 +1194,7 @@ CH -> CH^+
 
 EXCITATION
 C2H6 -> C2H5 H
-7.45 / mass ratio
+7.45 / threshold energy
 -----------------------------
   7.4500e+00  0.0000e+00
   8.5000e+00  6.1501e-23
@@ -1223,7 +1223,7 @@ C2H6 -> C2H5 H
 
 EXCITATION
 C2H6 -> C2H4 H2
-4.0 / mass ratio
+4.0 / threshold energy
 -----------------------------
   4.0000e+00  0.0000e+00
   4.5000e+00  1.4298e-22
@@ -1260,7 +1260,7 @@ C2H6 -> C2H4 H2
 
 EXCITATION
 C2H6 -> C2H3 H2 H
-9.4 / mass ratio
+9.4 / threshold energy
 -----------------------------
   9.4000e+00  0.0000e+00
   9.5000e+00  5.8259e-27
@@ -1287,7 +1287,7 @@ C2H6 -> C2H3 H2 H
 
 EXCITATION
 C2H6 -> C2H2 H2 H2
-6.2 / mass ratio
+6.2 / threshold energy
 -----------------------------
   6.2000e+00  0.0000e+00
   6.5000e+00  1.8141e-24
@@ -1320,7 +1320,7 @@ C2H6 -> C2H2 H2 H2
 
 EXCITATION
 C2H6 -> CH4 CH2
-6.95 / mass ratio
+6.95 / threshold energy
 -----------------------------
   6.9500e+00  0.0000e+00
   7.0000e+00  4.0347e-27
@@ -1352,7 +1352,7 @@ C2H6 -> CH4 CH2
 
 EXCITATION
 C2H6 -> CH3 CH3
-6.38 / mass ratio
+6.38 / threshold energy
 -----------------------------
   6.3800e+00  0.0000e+00
   6.5000e+00  8.4440e-26
@@ -1385,7 +1385,7 @@ C2H6 -> CH3 CH3
 
 EXCITATION
 C2H5 -> C2H4 H
-4.45 / mass ratio
+4.45 / threshold energy
 -----------------------------
   4.4500e+00  0.0000e+00
   4.5000e+00  1.2673e-25
@@ -1422,7 +1422,7 @@ C2H5 -> C2H4 H
 
 EXCITATION
 C2H5 -> C2H3 H2
-5.36 / mass ratio
+5.36 / threshold energy
 -----------------------------
   5.3600e+00  0.0000e+00
   5.5000e+00  5.5738e-25
@@ -1459,7 +1459,7 @@ C2H5 -> C2H3 H2
 
 EXCITATION
 C2H5 -> C2H3 H H
-8.67 / mass ratio
+8.67 / threshold energy
 -----------------------------
   8.6700e+00  0.0000e+00
   8.7000e+00  2.0294e-28
@@ -1496,7 +1496,7 @@ C2H5 -> C2H3 H H
 
 EXCITATION
 C2H5 -> C2H2 H2 H
-5.47 / mass ratio
+5.47 / threshold energy
 -----------------------------
   5.4700e+00  0.0000e+00
   5.5000e+00  3.1752e-27
@@ -1533,7 +1533,7 @@ C2H5 -> C2H2 H2 H
 
 EXCITATION
 C2H5 -> CH4 CH
-6.5 / mass ratio
+6.5 / threshold energy
 -----------------------------
   6.5000e+00  0.0000e+00
   6.6000e+00  3.2047e-26
@@ -1570,7 +1570,7 @@ C2H5 -> CH4 CH
 
 EXCITATION
 C2H5 -> CH3 CH2
-6.6 / mass ratio
+6.6 / threshold energy
 -----------------------------
   6.6000e+00  0.0000e+00
   6.7000e+00  3.0269e-26
@@ -1607,7 +1607,7 @@ C2H5 -> CH3 CH2
 
 EXCITATION
 C2H4 -> C2H3 H
-6.9 / mass ratio
+6.9 / threshold energy
 -----------------------------
   6.9000e+00  0.0000e+00
   7.0000e+00  1.2590e-25
@@ -1644,7 +1644,7 @@ C2H4 -> C2H3 H
 
 EXCITATION
 C2H4 -> C2H2 H2
-5.8 / mass ratio
+5.8 / threshold energy
 -----------------------------
   5.8000e+00  0.0000e+00
   5.9000e+00  1.8078e-25
@@ -1681,7 +1681,7 @@ C2H4 -> C2H2 H2
 
 EXCITATION
 C2H4 -> C2H2 H H
-6.5 / mass ratio
+6.5 / threshold energy
 -----------------------------
   6.5000e+00  0.0000e+00
   6.6000e+00  7.8691e-26
@@ -1718,7 +1718,7 @@ C2H4 -> C2H2 H H
 
 EXCITATION
 C2H4 -> CH3 CH
-8.7 / mass ratio
+8.7 / threshold energy
 -----------------------------
   8.7000e+00  0.0000e+00
   8.8000e+00  9.9442e-27
@@ -1755,7 +1755,7 @@ C2H4 -> CH3 CH
 
 EXCITATION
 C2H4 -> CH2 CH2
-8.9 / mass ratio
+8.9 / threshold energy
 -----------------------------
   8.9000e+00  0.0000e+00
   9.0000e+00  9.1375e-27
@@ -1792,7 +1792,7 @@ C2H4 -> CH2 CH2
 
 EXCITATION
 C2H3 -> C2H2 H
-4.6 / mass ratio
+4.6 / threshold energy
 -----------------------------
   4.6000e+00  0.0000e+00
   5.0000e+00  4.0613e-23
@@ -1829,7 +1829,7 @@ C2H3 -> C2H2 H
 
 EXCITATION
 C2H3 -> CH2 CH
-8.7 / mass ratio
+8.7 / threshold energy
 -----------------------------
   8.7000e+00  0.0000e+00
   8.8000e+00  9.0890e-27
@@ -1866,7 +1866,7 @@ C2H3 -> CH2 CH
 
 EXCITATION
 C2H2 -> CH CH
-10.6 / mass ratio
+10.6 / threshold energy
 -----------------------------
   1.0600e+01  0.0000e+00
   1.0700e+01  5.9265e-27
@@ -1903,7 +1903,7 @@ C2H2 -> CH CH
 
 EXCITATION
 C3H8 -> C3H7 H
-5.82 / mass ratio
+5.82 / threshold energy
 -----------------------------
   5.8200e+00  0.0000e+00
   6.0000e+00  1.6387e-24
@@ -1932,7 +1932,7 @@ C3H8 -> C3H7 H
 
 EXCITATION
 C3H8 -> C3H6 H2
-2.66 / mass ratio
+2.66 / threshold energy
 -----------------------------
   2.6600e+00  0.0000e+00
   3.0000e+00  2.4488e-22
@@ -1961,7 +1961,7 @@ C3H8 -> C3H6 H2
 
 EXCITATION
 C3H8 -> C3H4 H2 H2
-4.26 / mass ratio
+4.26 / threshold energy
 -----------------------------
   4.2600e+00  0.0000e+00
   5.0000e+00  7.2650e-23
@@ -1990,7 +1990,7 @@ C3H8 -> C3H4 H2 H2
 
 EXCITATION
 C3H8 -> C2H6 CH2
-5.7 / mass ratio
+5.7 / threshold energy
 -----------------------------
   5.7000e+00  0.0000e+00
   6.0000e+00  1.0345e-24
@@ -2019,7 +2019,7 @@ C3H8 -> C2H6 CH2
 
 EXCITATION
 C3H8 -> C2H5 CH3
-5.05 / mass ratio
+5.05 / threshold energy
 -----------------------------
   5.0500e+00  0.0000e+00
   6.5000e+00  1.1488e-22
@@ -2048,7 +2048,7 @@ C3H8 -> C2H5 CH3
 
 EXCITATION
 C3H8 -> C2H4 CH4
-2.1 / mass ratio
+2.1 / threshold energy
 -----------------------------
   2.1000e+00  0.0000e+00
   3.0000e+00  4.0076e-21
@@ -2077,7 +2077,7 @@ C3H8 -> C2H4 CH4
 
 EXCITATION
 C3H7 -> C3H6 H
-3.16 / mass ratio
+3.16 / threshold energy
 -----------------------------
   3.1600e+00  0.0000e+00
   4.0000e+00  1.0854e-21
@@ -2106,7 +2106,7 @@ C3H7 -> C3H6 H
 
 EXCITATION
 C3H7 -> C3H5 H2
-2.4 / mass ratio
+2.4 / threshold energy
 -----------------------------
   2.4000e+00  0.0000e+00
   3.0000e+00  1.3521e-21
@@ -2135,7 +2135,7 @@ C3H7 -> C3H5 H2
 
 EXCITATION
 C3H7 -> C3H4 H2 H
-5.59 / mass ratio
+5.59 / threshold energy
 -----------------------------
   5.5900e+00  0.0000e+00
   6.0000e+00  2.5059e-24
@@ -2164,7 +2164,7 @@ C3H7 -> C3H4 H2 H
 
 EXCITATION
 C3H7 -> C2H4 CH3
-3.12 / mass ratio
+3.12 / threshold energy
 -----------------------------
   3.1200e+00  0.0000e+00
   4.0000e+00  5.0697e-22
@@ -2193,7 +2193,7 @@ C3H7 -> C2H4 CH3
 
 EXCITATION
 C3H7 -> C2H3 CH4
-3.89 / mass ratio
+3.89 / threshold energy
 -----------------------------
   3.8900e+00  0.0000e+00
   4.0000e+00  5.3317e-25
@@ -2222,7 +2222,7 @@ C3H7 -> C2H3 CH4
 
 EXCITATION
 C3H6 -> C3H5 H
-5.35 / mass ratio
+5.35 / threshold energy
 -----------------------------
   5.3500e+00  0.0000e+00
   6.0000e+00  7.8730e-23
@@ -2251,7 +2251,7 @@ C3H6 -> C3H5 H
 
 EXCITATION
 C3H6 -> C3H4 H2
-3.76 / mass ratio
+3.76 / threshold energy
 -----------------------------
   3.7600e+00  0.0000e+00
   4.0000e+00  2.2455e-23
@@ -2280,7 +2280,7 @@ C3H6 -> C3H4 H2
 
 EXCITATION
 C3H6 -> C2H4 CH2
-5.82 / mass ratio
+5.82 / threshold energy
 -----------------------------
   5.8200e+00  0.0000e+00
   6.0000e+00  4.0126e-25
@@ -2309,7 +2309,7 @@ C3H6 -> C2H4 CH2
 
 EXCITATION
 C3H6 -> C2H3 CH3
-5.81 / mass ratio
+5.81 / threshold energy
 -----------------------------
   5.8100e+00  0.0000e+00
   6.0000e+00  4.7192e-25
@@ -2338,7 +2338,7 @@ C3H6 -> C2H3 CH3
 
 EXCITATION
 C3H6 -> C2H2 CH4
-3.35 / mass ratio
+3.35 / threshold energy
 -----------------------------
   3.3500e+00  0.0000e+00
   4.0000e+00  3.2713e-22
@@ -2367,7 +2367,7 @@ C3H6 -> C2H2 CH4
 
 EXCITATION
 C3H5 -> C3H4 H
-4.37 / mass ratio
+4.37 / threshold energy
 -----------------------------
   4.3700e+00  0.0000e+00
   5.0000e+00  1.3557e-22
@@ -2396,7 +2396,7 @@ C3H5 -> C3H4 H
 
 EXCITATION
 C3H5 -> C2H2 CH3
-4.02 / mass ratio
+4.02 / threshold energy
 -----------------------------
   4.0200e+00  0.0000e+00
   5.0000e+00  1.8371e-22
@@ -2425,7 +2425,7 @@ C3H5 -> C2H2 CH3
 
 EXCITATION
 C3H4 -> C2H3 CH
-9.54 / mass ratio
+9.54 / threshold energy
 -----------------------------
   9.5400e+00  0.0000e+00
   1.0000e+01  2.8699e-25
@@ -2454,7 +2454,7 @@ C3H4 -> C2H3 CH
 
 EXCITATION
 C3H4 -> C2H2 CH2
-5.98 / mass ratio
+5.98 / threshold energy
 -----------------------------
   5.9800e+00  0.0000e+00
   6.0000e+00  6.5040e-28
@@ -2483,7 +2483,7 @@ C3H4 -> C2H2 CH2
 
 IONIZATION
 C2H6 -> C2H6^+
-11.6 / mass ratio
+11.6 / threshold energy
 -----------------------------
   1.1600e+01  0.0000e+00
   1.2000e+01  4.2824e-23
@@ -2507,7 +2507,7 @@ C2H6 -> C2H6^+
 
 IONIZATION
 C2H6 -> H C2H5^+
-12.65 / mass ratio
+12.65 / threshold energy
 -----------------------------
   1.2650e+01  0.0000e+00
   1.3800e+01  4.1157e-24
@@ -2531,7 +2531,7 @@ C2H6 -> H C2H5^+
 
 IONIZATION
 C2H6 -> H2 C2H4^+
-11.81 / mass ratio
+11.81 / threshold energy
 -----------------------------
   1.1810e+01  0.0000e+00
   1.2000e+01  1.9380e-23
@@ -2555,7 +2555,7 @@ C2H6 -> H2 C2H4^+
 
 IONIZATION
 C2H6 -> H2 H C2H3^+
-15.0 / mass ratio
+15.0 / threshold energy
 -----------------------------
   1.5000e+01  0.0000e+00
   1.5200e+01  6.1207e-23
@@ -2579,7 +2579,7 @@ C2H6 -> H2 H C2H3^+
 
 IONIZATION
 C2H6 -> H2 H2 C2H2^+
-16.0 / mass ratio
+16.0 / threshold energy
 -----------------------------
   1.6000e+01  0.0000e+00
   1.6100e+01  3.6159e-23
@@ -2603,7 +2603,7 @@ C2H6 -> H2 H2 C2H2^+
 
 IONIZATION
 C2H6 -> CH3 CH3^+
-15.5 / mass ratio
+15.5 / threshold energy
 -----------------------------
   1.5500e+01  0.0000e+00
   1.7300e+01  6.9138e-24
@@ -2627,7 +2627,7 @@ C2H6 -> CH3 CH3^+
 
 IONIZATION
 C2H6 -> CH4 CH2^+
-26.0 / mass ratio
+26.0 / threshold energy
 -----------------------------
   2.6000e+01  0.0000e+00
   1.7300e+01  2.4736e-21
@@ -2651,7 +2651,7 @@ C2H6 -> CH4 CH2^+
 
 IONIZATION
 C2H5 -> C2H5^+
-9.26 / mass ratio
+9.26 / threshold energy
 -----------------------------
   9.2600e+00  0.0000e+00
   1.0500e+01  1.9037e-23
@@ -2675,7 +2675,7 @@ C2H5 -> C2H5^+
 
 IONIZATION
 C2H5 -> H C2H4^+
-11.5 / mass ratio
+11.5 / threshold energy
 -----------------------------
   1.1500e+01  0.0000e+00
   1.2000e+01  5.3889e-23
@@ -2699,7 +2699,7 @@ C2H5 -> H C2H4^+
 
 IONIZATION
 C2H5 -> H2 C2H3^+
-12.1 / mass ratio
+12.1 / threshold energy
 -----------------------------
   1.2100e+01  0.0000e+00
   1.2500e+01  3.5780e-23
@@ -2723,7 +2723,7 @@ C2H5 -> H2 C2H3^+
 
 IONIZATION
 C2H5 -> H2 H C2H2^+
-16.3 / mass ratio
+16.3 / threshold energy
 -----------------------------
   1.6300e+01  0.0000e+00
   1.6500e+01  5.0748e-24
@@ -2747,7 +2747,7 @@ C2H5 -> H2 H C2H2^+
 
 IONIZATION
 C2H5 -> CH2 CH3^+
-18.1 / mass ratio
+18.1 / threshold energy
 -----------------------------
   1.8100e+01  0.0000e+00
   1.9200e+01  1.1366e-23
@@ -2771,7 +2771,7 @@ C2H5 -> CH2 CH3^+
 
 IONIZATION
 C2H5 -> CH3 CH2^+
-18.7 / mass ratio
+18.7 / threshold energy
 -----------------------------
   1.8700e+01  0.0000e+00
   2.0500e+01  3.2454e-24
@@ -2795,7 +2795,7 @@ C2H5 -> CH3 CH2^+
 
 IONIZATION
 C2H5 -> CH4 CH^+
-20.0 / mass ratio
+20.0 / threshold energy
 -----------------------------
   2.0000e+01  0.0000e+00
   2.2300e+01  1.6386e-24
@@ -2819,7 +2819,7 @@ C2H5 -> CH4 CH^+
 
 IONIZATION
 C2H4 -> C2H4^+
-11.0 / mass ratio
+11.0 / threshold energy
 -----------------------------
   1.1000e+01  0.0000e+00
   1.2000e+01  2.7586e-22
@@ -2843,7 +2843,7 @@ C2H4 -> C2H4^+
 
 IONIZATION
 C2H4 -> H C2H3^+
-12.6 / mass ratio
+12.6 / threshold energy
 -----------------------------
   1.2600e+01  0.0000e+00
   1.3900e+01  1.4320e-23
@@ -2867,7 +2867,7 @@ C2H4 -> H C2H3^+
 
 IONIZATION
 C2H4 -> CH CH3^+
-21.5 / mass ratio
+21.5 / threshold energy
 -----------------------------
   2.1500e+01  0.0000e+00
   2.2000e+01  1.4492e-23
@@ -2891,7 +2891,7 @@ C2H4 -> CH CH3^+
 
 IONIZATION
 C2H4 -> CH2 CH2^+
-21.5 / mass ratio
+21.5 / threshold energy
 -----------------------------
   2.1500e+01  0.0000e+00
   2.2000e+01  1.3295e-23
@@ -2915,7 +2915,7 @@ C2H4 -> CH2 CH2^+
 
 IONIZATION
 C2H4 -> CH3 CH^+
-27.4 / mass ratio
+27.4 / threshold energy
 -----------------------------
   2.7400e+01  0.0000e+00
   2.8000e+01  6.1976e-24
@@ -2939,7 +2939,7 @@ C2H4 -> CH3 CH^+
 
 IONIZATION
 C2H3 -> C2H3^+
-10.0 / mass ratio
+10.0 / threshold energy
 -----------------------------
   1.0000e+01  0.0000e+00
   1.1000e+01  1.1198e-21
@@ -2964,7 +2964,7 @@ C2H3 -> C2H3^+
 
 IONIZATION
 C2H3 -> H C2H2^+
-12.3 / mass ratio
+12.3 / threshold energy
 -----------------------------
   1.2300e+01  0.0000e+00
   1.2500e+01  6.4753e-23
@@ -2989,7 +2989,7 @@ C2H3 -> H C2H2^+
 
 IONIZATION
 C2H3 -> CH CH2^+
-20.0 / mass ratio
+20.0 / threshold energy
 -----------------------------
   2.0000e+01  0.0000e+00
   2.1000e+01  1.1349e-23
@@ -3014,7 +3014,7 @@ C2H3 -> CH CH2^+
 
 IONIZATION
 C2H3 -> CH2 CH^+
-25.0 / mass ratio
+25.0 / threshold energy
 -----------------------------
   2.5000e+01  0.0000e+00
   2.5500e+01  7.7329e-25
@@ -3039,7 +3039,7 @@ C2H3 -> CH2 CH^+
 
 IONIZATION
 C2H3 -> C2H2 H^+
-21.1 / mass ratio
+21.1 / threshold energy
 -----------------------------
   2.1100e+01  0.0000e+00
   2.1500e+01  1.0622e-24
@@ -3064,7 +3064,7 @@ C2H3 -> C2H2 H^+
 
 IONIZATION
 C2H2 -> C2H2^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.6000e+01  3.6137e-21
@@ -3089,7 +3089,7 @@ C2H2 -> C2H2^+
 
 IONIZATION
 C2H2 -> CH CH^+
-23.9 / mass ratio
+23.9 / threshold energy
 -----------------------------
   2.3900e+01  0.0000e+00
   2.4000e+01  5.8599e-24
@@ -3114,7 +3114,7 @@ C2H2 -> CH CH^+
 
 IONIZATION
 C3H8 -> C3H8^+
-14.3 / mass ratio
+14.3 / threshold energy
 -----------------------------
   1.4300e+01  0.0000e+00
   1.4500e+01  3.3375e-22
@@ -3138,7 +3138,7 @@ C3H8 -> C3H8^+
 
 IONIZATION
 C3H8 -> H C3H7^+
-14.32 / mass ratio
+14.32 / threshold energy
 -----------------------------
   1.4320e+01  0.0000e+00
   1.4800e+01  3.2310e-24
@@ -3162,7 +3162,7 @@ C3H8 -> H C3H7^+
 
 IONIZATION
 C3H8 -> H2 C3H6^+
-18.11 / mass ratio
+18.11 / threshold energy
 -----------------------------
   1.8110e+01  0.0000e+00
   1.8200e+01  1.4874e-23
@@ -3186,7 +3186,7 @@ C3H8 -> H2 C3H6^+
 
 IONIZATION
 C3H8 -> H2 H C3H5^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.5600e+01  2.6795e-23
@@ -3210,7 +3210,7 @@ C3H8 -> H2 H C3H5^+
 
 IONIZATION
 C3H8 -> H2 H2 C3H4^+
-16.25 / mass ratio
+16.25 / threshold energy
 -----------------------------
   1.6250e+01  0.0000e+00
   1.6300e+01  2.4787e-24
@@ -3234,7 +3234,7 @@ C3H8 -> H2 H2 C3H4^+
 
 IONIZATION
 C3H8 -> CH3 C2H5^+
-13.92 / mass ratio
+13.92 / threshold energy
 -----------------------------
   1.3920e+01  0.0000e+00
   1.4000e+01  8.9071e-23
@@ -3258,7 +3258,7 @@ C3H8 -> CH3 C2H5^+
 
 IONIZATION
 C3H8 -> CH4 C2H4^+
-14.19 / mass ratio
+14.19 / threshold energy
 -----------------------------
   1.4190e+01  0.0000e+00
   1.5300e+01  3.4449e-24
@@ -3282,7 +3282,7 @@ C3H8 -> CH4 C2H4^+
 
 IONIZATION
 C3H8 -> C2H5 CH3^+
-23.0 / mass ratio
+23.0 / threshold energy
 -----------------------------
   2.3000e+01  0.0000e+00
   2.7000e+01  5.1958e-24
@@ -3306,7 +3306,7 @@ C3H8 -> C2H5 CH3^+
 
 IONIZATION
 C3H8 -> C2H6 CH2^+
-21.0 / mass ratio
+21.0 / threshold energy
 -----------------------------
   2.1000e+01  0.0000e+00
   2.5000e+01  1.0447e-24
@@ -3330,7 +3330,7 @@ C3H8 -> C2H6 CH2^+
 
 IONIZATION
 C3H7 -> C3H7^+
-7.55 / mass ratio
+7.55 / threshold energy
 -----------------------------
   7.5500e+00  0.0000e+00
   8.0000e+00  2.0829e-23
@@ -3358,7 +3358,7 @@ C3H7 -> C3H7^+
 
 IONIZATION
 C3H7 -> H C3H6^+
-10.3 / mass ratio
+10.3 / threshold energy
 -----------------------------
   1.0300e+01  0.0000e+00
   1.0500e+01  3.5208e-25
@@ -3386,7 +3386,7 @@ C3H7 -> H C3H6^+
 
 IONIZATION
 C3H7 -> H2 C3H5^+
-8.99 / mass ratio
+8.99 / threshold energy
 -----------------------------
   8.9900e+00  0.0000e+00
   9.0000e+00  8.3928e-29
@@ -3414,7 +3414,7 @@ C3H7 -> H2 C3H5^+
 
 IONIZATION
 C3H7 -> H2 H C3H4^+
-13.65 / mass ratio
+13.65 / threshold energy
 -----------------------------
   1.3650e+01  0.0000e+00
   1.4000e+01  4.8893e-25
@@ -3442,7 +3442,7 @@ C3H7 -> H2 H C3H4^+
 
 IONIZATION
 C3H7 -> CH2 C2H5^+
-12.42 / mass ratio
+12.42 / threshold energy
 -----------------------------
   1.2420e+01  0.0000e+00
   1.3000e+01  3.2107e-24
@@ -3470,7 +3470,7 @@ C3H7 -> CH2 C2H5^+
 
 IONIZATION
 C3H7 -> CH3 C2H4^+
-11.55 / mass ratio
+11.55 / threshold energy
 -----------------------------
   1.1550e+01  0.0000e+00
   1.2000e+01  2.2714e-24
@@ -3498,7 +3498,7 @@ C3H7 -> CH3 C2H4^+
 
 IONIZATION
 C3H7 -> CH4 C2H3^+
-9.64 / mass ratio
+9.64 / threshold energy
 -----------------------------
   9.6400e+00  0.0000e+00
   1.0000e+01  3.0160e-24
@@ -3526,7 +3526,7 @@ C3H7 -> CH4 C2H3^+
 
 IONIZATION
 C3H7 -> C2H3 CH4^+
-13.09 / mass ratio
+13.09 / threshold energy
 -----------------------------
   1.3090e+01  0.0000e+00
   1.4000e+01  3.3481e-24
@@ -3554,7 +3554,7 @@ C3H7 -> C2H3 CH4^+
 
 IONIZATION
 C3H7 -> C2H4 CH3^+
-10.88 / mass ratio
+10.88 / threshold energy
 -----------------------------
   1.0880e+01  0.0000e+00
   1.1000e+01  3.2503e-26
@@ -3582,7 +3582,7 @@ C3H7 -> C2H4 CH3^+
 
 IONIZATION
 C3H7 -> C2H5 CH2^+
-14.7 / mass ratio
+14.7 / threshold energy
 -----------------------------
   1.4700e+01  0.0000e+00
   1.1000e+01  -3.5495e-22
@@ -3610,7 +3610,7 @@ C3H7 -> C2H5 CH2^+
 
 IONIZATION
 C3H7 -> C2H6 CH^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.1000e+01  -9.4251e-23
@@ -3638,7 +3638,7 @@ C3H7 -> C2H6 CH^+
 
 IONIZATION
 C3H6 -> C3H6^+
-9.72 / mass ratio
+9.72 / threshold energy
 -----------------------------
   9.7200e+00  0.0000e+00
   1.0000e+01  2.3643e-24
@@ -3666,7 +3666,7 @@ C3H6 -> C3H6^+
 
 IONIZATION
 C3H6 -> H C3H5^+
-11.95 / mass ratio
+11.95 / threshold energy
 -----------------------------
   1.1950e+01  0.0000e+00
   1.2000e+01  4.9715e-27
@@ -3694,7 +3694,7 @@ C3H6 -> H C3H5^+
 
 IONIZATION
 C3H6 -> H2 C3H4^+
-12.07 / mass ratio
+12.07 / threshold energy
 -----------------------------
   1.2070e+01  0.0000e+00
   1.3000e+01  2.1302e-23
@@ -3722,7 +3722,7 @@ C3H6 -> H2 C3H4^+
 
 IONIZATION
 C3H6 -> CH C2H5^+
-15.28 / mass ratio
+15.28 / threshold energy
 -----------------------------
   1.5280e+01  0.0000e+00
   1.6000e+01  1.4849e-24
@@ -3750,7 +3750,7 @@ C3H6 -> CH C2H5^+
 
 IONIZATION
 C3H6 -> CH2 C2H4^+
-14.82 / mass ratio
+14.82 / threshold energy
 -----------------------------
   1.4820e+01  0.0000e+00
   1.5000e+01  4.2718e-26
@@ -3778,7 +3778,7 @@ C3H6 -> CH2 C2H4^+
 
 IONIZATION
 C3H6 -> CH3 C2H3^+
-12.55 / mass ratio
+12.55 / threshold energy
 -----------------------------
   1.2550e+01  0.0000e+00
   1.5000e+01  1.5412e-22
@@ -3806,7 +3806,7 @@ C3H6 -> CH3 C2H3^+
 
 IONIZATION
 C3H6 -> CH4 C2H2^+
-12.74 / mass ratio
+12.74 / threshold energy
 -----------------------------
   1.2740e+01  0.0000e+00
   1.5000e+01  5.7235e-23
@@ -3834,7 +3834,7 @@ C3H6 -> CH4 C2H2^+
 
 IONIZATION
 C3H6 -> C2H2 CH4^+
-14.04 / mass ratio
+14.04 / threshold energy
 -----------------------------
   1.4040e+01  0.0000e+00
   1.5000e+01  2.1934e-24
@@ -3862,7 +3862,7 @@ C3H6 -> C2H2 CH4^+
 
 IONIZATION
 C3H6 -> C2H3 CH3^+
-14.14 / mass ratio
+14.14 / threshold energy
 -----------------------------
   1.4140e+01  0.0000e+00
   1.5000e+01  3.0104e-24
@@ -3890,7 +3890,7 @@ C3H6 -> C2H3 CH3^+
 
 IONIZATION
 C3H6 -> C2H4 CH2^+
-14.71 / mass ratio
+14.71 / threshold energy
 -----------------------------
   1.4710e+01  0.0000e+00
   1.5000e+01  2.7484e-26
@@ -3918,7 +3918,7 @@ C3H6 -> C2H4 CH2^+
 
 IONIZATION
 C3H6 -> C2H5 CH^+
-17.8 / mass ratio
+17.8 / threshold energy
 -----------------------------
   1.7800e+01  0.0000e+00
   1.8000e+01  2.7280e-27
@@ -3946,7 +3946,7 @@ C3H6 -> C2H5 CH^+
 
 IONIZATION
 C3H5 -> C3H5^+
-8.13 / mass ratio
+8.13 / threshold energy
 -----------------------------
   8.1300e+00  0.0000e+00
   9.0000e+00  1.4313e-22
@@ -3974,7 +3974,7 @@ C3H5 -> C3H5^+
 
 IONIZATION
 C3H5 -> H C3H4^+
-12.79 / mass ratio
+12.79 / threshold energy
 -----------------------------
   1.2790e+01  0.0000e+00
   1.3000e+01  3.3910e-25
@@ -4002,7 +4002,7 @@ C3H5 -> H C3H4^+
 
 IONIZATION
 C3H5 -> CH C2H4^+
-15.44 / mass ratio
+15.44 / threshold energy
 -----------------------------
   1.5440e+01  0.0000e+00
   1.6000e+01  3.0635e-25
@@ -4030,7 +4030,7 @@ C3H5 -> CH C2H4^+
 
 IONIZATION
 C3H5 -> CH2 C2H3^+
-13.58 / mass ratio
+13.58 / threshold energy
 -----------------------------
   1.3580e+01  0.0000e+00
   1.4000e+01  6.5157e-25
@@ -4058,7 +4058,7 @@ C3H5 -> CH2 C2H3^+
 
 IONIZATION
 C3H5 -> CH3 C2H2^+
-13.41 / mass ratio
+13.41 / threshold energy
 -----------------------------
   1.3410e+01  0.0000e+00
   1.4000e+01  1.0068e-24
@@ -4086,7 +4086,7 @@ C3H5 -> CH3 C2H2^+
 
 IONIZATION
 C3H5 -> C2H2 CH3^+
-11.85 / mass ratio
+11.85 / threshold energy
 -----------------------------
   1.1850e+01  0.0000e+00
   1.2000e+01  2.8751e-26
@@ -4114,7 +4114,7 @@ C3H5 -> C2H2 CH3^+
 
 IONIZATION
 C3H5 -> C2H3 CH2^+
-15.73 / mass ratio
+15.73 / threshold energy
 -----------------------------
   1.5730e+01  0.0000e+00
   1.6000e+01  2.5751e-26
@@ -4142,7 +4142,7 @@ C3H5 -> C2H3 CH2^+
 
 IONIZATION
 C3H5 -> C2H4 CH^+
-15.57 / mass ratio
+15.57 / threshold energy
 -----------------------------
   1.5570e+01  0.0000e+00
   1.6000e+01  6.9346e-26
@@ -4170,7 +4170,7 @@ C3H5 -> C2H4 CH^+
 
 IONIZATION
 C3H4 -> C3H4^+
-10.36 / mass ratio
+10.36 / threshold energy
 -----------------------------
   1.0360e+01  0.0000e+00
   1.1000e+01  3.2494e-23
@@ -4198,7 +4198,7 @@ C3H4 -> C3H4^+
 
 IONIZATION
 C3H4 -> CH C2H3^+
-15.59 / mass ratio
+15.59 / threshold energy
 -----------------------------
   1.5590e+01  0.0000e+00
   1.6000e+01  2.0160e-25
@@ -4226,7 +4226,7 @@ C3H4 -> CH C2H3^+
 
 IONIZATION
 C3H4 -> CH2 C2H2^+
-15.83 / mass ratio
+15.83 / threshold energy
 -----------------------------
   1.5830e+01  0.0000e+00
   1.6000e+01  1.1412e-26
@@ -4254,7 +4254,7 @@ C3H4 -> CH2 C2H2^+
 
 IONIZATION
 C3H4 -> C2H2 CH2^+
-14.83 / mass ratio
+14.83 / threshold energy
 -----------------------------
   1.4830e+01  0.0000e+00
   1.5000e+01  1.1314e-26
@@ -4282,7 +4282,7 @@ C3H4 -> C2H2 CH2^+
 
 IONIZATION
 C3H4 -> C2H3 CH^+
-17.98 / mass ratio
+17.98 / threshold energy
 -----------------------------
   1.7980e+01  0.0000e+00
   1.8000e+01  6.1944e-30
@@ -4310,7 +4310,7 @@ C3H4 -> C2H3 CH^+
 
 EXCITATION
 CH4(v24) -> CH3 H
-8.8 / mass ratio
+8.8 / threshold energy
 -----------------------------
   8.8000e+00  0.0000e+00
   9.0000e+00  9.7183e-25
@@ -4338,7 +4338,7 @@ CH4(v24) -> CH3 H
 
 EXCITATION
 CH4(v13) -> CH3 H
-8.8 / mass ratio
+8.8 / threshold energy
 -----------------------------
   8.8000e+00  0.0000e+00
   9.0000e+00  9.7183e-25
@@ -4366,7 +4366,7 @@ CH4(v13) -> CH3 H
 
 EXCITATION
 CH4(v24) -> CH2 H2
-9.4 / mass ratio
+9.4 / threshold energy
 -----------------------------
   9.4000e+00  0.0000e+00
   9.5000e+00  1.8782e-26
@@ -4393,7 +4393,7 @@ CH4(v24) -> CH2 H2
 
 EXCITATION
 CH4(v13) -> CH2 H2
-9.4 / mass ratio
+9.4 / threshold energy
 -----------------------------
   9.4000e+00  0.0000e+00
   9.5000e+00  1.8782e-26
@@ -4420,7 +4420,7 @@ CH4(v13) -> CH2 H2
 
 EXCITATION
 CH4(v24) -> CH H2 H
-12.5 / mass ratio
+12.5 / threshold energy
 -----------------------------
   1.2500e+01  0.0000e+00
   1.3000e+01  3.6790e-25
@@ -4443,7 +4443,7 @@ CH4(v24) -> CH H2 H
 
 EXCITATION
 CH4(v13) -> CH H2 H
-12.5 / mass ratio
+12.5 / threshold energy
 -----------------------------
   1.2500e+01  0.0000e+00
   1.3000e+01  3.6790e-25
@@ -4466,7 +4466,7 @@ CH4(v13) -> CH H2 H
 
 IONIZATION
 CH4(v24) -> CH4^+
-12.63 / mass ratio
+12.63 / threshold energy
 -----------------------------
   1.2630e+01  0.0000e+00
   1.3900e+01  4.8183e-23
@@ -4489,7 +4489,7 @@ CH4(v24) -> CH4^+
 
 IONIZATION
 CH4(v13) -> CH4^+
-12.63 / mass ratio
+12.63 / threshold energy
 -----------------------------
   1.2630e+01  0.0000e+00
   1.3900e+01  4.8183e-23
@@ -4512,7 +4512,7 @@ CH4(v13) -> CH4^+
 
 IONIZATION
 CH4(v24) -> H CH3^+
-14.01 / mass ratio
+14.01 / threshold energy
 -----------------------------
   1.4010e+01  0.0000e+00
   1.5000e+01  5.4775e-22
@@ -4533,7 +4533,7 @@ CH4(v24) -> H CH3^+
 
 IONIZATION
 CH4(v13) -> H CH3^+
-14.01 / mass ratio
+14.01 / threshold energy
 -----------------------------
   1.4010e+01  0.0000e+00
   1.5000e+01  5.4775e-22
@@ -4554,7 +4554,7 @@ CH4(v13) -> H CH3^+
 
 IONIZATION
 CH4(v24) -> H2 CH2^+
-16.2 / mass ratio
+16.2 / threshold energy
 -----------------------------
   1.6200e+01  0.0000e+00
   1.7000e+01  3.0857e-21
@@ -4573,7 +4573,7 @@ CH4(v24) -> H2 CH2^+
 
 IONIZATION
 CH4(v13) -> H2 CH2^+
-16.2 / mass ratio
+16.2 / threshold energy
 -----------------------------
   1.6200e+01  0.0000e+00
   1.7000e+01  3.0857e-21
@@ -4592,7 +4592,7 @@ CH4(v13) -> H2 CH2^+
 
 IONIZATION
 CH4(v24) -> H2 H CH^+
-22.2 / mass ratio
+22.2 / threshold energy
 -----------------------------
   2.2200e+01  0.0000e+00
   2.3000e+01  1.9463e-23
@@ -4614,7 +4614,7 @@ CH4(v24) -> H2 H CH^+
 
 IONIZATION
 CH4(v13) -> H2 H CH^+
-22.2 / mass ratio
+22.2 / threshold energy
 -----------------------------
   2.2200e+01  0.0000e+00
   2.3000e+01  1.9463e-23
@@ -4636,7 +4636,7 @@ CH4(v13) -> H2 H CH^+
 
 EXCITATION
 C2H6(v24) -> C2H5 H
-7.45 / mass ratio
+7.45 / threshold energy
 -----------------------------
   7.4500e+00  0.0000e+00
   8.5000e+00  6.1501e-23
@@ -4665,7 +4665,7 @@ C2H6(v24) -> C2H5 H
 
 EXCITATION
 C2H6(v13) -> C2H5 H
-7.45 / mass ratio
+7.45 / threshold energy
 -----------------------------
   7.4500e+00  0.0000e+00
   8.5000e+00  6.1501e-23
@@ -4694,7 +4694,7 @@ C2H6(v13) -> C2H5 H
 
 EXCITATION
 C2H6(v24) -> C2H4 H2
-4.0 / mass ratio
+4.0 / threshold energy
 -----------------------------
   4.0000e+00  0.0000e+00
   4.5000e+00  1.4298e-22
@@ -4731,7 +4731,7 @@ C2H6(v24) -> C2H4 H2
 
 EXCITATION
 C2H6(v13) -> C2H4 H2
-4.0 / mass ratio
+4.0 / threshold energy
 -----------------------------
   4.0000e+00  0.0000e+00
   4.5000e+00  1.4298e-22
@@ -4768,7 +4768,7 @@ C2H6(v13) -> C2H4 H2
 
 EXCITATION
 C2H6(v24) -> C2H3 H2 H
-9.4 / mass ratio
+9.4 / threshold energy
 -----------------------------
   9.4000e+00  0.0000e+00
   9.5000e+00  5.8259e-27
@@ -4795,7 +4795,7 @@ C2H6(v24) -> C2H3 H2 H
 
 EXCITATION
 C2H6(v13) -> C2H3 H2 H
-9.4 / mass ratio
+9.4 / threshold energy
 -----------------------------
   9.4000e+00  0.0000e+00
   9.5000e+00  5.8259e-27
@@ -4822,7 +4822,7 @@ C2H6(v13) -> C2H3 H2 H
 
 EXCITATION
 C2H6(v24) -> C2H2 H2 H2
-6.2 / mass ratio
+6.2 / threshold energy
 -----------------------------
   6.2000e+00  0.0000e+00
   6.5000e+00  1.8141e-24
@@ -4855,7 +4855,7 @@ C2H6(v24) -> C2H2 H2 H2
 
 EXCITATION
 C2H6(v13) -> C2H2 H2 H2
-6.2 / mass ratio
+6.2 / threshold energy
 -----------------------------
   6.2000e+00  0.0000e+00
   6.5000e+00  1.8141e-24
@@ -4888,7 +4888,7 @@ C2H6(v13) -> C2H2 H2 H2
 
 EXCITATION
 C2H6(v24) -> CH4 CH2
-6.95 / mass ratio
+6.95 / threshold energy
 -----------------------------
   6.9500e+00  0.0000e+00
   7.0000e+00  4.0347e-27
@@ -4920,7 +4920,7 @@ C2H6(v24) -> CH4 CH2
 
 EXCITATION
 C2H6(v13) -> CH4 CH2
-6.95 / mass ratio
+6.95 / threshold energy
 -----------------------------
   6.9500e+00  0.0000e+00
   7.0000e+00  4.0347e-27
@@ -4952,7 +4952,7 @@ C2H6(v13) -> CH4 CH2
 
 EXCITATION
 C2H6(v24) -> CH3 CH3
-6.38 / mass ratio
+6.38 / threshold energy
 -----------------------------
   6.3800e+00  0.0000e+00
   6.5000e+00  8.4440e-26
@@ -4985,7 +4985,7 @@ C2H6(v24) -> CH3 CH3
 
 EXCITATION
 C2H6(v13) -> CH3 CH3
-6.38 / mass ratio
+6.38 / threshold energy
 -----------------------------
   6.3800e+00  0.0000e+00
   6.5000e+00  8.4440e-26
@@ -5018,7 +5018,7 @@ C2H6(v13) -> CH3 CH3
 
 EXCITATION
 C2H4(v1) -> C2H3 H
-6.9 / mass ratio
+6.9 / threshold energy
 -----------------------------
   6.9000e+00  0.0000e+00
   7.0000e+00  1.2590e-25
@@ -5055,7 +5055,7 @@ C2H4(v1) -> C2H3 H
 
 EXCITATION
 C2H4(v2) -> C2H3 H
-6.9 / mass ratio
+6.9 / threshold energy
 -----------------------------
   6.9000e+00  0.0000e+00
   7.0000e+00  1.2590e-25
@@ -5092,7 +5092,7 @@ C2H4(v2) -> C2H3 H
 
 EXCITATION
 C2H4(v1) -> C2H2 H2
-5.8 / mass ratio
+5.8 / threshold energy
 -----------------------------
   5.8000e+00  0.0000e+00
   5.9000e+00  1.8078e-25
@@ -5129,7 +5129,7 @@ C2H4(v1) -> C2H2 H2
 
 EXCITATION
 C2H4(v2) -> C2H2 H2
-5.8 / mass ratio
+5.8 / threshold energy
 -----------------------------
   5.8000e+00  0.0000e+00
   5.9000e+00  1.8078e-25
@@ -5166,7 +5166,7 @@ C2H4(v2) -> C2H2 H2
 
 EXCITATION
 C2H4(v1) -> C2H2 H H
-6.5 / mass ratio
+6.5 / threshold energy
 -----------------------------
   6.5000e+00  0.0000e+00
   6.6000e+00  7.8691e-26
@@ -5203,7 +5203,7 @@ C2H4(v1) -> C2H2 H H
 
 EXCITATION
 C2H4(v2) -> C2H2 H H
-6.5 / mass ratio
+6.5 / threshold energy
 -----------------------------
   6.5000e+00  0.0000e+00
   6.6000e+00  7.8691e-26
@@ -5240,7 +5240,7 @@ C2H4(v2) -> C2H2 H H
 
 EXCITATION
 C2H4(v1) -> CH3 CH
-8.7 / mass ratio
+8.7 / threshold energy
 -----------------------------
   8.7000e+00  0.0000e+00
   8.8000e+00  9.9442e-27
@@ -5277,7 +5277,7 @@ C2H4(v1) -> CH3 CH
 
 EXCITATION
 C2H4(v2) -> CH3 CH
-8.7 / mass ratio
+8.7 / threshold energy
 -----------------------------
   8.7000e+00  0.0000e+00
   8.8000e+00  9.9442e-27
@@ -5314,7 +5314,7 @@ C2H4(v2) -> CH3 CH
 
 EXCITATION
 C2H4(v1) -> CH2 CH2
-8.9 / mass ratio
+8.9 / threshold energy
 -----------------------------
   8.9000e+00  0.0000e+00
   9.0000e+00  9.1375e-27
@@ -5351,7 +5351,7 @@ C2H4(v1) -> CH2 CH2
 
 EXCITATION
 C2H4(v2) -> CH2 CH2
-8.9 / mass ratio
+8.9 / threshold energy
 -----------------------------
   8.9000e+00  0.0000e+00
   9.0000e+00  9.1375e-27
@@ -5388,7 +5388,7 @@ C2H4(v2) -> CH2 CH2
 
 EXCITATION
 C2H2(v5) -> CH CH
-10.6 / mass ratio
+10.6 / threshold energy
 -----------------------------
   1.0600e+01  0.0000e+00
   1.0700e+01  5.9265e-27
@@ -5425,7 +5425,7 @@ C2H2(v5) -> CH CH
 
 EXCITATION
 C2H2(v2) -> CH CH
-10.6 / mass ratio
+10.6 / threshold energy
 -----------------------------
   1.0600e+01  0.0000e+00
   1.0700e+01  5.9265e-27
@@ -5462,7 +5462,7 @@ C2H2(v2) -> CH CH
 
 EXCITATION
 C2H2(v13) -> CH CH
-10.6 / mass ratio
+10.6 / threshold energy
 -----------------------------
   1.0600e+01  0.0000e+00
   1.0700e+01  5.9265e-27
@@ -5499,7 +5499,7 @@ C2H2(v13) -> CH CH
 
 EXCITATION
 C3H8(v1) -> C3H7 H
-5.82 / mass ratio
+5.82 / threshold energy
 -----------------------------
   5.8200e+00  0.0000e+00
   6.0000e+00  1.6387e-24
@@ -5528,7 +5528,7 @@ C3H8(v1) -> C3H7 H
 
 EXCITATION
 C3H8(v2) -> C3H7 H
-5.82 / mass ratio
+5.82 / threshold energy
 -----------------------------
   5.8200e+00  0.0000e+00
   6.0000e+00  1.6387e-24
@@ -5557,7 +5557,7 @@ C3H8(v2) -> C3H7 H
 
 EXCITATION
 C3H8(v1) -> C3H6 H2
-2.66 / mass ratio
+2.66 / threshold energy
 -----------------------------
   2.6600e+00  0.0000e+00
   3.0000e+00  2.4488e-22
@@ -5586,7 +5586,7 @@ C3H8(v1) -> C3H6 H2
 
 EXCITATION
 C3H8(v2) -> C3H6 H2
-2.66 / mass ratio
+2.66 / threshold energy
 -----------------------------
   2.6600e+00  0.0000e+00
   3.0000e+00  2.4488e-22
@@ -5615,7 +5615,7 @@ C3H8(v2) -> C3H6 H2
 
 EXCITATION
 C3H8(v1) -> C3H4 H2 H2
-4.26 / mass ratio
+4.26 / threshold energy
 -----------------------------
   4.2600e+00  0.0000e+00
   5.0000e+00  7.2650e-23
@@ -5644,7 +5644,7 @@ C3H8(v1) -> C3H4 H2 H2
 
 EXCITATION
 C3H8(v2) -> C3H4 H2 H2
-4.26 / mass ratio
+4.26 / threshold energy
 -----------------------------
   4.2600e+00  0.0000e+00
   5.0000e+00  7.2650e-23
@@ -5673,7 +5673,7 @@ C3H8(v2) -> C3H4 H2 H2
 
 EXCITATION
 C3H8(v1) -> C2H6 CH2
-5.7 / mass ratio
+5.7 / threshold energy
 -----------------------------
   5.7000e+00  0.0000e+00
   6.0000e+00  1.0345e-24
@@ -5702,7 +5702,7 @@ C3H8(v1) -> C2H6 CH2
 
 EXCITATION
 C3H8(v2) -> C2H6 CH2
-5.7 / mass ratio
+5.7 / threshold energy
 -----------------------------
   5.7000e+00  0.0000e+00
   6.0000e+00  1.0345e-24
@@ -5731,7 +5731,7 @@ C3H8(v2) -> C2H6 CH2
 
 EXCITATION
 C3H8(v1) -> C2H5 CH3
-5.05 / mass ratio
+5.05 / threshold energy
 -----------------------------
   5.0500e+00  0.0000e+00
   6.5000e+00  1.1488e-22
@@ -5760,7 +5760,7 @@ C3H8(v1) -> C2H5 CH3
 
 EXCITATION
 C3H8(v2) -> C2H5 CH3
-5.05 / mass ratio
+5.05 / threshold energy
 -----------------------------
   5.0500e+00  0.0000e+00
   6.5000e+00  1.1488e-22
@@ -5789,7 +5789,7 @@ C3H8(v2) -> C2H5 CH3
 
 EXCITATION
 C3H8(v1) -> C2H4 CH4
-2.1 / mass ratio
+2.1 / threshold energy
 -----------------------------
   2.1000e+00  0.0000e+00
   3.0000e+00  4.0076e-21
@@ -5818,7 +5818,7 @@ C3H8(v1) -> C2H4 CH4
 
 EXCITATION
 C3H8(v2) -> C2H4 CH4
-2.1 / mass ratio
+2.1 / threshold energy
 -----------------------------
   2.1000e+00  0.0000e+00
   3.0000e+00  4.0076e-21
@@ -5847,7 +5847,7 @@ C3H8(v2) -> C2H4 CH4
 
 IONIZATION
 C2H6(v24) -> C2H6^+
-11.6 / mass ratio
+11.6 / threshold energy
 -----------------------------
   1.1600e+01  0.0000e+00
   1.2000e+01  4.2824e-23
@@ -5871,7 +5871,7 @@ C2H6(v24) -> C2H6^+
 
 IONIZATION
 C2H6(v13) -> C2H6^+
-11.6 / mass ratio
+11.6 / threshold energy
 -----------------------------
   1.1600e+01  0.0000e+00
   1.2000e+01  4.2824e-23
@@ -5895,7 +5895,7 @@ C2H6(v13) -> C2H6^+
 
 IONIZATION
 C2H6(v24) -> H C2H5^+
-12.65 / mass ratio
+12.65 / threshold energy
 -----------------------------
   1.2650e+01  0.0000e+00
   1.3800e+01  4.1157e-24
@@ -5919,7 +5919,7 @@ C2H6(v24) -> H C2H5^+
 
 IONIZATION
 C2H6(v13) -> H C2H5^+
-12.65 / mass ratio
+12.65 / threshold energy
 -----------------------------
   1.2650e+01  0.0000e+00
   1.3800e+01  4.1157e-24
@@ -5943,7 +5943,7 @@ C2H6(v13) -> H C2H5^+
 
 IONIZATION
 C2H6(v24) -> H2 C2H4^+
-11.81 / mass ratio
+11.81 / threshold energy
 -----------------------------
   1.1810e+01  0.0000e+00
   1.2000e+01  1.9380e-23
@@ -5967,7 +5967,7 @@ C2H6(v24) -> H2 C2H4^+
 
 IONIZATION
 C2H6(v13) -> H2 C2H4^+
-11.81 / mass ratio
+11.81 / threshold energy
 -----------------------------
   1.1810e+01  0.0000e+00
   1.2000e+01  1.9380e-23
@@ -5991,7 +5991,7 @@ C2H6(v13) -> H2 C2H4^+
 
 IONIZATION
 C2H6(v24) -> H2 H C2H3^+
-15.0 / mass ratio
+15.0 / threshold energy
 -----------------------------
   1.5000e+01  0.0000e+00
   1.5200e+01  6.1207e-23
@@ -6015,7 +6015,7 @@ C2H6(v24) -> H2 H C2H3^+
 
 IONIZATION
 C2H6(v13) -> H2 H C2H3^+
-15.0 / mass ratio
+15.0 / threshold energy
 -----------------------------
   1.5000e+01  0.0000e+00
   1.5200e+01  6.1207e-23
@@ -6039,7 +6039,7 @@ C2H6(v13) -> H2 H C2H3^+
 
 IONIZATION
 C2H6(v24) -> H2 H2 C2H2^+
-16.0 / mass ratio
+16.0 / threshold energy
 -----------------------------
   1.6000e+01  0.0000e+00
   1.6100e+01  3.6159e-23
@@ -6063,7 +6063,7 @@ C2H6(v24) -> H2 H2 C2H2^+
 
 IONIZATION
 C2H6(v13) -> H2 H2 C2H2^+
-16.0 / mass ratio
+16.0 / threshold energy
 -----------------------------
   1.6000e+01  0.0000e+00
   1.6100e+01  3.6159e-23
@@ -6087,7 +6087,7 @@ C2H6(v13) -> H2 H2 C2H2^+
 
 IONIZATION
 C2H6(v24) -> CH3 CH3^+
-15.5 / mass ratio
+15.5 / threshold energy
 -----------------------------
   1.5500e+01  0.0000e+00
   1.7300e+01  6.9138e-24
@@ -6111,7 +6111,7 @@ C2H6(v24) -> CH3 CH3^+
 
 IONIZATION
 C2H6(v13) -> CH3 CH3^+
-15.5 / mass ratio
+15.5 / threshold energy
 -----------------------------
   1.5500e+01  0.0000e+00
   1.7300e+01  6.9138e-24
@@ -6135,7 +6135,7 @@ C2H6(v13) -> CH3 CH3^+
 
 IONIZATION
 C2H6(v24) -> CH4 CH2^+
-26.0 / mass ratio
+26.0 / threshold energy
 -----------------------------
   2.6000e+01  0.0000e+00
   1.7300e+01  2.4736e-21
@@ -6159,7 +6159,7 @@ C2H6(v24) -> CH4 CH2^+
 
 IONIZATION
 C2H6(v13) -> CH4 CH2^+
-26.0 / mass ratio
+26.0 / threshold energy
 -----------------------------
   2.6000e+01  0.0000e+00
   1.7300e+01  2.4736e-21
@@ -6183,7 +6183,7 @@ C2H6(v13) -> CH4 CH2^+
 
 IONIZATION
 C2H4(v1) -> C2H4^+
-11.0 / mass ratio
+11.0 / threshold energy
 -----------------------------
   1.1000e+01  0.0000e+00
   1.2000e+01  2.7586e-22
@@ -6207,7 +6207,7 @@ C2H4(v1) -> C2H4^+
 
 IONIZATION
 C2H4(v2) -> C2H4^+
-11.0 / mass ratio
+11.0 / threshold energy
 -----------------------------
   1.1000e+01  0.0000e+00
   1.2000e+01  2.7586e-22
@@ -6231,7 +6231,7 @@ C2H4(v2) -> C2H4^+
 
 IONIZATION
 C2H4(v1) -> H C2H3^+
-12.6 / mass ratio
+12.6 / threshold energy
 -----------------------------
   1.2600e+01  0.0000e+00
   1.3900e+01  1.4320e-23
@@ -6255,7 +6255,7 @@ C2H4(v1) -> H C2H3^+
 
 IONIZATION
 C2H4(v2) -> H C2H3^+
-12.6 / mass ratio
+12.6 / threshold energy
 -----------------------------
   1.2600e+01  0.0000e+00
   1.3900e+01  1.4320e-23
@@ -6279,7 +6279,7 @@ C2H4(v2) -> H C2H3^+
 
 IONIZATION
 C2H4(v1) -> CH CH3^+
-21.5 / mass ratio
+21.5 / threshold energy
 -----------------------------
   2.1500e+01  0.0000e+00
   2.2000e+01  1.4492e-23
@@ -6303,7 +6303,7 @@ C2H4(v1) -> CH CH3^+
 
 IONIZATION
 C2H4(v2) -> CH CH3^+
-21.5 / mass ratio
+21.5 / threshold energy
 -----------------------------
   2.1500e+01  0.0000e+00
   2.2000e+01  1.4492e-23
@@ -6327,7 +6327,7 @@ C2H4(v2) -> CH CH3^+
 
 IONIZATION
 C2H4(v1) -> CH2 CH2^+
-21.5 / mass ratio
+21.5 / threshold energy
 -----------------------------
   2.1500e+01  0.0000e+00
   2.2000e+01  1.3295e-23
@@ -6351,7 +6351,7 @@ C2H4(v1) -> CH2 CH2^+
 
 IONIZATION
 C2H4(v2) -> CH2 CH2^+
-21.5 / mass ratio
+21.5 / threshold energy
 -----------------------------
   2.1500e+01  0.0000e+00
   2.2000e+01  1.3295e-23
@@ -6375,7 +6375,7 @@ C2H4(v2) -> CH2 CH2^+
 
 IONIZATION
 C2H4(v1) -> CH3 CH^+
-27.4 / mass ratio
+27.4 / threshold energy
 -----------------------------
   2.7400e+01  0.0000e+00
   2.8000e+01  6.1976e-24
@@ -6399,7 +6399,7 @@ C2H4(v1) -> CH3 CH^+
 
 IONIZATION
 C2H4(v2) -> CH3 CH^+
-27.4 / mass ratio
+27.4 / threshold energy
 -----------------------------
   2.7400e+01  0.0000e+00
   2.8000e+01  6.1976e-24
@@ -6423,7 +6423,7 @@ C2H4(v2) -> CH3 CH^+
 
 IONIZATION
 C2H2(v5) -> C2H2^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.6000e+01  3.6137e-21
@@ -6448,7 +6448,7 @@ C2H2(v5) -> C2H2^+
 
 IONIZATION
 C2H2(v2) -> C2H2^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.6000e+01  3.6137e-21
@@ -6473,7 +6473,7 @@ C2H2(v2) -> C2H2^+
 
 IONIZATION
 C2H2(v13) -> C2H2^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.6000e+01  3.6137e-21
@@ -6498,7 +6498,7 @@ C2H2(v13) -> C2H2^+
 
 IONIZATION
 C2H2(v5) -> CH CH^+
-23.9 / mass ratio
+23.9 / threshold energy
 -----------------------------
   2.3900e+01  0.0000e+00
   2.4000e+01  5.8599e-24
@@ -6523,7 +6523,7 @@ C2H2(v5) -> CH CH^+
 
 IONIZATION
 C2H2(v2) -> CH CH^+
-23.9 / mass ratio
+23.9 / threshold energy
 -----------------------------
   2.3900e+01  0.0000e+00
   2.4000e+01  5.8599e-24
@@ -6548,7 +6548,7 @@ C2H2(v2) -> CH CH^+
 
 IONIZATION
 C2H2(v13) -> CH CH^+
-23.9 / mass ratio
+23.9 / threshold energy
 -----------------------------
   2.3900e+01  0.0000e+00
   2.4000e+01  5.8599e-24
@@ -6573,7 +6573,7 @@ C2H2(v13) -> CH CH^+
 
 IONIZATION
 C3H8(v1) -> C3H8^+
-14.3 / mass ratio
+14.3 / threshold energy
 -----------------------------
   1.4300e+01  0.0000e+00
   1.4500e+01  3.3375e-22
@@ -6597,7 +6597,7 @@ C3H8(v1) -> C3H8^+
 
 IONIZATION
 C3H8(v2) -> C3H8^+
-14.3 / mass ratio
+14.3 / threshold energy
 -----------------------------
   1.4300e+01  0.0000e+00
   1.4500e+01  3.3375e-22
@@ -6621,7 +6621,7 @@ C3H8(v2) -> C3H8^+
 
 IONIZATION
 C3H8(v1) -> H C3H7^+
-14.32 / mass ratio
+14.32 / threshold energy
 -----------------------------
   1.4320e+01  0.0000e+00
   1.4800e+01  3.2310e-24
@@ -6645,7 +6645,7 @@ C3H8(v1) -> H C3H7^+
 
 IONIZATION
 C3H8(v2) -> H C3H7^+
-14.32 / mass ratio
+14.32 / threshold energy
 -----------------------------
   1.4320e+01  0.0000e+00
   1.4800e+01  3.2310e-24
@@ -6669,7 +6669,7 @@ C3H8(v2) -> H C3H7^+
 
 IONIZATION
 C3H8(v1) -> H2 C3H6^+
-18.11 / mass ratio
+18.11 / threshold energy
 -----------------------------
   1.8110e+01  0.0000e+00
   1.8200e+01  1.4874e-23
@@ -6693,7 +6693,7 @@ C3H8(v1) -> H2 C3H6^+
 
 IONIZATION
 C3H8(v2) -> H2 C3H6^+
-18.11 / mass ratio
+18.11 / threshold energy
 -----------------------------
   1.8110e+01  0.0000e+00
   1.8200e+01  1.4874e-23
@@ -6717,7 +6717,7 @@ C3H8(v2) -> H2 C3H6^+
 
 IONIZATION
 C3H8(v1) -> H2 H C3H5^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.5600e+01  2.6795e-23
@@ -6741,7 +6741,7 @@ C3H8(v1) -> H2 H C3H5^+
 
 IONIZATION
 C3H8(v2) -> H2 H C3H5^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.5600e+01  2.6795e-23
@@ -6765,7 +6765,7 @@ C3H8(v2) -> H2 H C3H5^+
 
 IONIZATION
 C3H8(v1) -> H2 H2 C3H4^+
-16.25 / mass ratio
+16.25 / threshold energy
 -----------------------------
   1.6250e+01  0.0000e+00
   1.6300e+01  2.4787e-24
@@ -6789,7 +6789,7 @@ C3H8(v1) -> H2 H2 C3H4^+
 
 IONIZATION
 C3H8(v2) -> H2 H2 C3H4^+
-16.25 / mass ratio
+16.25 / threshold energy
 -----------------------------
   1.6250e+01  0.0000e+00
   1.6300e+01  2.4787e-24
@@ -6813,7 +6813,7 @@ C3H8(v2) -> H2 H2 C3H4^+
 
 IONIZATION
 C3H8(v1) -> CH3 C2H5^+
-13.92 / mass ratio
+13.92 / threshold energy
 -----------------------------
   1.3920e+01  0.0000e+00
   1.4000e+01  8.9071e-23
@@ -6837,7 +6837,7 @@ C3H8(v1) -> CH3 C2H5^+
 
 IONIZATION
 C3H8(v2) -> CH3 C2H5^+
-13.92 / mass ratio
+13.92 / threshold energy
 -----------------------------
   1.3920e+01  0.0000e+00
   1.4000e+01  8.9071e-23
@@ -6861,7 +6861,7 @@ C3H8(v2) -> CH3 C2H5^+
 
 IONIZATION
 C3H8(v1) -> CH4 C2H4^+
-14.19 / mass ratio
+14.19 / threshold energy
 -----------------------------
   1.4190e+01  0.0000e+00
   1.5300e+01  3.4449e-24
@@ -6885,7 +6885,7 @@ C3H8(v1) -> CH4 C2H4^+
 
 IONIZATION
 C3H8(v2) -> CH4 C2H4^+
-14.19 / mass ratio
+14.19 / threshold energy
 -----------------------------
   1.4190e+01  0.0000e+00
   1.5300e+01  3.4449e-24
@@ -6909,7 +6909,7 @@ C3H8(v2) -> CH4 C2H4^+
 
 IONIZATION
 C3H8(v1) -> C2H5 CH3^+
-23.0 / mass ratio
+23.0 / threshold energy
 -----------------------------
   2.3000e+01  0.0000e+00
   2.7000e+01  5.1958e-24
@@ -6933,7 +6933,7 @@ C3H8(v1) -> C2H5 CH3^+
 
 IONIZATION
 C3H8(v2) -> C2H5 CH3^+
-23.0 / mass ratio
+23.0 / threshold energy
 -----------------------------
   2.3000e+01  0.0000e+00
   2.7000e+01  5.1958e-24
@@ -6957,7 +6957,7 @@ C3H8(v2) -> C2H5 CH3^+
 
 IONIZATION
 C3H8(v1) -> C2H6 CH2^+
-21.0 / mass ratio
+21.0 / threshold energy
 -----------------------------
   2.1000e+01  0.0000e+00
   2.5000e+01  1.0447e-24
@@ -6981,7 +6981,7 @@ C3H8(v1) -> C2H6 CH2^+
 
 IONIZATION
 C3H8(v2) -> C2H6 CH2^+
-21.0 / mass ratio
+21.0 / threshold energy
 -----------------------------
   2.1000e+01  0.0000e+00
   2.5000e+01  1.0447e-24
@@ -7078,7 +7078,7 @@ H2
 
 EXCITATION
 H2 -> H H
-8.9 / mass ratio
+8.9 / threshold energy
 -----------------------------
   8.9000e+00  0.0000e+00
   9.0000e+00  4.4000e-22
@@ -7097,7 +7097,7 @@ H2 -> H H
 
 IONIZATION
 H2 -> H2^+
-15.4 / mass ratio
+15.4 / threshold energy
 -----------------------------
   1.5400e+01  0.0000e+00
   1.6000e+01  2.9900e-22

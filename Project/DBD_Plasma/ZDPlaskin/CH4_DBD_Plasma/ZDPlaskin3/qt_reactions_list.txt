@@ -1,0 +1,507 @@
+  1 bolsig:CH4->CH4(V24)        
+  2 bolsig:CH4->CH4(V13)        
+  3 bolsig:C2H6->C2H6(V24)      
+  4 bolsig:C2H6->C2H6(V13)      
+  5 bolsig:C2H4->C2H4(V1)       
+  6 bolsig:C2H4->C2H4(V2)       
+  7 bolsig:C2H2->C2H2(V5)       
+  8 bolsig:C2H2->C2H2(V2)       
+  9 bolsig:C2H2->C2H2(V13)      
+ 10 bolsig:C3H8->C3H8(V1)       
+ 11 bolsig:C3H8->C3H8(V2)       
+ 12 bolsig:C3H6->C3H6(V)        
+ 13 bolsig:CH4->CH3H            
+ 14 bolsig:CH4->CH2H2           
+ 15 bolsig:CH4->CHH2H           
+ 16 bolsig:CH3->CH2H            
+ 17 bolsig:CH3->CHH2            
+ 18 bolsig:CH2->CHH             
+ 19 bolsig:CH4->CH4^+           
+ 20 bolsig:CH4->HCH3^+          
+ 21 bolsig:CH4->H2CH2^+         
+ 22 bolsig:CH4->H2HCH^+         
+ 23 bolsig:CH3->CH3^+           
+ 24 bolsig:CH3->HCH2^+          
+ 25 bolsig:CH3->H2CH^+          
+ 26 bolsig:CH2->CH2^+           
+ 27 bolsig:CH2->HCH^+           
+ 28 bolsig:CH->CH^+             
+ 29 bolsig:C2H6->C2H5H          
+ 30 bolsig:C2H6->C2H4H2         
+ 31 bolsig:C2H6->C2H3H2H        
+ 32 bolsig:C2H6->C2H2H2H2       
+ 33 bolsig:C2H6->CH4CH2         
+ 34 bolsig:C2H6->CH3CH3         
+ 35 bolsig:C2H5->C2H4H          
+ 36 bolsig:C2H5->C2H3H2         
+ 37 bolsig:C2H5->C2H3HH         
+ 38 bolsig:C2H5->C2H2H2H        
+ 39 bolsig:C2H5->CH4CH          
+ 40 bolsig:C2H5->CH3CH2         
+ 41 bolsig:C2H4->C2H3H          
+ 42 bolsig:C2H4->C2H2H2         
+ 43 bolsig:C2H4->C2H2HH         
+ 44 bolsig:C2H4->CH3CH          
+ 45 bolsig:C2H4->CH2CH2         
+ 46 bolsig:C2H3->C2H2H          
+ 47 bolsig:C2H3->CH2CH          
+ 48 bolsig:C2H2->CHCH           
+ 49 bolsig:C3H8->C3H7H          
+ 50 bolsig:C3H8->C3H6H2         
+ 51 bolsig:C3H8->C3H4H2H2       
+ 52 bolsig:C3H8->C2H6CH2        
+ 53 bolsig:C3H8->C2H5CH3        
+ 54 bolsig:C3H8->C2H4CH4        
+ 55 bolsig:C3H7->C3H6H          
+ 56 bolsig:C3H7->C3H5H2         
+ 57 bolsig:C3H7->C3H4H2H        
+ 58 bolsig:C3H7->C2H4CH3        
+ 59 bolsig:C3H7->C2H3CH4        
+ 60 bolsig:C3H6->C3H5H          
+ 61 bolsig:C3H6->C3H4H2         
+ 62 bolsig:C3H6->C2H4CH2        
+ 63 bolsig:C3H6->C2H3CH3        
+ 64 bolsig:C3H6->C2H2CH4        
+ 65 bolsig:C3H5->C3H4H          
+ 66 bolsig:C3H5->C2H2CH3        
+ 67 bolsig:C3H4->C2H3CH         
+ 68 bolsig:C3H4->C2H2CH2        
+ 69 bolsig:C2H6->C2H6^+         
+ 70 bolsig:C2H6->HC2H5^+        
+ 71 bolsig:C2H6->H2C2H4^+       
+ 72 bolsig:C2H6->H2HC2H3^+      
+ 73 bolsig:C2H6->H2H2C2H2^+     
+ 74 bolsig:C2H6->CH3CH3^+       
+ 75 bolsig:C2H6->CH4CH2^+       
+ 76 bolsig:C2H5->C2H5^+         
+ 77 bolsig:C2H5->HC2H4^+        
+ 78 bolsig:C2H5->H2C2H3^+       
+ 79 bolsig:C2H5->H2HC2H2^+      
+ 80 bolsig:C2H5->CH2CH3^+       
+ 81 bolsig:C2H5->CH3CH2^+       
+ 82 bolsig:C2H5->CH4CH^+        
+ 83 bolsig:C2H4->C2H4^+         
+ 84 bolsig:C2H4->HC2H3^+        
+ 85 bolsig:C2H4->CHCH3^+        
+ 86 bolsig:C2H4->CH2CH2^+       
+ 87 bolsig:C2H4->CH3CH^+        
+ 88 bolsig:C2H3->C2H3^+         
+ 89 bolsig:C2H3->HC2H2^+        
+ 90 bolsig:C2H3->CHCH2^+        
+ 91 bolsig:C2H3->CH2CH^+        
+ 92 bolsig:C2H3->C2H2H^+        
+ 93 bolsig:C2H2->C2H2^+         
+ 94 bolsig:C2H2->CHCH^+         
+ 95 bolsig:C3H8->C3H8^+         
+ 96 bolsig:C3H8->HC3H7^+        
+ 97 bolsig:C3H8->H2C3H6^+       
+ 98 bolsig:C3H8->H2HC3H5^+      
+ 99 bolsig:C3H8->H2H2C3H4^+     
+100 bolsig:C3H8->CH3C2H5^+      
+101 bolsig:C3H8->CH4C2H4^+      
+102 bolsig:C3H8->C2H5CH3^+      
+103 bolsig:C3H8->C2H6CH2^+      
+104 bolsig:C3H7->C3H7^+         
+105 bolsig:C3H7->HC3H6^+        
+106 bolsig:C3H7->H2C3H5^+       
+107 bolsig:C3H7->H2HC3H4^+      
+108 bolsig:C3H7->CH2C2H5^+      
+109 bolsig:C3H7->CH3C2H4^+      
+110 bolsig:C3H7->CH4C2H3^+      
+111 bolsig:C3H7->C2H3CH4^+      
+112 bolsig:C3H7->C2H4CH3^+      
+113 bolsig:C3H7->C2H5CH2^+      
+114 bolsig:C3H7->C2H6CH^+       
+115 bolsig:C3H6->C3H6^+         
+116 bolsig:C3H6->HC3H5^+        
+117 bolsig:C3H6->H2C3H4^+       
+118 bolsig:C3H6->CHC2H5^+       
+119 bolsig:C3H6->CH2C2H4^+      
+120 bolsig:C3H6->CH3C2H3^+      
+121 bolsig:C3H6->CH4C2H2^+      
+122 bolsig:C3H6->C2H2CH4^+      
+123 bolsig:C3H6->C2H3CH3^+      
+124 bolsig:C3H6->C2H4CH2^+      
+125 bolsig:C3H6->C2H5CH^+       
+126 bolsig:C3H5->C3H5^+         
+127 bolsig:C3H5->HC3H4^+        
+128 bolsig:C3H5->CHC2H4^+       
+129 bolsig:C3H5->CH2C2H3^+      
+130 bolsig:C3H5->CH3C2H2^+      
+131 bolsig:C3H5->C2H2CH3^+      
+132 bolsig:C3H5->C2H3CH2^+      
+133 bolsig:C3H5->C2H4CH^+       
+134 bolsig:C3H4->C3H4^+         
+135 bolsig:C3H4->CHC2H3^+       
+136 bolsig:C3H4->CH2C2H2^+      
+137 bolsig:C3H4->C2H2CH2^+      
+138 bolsig:C3H4->C2H3CH^+       
+139 bolsig:CH4(V24)->CH3H       
+140 bolsig:CH4(V13)->CH3H       
+141 bolsig:CH4(V24)->CH2H2      
+142 bolsig:CH4(V13)->CH2H2      
+143 bolsig:CH4(V24)->CHH2H      
+144 bolsig:CH4(V13)->CHH2H      
+145 bolsig:CH4(V24)->CH4^+      
+146 bolsig:CH4(V13)->CH4^+      
+147 bolsig:CH4(V24)->HCH3^+     
+148 bolsig:CH4(V13)->HCH3^+     
+149 bolsig:CH4(V24)->H2CH2^+    
+150 bolsig:CH4(V13)->H2CH2^+    
+151 bolsig:CH4(V24)->H2HCH^+    
+152 bolsig:CH4(V13)->H2HCH^+    
+153 bolsig:C2H6(V24)->C2H5H     
+154 bolsig:C2H6(V13)->C2H5H     
+155 bolsig:C2H6(V24)->C2H4H2    
+156 bolsig:C2H6(V13)->C2H4H2    
+157 bolsig:C2H6(V24)->C2H3H2H   
+158 bolsig:C2H6(V13)->C2H3H2H   
+159 bolsig:C2H6(V24)->C2H2H2H2  
+160 bolsig:C2H6(V13)->C2H2H2H2  
+161 bolsig:C2H6(V24)->CH4CH2    
+162 bolsig:C2H6(V13)->CH4CH2    
+163 bolsig:C2H6(V24)->CH3CH3    
+164 bolsig:C2H6(V13)->CH3CH3    
+165 bolsig:C2H4(V1)->C2H3H      
+166 bolsig:C2H4(V2)->C2H3H      
+167 bolsig:C2H4(V1)->C2H2H2     
+168 bolsig:C2H4(V2)->C2H2H2     
+169 bolsig:C2H4(V1)->C2H2HH     
+170 bolsig:C2H4(V2)->C2H2HH     
+171 bolsig:C2H4(V1)->CH3CH      
+172 bolsig:C2H4(V2)->CH3CH      
+173 bolsig:C2H4(V1)->CH2CH2     
+174 bolsig:C2H4(V2)->CH2CH2     
+175 bolsig:C2H2(V5)->CHCH       
+176 bolsig:C2H2(V2)->CHCH       
+177 bolsig:C2H2(V13)->CHCH      
+178 bolsig:C3H8(V1)->C3H7H      
+179 bolsig:C3H8(V2)->C3H7H      
+180 bolsig:C3H8(V1)->C3H6H2     
+181 bolsig:C3H8(V2)->C3H6H2     
+182 bolsig:C3H8(V1)->C3H4H2H2   
+183 bolsig:C3H8(V2)->C3H4H2H2   
+184 bolsig:C3H8(V1)->C2H6CH2    
+185 bolsig:C3H8(V2)->C2H6CH2    
+186 bolsig:C3H8(V1)->C2H5CH3    
+187 bolsig:C3H8(V2)->C2H5CH3    
+188 bolsig:C3H8(V1)->C2H4CH4    
+189 bolsig:C3H8(V2)->C2H4CH4    
+190 bolsig:C2H6(V24)->C2H6^+    
+191 bolsig:C2H6(V13)->C2H6^+    
+192 bolsig:C2H6(V24)->HC2H5^+   
+193 bolsig:C2H6(V13)->HC2H5^+   
+194 bolsig:C2H6(V24)->H2C2H4^+  
+195 bolsig:C2H6(V13)->H2C2H4^+  
+196 bolsig:C2H6(V24)->H2HC2H3^+ 
+197 bolsig:C2H6(V13)->H2HC2H3^+ 
+198 bolsig:C2H6(V24)->H2H2C2H2^+
+199 bolsig:C2H6(V13)->H2H2C2H2^+
+200 bolsig:C2H6(V24)->CH3CH3^+  
+201 bolsig:C2H6(V13)->CH3CH3^+  
+202 bolsig:C2H6(V24)->CH4CH2^+  
+203 bolsig:C2H6(V13)->CH4CH2^+  
+204 bolsig:C2H4(V1)->C2H4^+     
+205 bolsig:C2H4(V2)->C2H4^+     
+206 bolsig:C2H4(V1)->HC2H3^+    
+207 bolsig:C2H4(V2)->HC2H3^+    
+208 bolsig:C2H4(V1)->CHCH3^+    
+209 bolsig:C2H4(V2)->CHCH3^+    
+210 bolsig:C2H4(V1)->CH2CH2^+   
+211 bolsig:C2H4(V2)->CH2CH2^+   
+212 bolsig:C2H4(V1)->CH3CH^+    
+213 bolsig:C2H4(V2)->CH3CH^+    
+214 bolsig:C2H2(V5)->C2H2^+     
+215 bolsig:C2H2(V2)->C2H2^+     
+216 bolsig:C2H2(V13)->C2H2^+    
+217 bolsig:C2H2(V5)->CHCH^+     
+218 bolsig:C2H2(V2)->CHCH^+     
+219 bolsig:C2H2(V13)->CHCH^+    
+220 bolsig:C3H8(V1)->C3H8^+     
+221 bolsig:C3H8(V2)->C3H8^+     
+222 bolsig:C3H8(V1)->HC3H7^+    
+223 bolsig:C3H8(V2)->HC3H7^+    
+224 bolsig:C3H8(V1)->H2C3H6^+   
+225 bolsig:C3H8(V2)->H2C3H6^+   
+226 bolsig:C3H8(V1)->H2HC3H5^+  
+227 bolsig:C3H8(V2)->H2HC3H5^+  
+228 bolsig:C3H8(V1)->H2H2C3H4^+ 
+229 bolsig:C3H8(V2)->H2H2C3H4^+ 
+230 bolsig:C3H8(V1)->CH3C2H5^+  
+231 bolsig:C3H8(V2)->CH3C2H5^+  
+232 bolsig:C3H8(V1)->CH4C2H4^+  
+233 bolsig:C3H8(V2)->CH4C2H4^+  
+234 bolsig:C3H8(V1)->C2H5CH3^+  
+235 bolsig:C3H8(V2)->C2H5CH3^+  
+236 bolsig:C3H8(V1)->C2H6CH2^+  
+237 bolsig:C3H8(V2)->C2H6CH2^+  
+238 bolsig:H2->HH               
+239 bolsig:H2->H2^+             
+240 E+CH5^+=>CH3+H+H            
+241 E+CH5^+=>CH2+H2+H           
+242 E+CH4^+=>CH3+H              
+243 E+CH4^+=>CH2+H+H            
+244 E+CH4^+=>CH+H2+H            
+245 E+CH3^+=>CH2+H              
+246 E+CH3^+=>CH+H2              
+247 E+CH2^+=>CH+H               
+248 E+C2H6^+=>C2H5+H            
+249 E+C2H6^+=>C2H4+H+H          
+250 E+C2H5^+=>C2H4+H            
+251 E+C2H5^+=>C2H3+H+H          
+252 E+C2H5^+=>C2H2+H2+H         
+253 E+C2H5^+=>C2H2+H+H+H        
+254 E+C2H5^+=>CH3+CH2           
+255 E+C2H4^+=>C2H3+H            
+256 E+C2H4^+=>C2H2+H+H          
+257 E+C2H3^+=>C2H2+H            
+258 E+C2H2^+=>CH+CH             
+259 E+H2^+=>H+H                 
+260 E+H3^+=>H+H2                
+261 H2+H2^+=>H+H3^+             
+262 CH2+CH5^+=>CH4+CH3^+        
+263 CH+CH5^+=>CH4+CH2^+         
+264 C2H6+CH5^+=>CH4+H2+C2H5^+   
+265 C2H4+CH5^+=>CH4+C2H5^+      
+266 C2H2+CH5^+=>CH4+C2H3^+      
+267 H+CH5^+=>H2+CH4^+           
+268 CH4+CH4^+=>CH3+CH5^+        
+269 C2H6+CH4^+=>CH4+H2+C2H4^+   
+270 C2H4+CH4^+=>CH3+C2H5^+      
+271 C2H4+CH4^+=>CH4+C2H4^+      
+272 C2H2+CH4^+=>CH3+C2H3^+      
+273 C2H2+CH4^+=>CH4+C2H2^+      
+274 H2+CH4^+=>H+CH5^+           
+275 H+CH4^+=>H2+CH3^+           
+276 CH4+CH3^+=>CH3+CH4^+        
+277 CH4+CH3^+=>H2+C2H5^+        
+278 CH2+CH3^+=>H2+C2H3^+        
+279 CH+CH3^+=>H2+C2H2^+         
+280 C2H6+CH3^+=>CH4+C2H5^+      
+281 C2H4+CH3^+=>CH4+C2H3^+      
+282 C2H3+CH3^+=>CH3+C2H3^+      
+283 CH4+CH2^+=>CH3+CH3^+        
+284 CH4+CH2^+=>H+C2H5^+         
+285 CH4+CH2^+=>H2+C2H4^+        
+286 CH4+CH2^+=>H+H2+C2H3^+      
+287 CH4+CH2^+=>H2+H2+C2H2^+     
+288 H2+CH2^+=>H+CH3^+           
+289 CH4+CH^+=>H+C2H4^+          
+290 CH4+CH^+=>H2+C2H3^+         
+291 CH4+CH^+=>H2+H+C2H2^+       
+292 H2+CH^+=>H+CH2^+            
+293 C2H4+C2H6^+=>C2H6+C2H4^+    
+294 C2H2+C2H6^+=>C2H3+C2H5^+    
+295 H+C2H6^+=>H2+C2H5^+         
+296 H+C2H5^+=>H2+C2H4^+         
+297 C2H3+C2H4^+=>C2H2+C2H5^+    
+298 C2H3+C2H4^+=>C2H4+C2H3^+    
+299 H+C2H4^+=>H2+C2H3^+         
+300 C2H6+C2H3^+=>C2H4+C2H5^+    
+301 C2H4+C2H3^+=>C2H2+C2H5^+    
+302 C2H+C2H3^+=>C2H2+C2H2^+     
+303 H+C2H3^+=>H2+C2H2^+         
+304 CH4+C2H2^+=>CH3+C2H3^+      
+305 C2H6+C2H2^+=>C2H3+C2H5^+    
+306 C2H6+C2H2^+=>C2H4+C2H4^+    
+307 C2H4+C2H2^+=>C2H2+C2H4^+    
+308 C2H3+C2H2^+=>C2H2+C2H3^+    
+309 H2+C2H2^+=>H+C2H3^+         
+310 CH4+C2H^+=>CH3+C2H2^+       
+311 CH4+H3^+=>H2+CH5^+          
+312 CH3+H3^+=>H2+CH4^+          
+313 CH2+H3^+=>H2+CH3^+          
+314 CH+H3^+=>H2+CH2^+           
+315 C2H6+H3^+=>H2+H2+C2H5^+     
+316 C2H5+H3^+=>H2+C2H6^+        
+317 C2H4+H3^+=>H2+C2H5^+        
+318 C2H4+H3^+=>H2+H2+C2H3^+     
+319 C2H3+H3^+=>H2+C2H4^+        
+320 C2H+H3^+=>H2+C2H2^+         
+321 C2H2+H3^+=>H2+C2H3^+        
+322 CH4+H2^+=>H+CH5^+           
+323 CH4+H2^+=>H2+CH4^+          
+324 CH4+H2^+=>H2+H+CH3^+        
+325 CH2+H2^+=>H+CH3^+           
+326 CH2+H2^+=>H2+CH2^+          
+327 CH+H2^+=>H+CH2^+            
+328 CH+H2^+=>H2+CH^+            
+329 C2H6+H2^+=>H2+C2H6^+        
+330 C2H6+H2^+=>H2+H+C2H5^+      
+331 C2H6+H2^+=>H2+H2+C2H4^+     
+332 C2H6+H2^+=>H2+H2+H+C2H3^+   
+333 C2H6+H2^+=>H2+H2+H2+C2H2^+  
+334 C2H4+H2^+=>H2+C2H4^+        
+335 C2H4+H2^+=>H2+H+C2H3^+      
+336 C2H4+H2^+=>H2+H2+C2H2^+     
+337 C2H2+H2^+=>H+C2H3^+         
+338 C2H2+H2^+=>H2+C2H2^+        
+339 H+H2^+=>H3^+                
+340 H+H2^+=>H2+H^+              
+341 CH4+H^+=>H+CH4^+            
+342 CH4+H^+=>H2+CH3^+           
+343 CH3+H^+=>H+CH3^+            
+344 CH2+H^+=>H+CH2^+            
+345 CH2+H^+=>H2+CH^+            
+346 CH+H^+=>H+CH^+              
+347 C2H6+H^+=>H2+C2H5^+         
+348 C2H6+H^+=>H2+H+C2H4^+       
+349 C2H6+H^+=>H2+H2+C2H3^+      
+350 C2H5+H^+=>H2+C2H4^+         
+351 C2H5+H^+=>H2+H+C2H3^+       
+352 C2H4+H^+=>H+C2H4^+          
+353 C2H4+H^+=>H2+C2H3^+         
+354 C2H4+H^+=>H2+H+C2H2^+       
+355 C2H3+H^+=>H+C2H3^+          
+356 C2H3+H^+=>H2+C2H2^+         
+357 C2H2+H^+=>H+C2H2^+          
+358 CH4+CH2=>CH3+CH3            
+359 CH4+CH=>C2H4+H              
+360 CH4+C2H5=>C2H6+CH3          
+361 CH4+C2H3=>C2H4+CH3          
+362 CH4+C2H=>C2H2+CH3           
+363 CH4+C3H7=>C3H8+CH3          
+364 CH4+C3H5=>C3H6+CH3          
+365 CH4+H=>CH3+H2               
+366 CH4+CH3=>H+C2H6             
+367 CH4+C4H9=>C4H9H+CH3         
+368 CH4+CH2=>C2H6               
+369 CH4=>CH3+H                  
+370 CH3+CH3=>C2H5+H             
+371 CH3+CH3=>C2H6               
+372 CH3+CH2=>C2H4+H             
+373 CH3+C2H6=>C2H5+CH4          
+374 CH3+C2H5=>C3H8              
+375 CH3+C2H4=>C2H3+CH4          
+376 CH3+C2H3=>C2H2+CH4          
+377 CH3+C2H3=>C3H6              
+378 CH3+C2H2=>C2H+CH4           
+379 CH3+C3H8=>C3H7+CH4          
+380 CH3+C3H7=>C3H6+CH4          
+381 CH3+C3H6=>C3H5+CH4          
+382 CH3+H2=>CH4+H               
+383 CH3+H=>CH2+H2               
+384 CH3+H=>CH4                  
+385 CH3+C3H7=>C2H5+C2H5         
+386 CH3=>CH2+H                  
+387 CH3=>CH+H2                  
+388 CH3+C2H5=>C2H6+CH2          
+389 CH2+CH2=>C2H2+H+H           
+390 CH2+C2H5=>C2H4+CH3          
+391 CH2+C2H3=>C2H2+CH3          
+392 CH2+C2H=>C2H2+CH            
+393 CH2+C3H8=>C3H7+CH3          
+394 CH2+C3H7=>C2H4+C2H5         
+395 CH2+C3H7=>C3H6+CH3          
+396 CH2+C3H6=>C3H5+CH3          
+397 CH2+H2=>CH3+H               
+398 CH2+H=>CH+H2                
+399 CH2=>CH+H                   
+400 CH2+CH2=>C2H2+H2            
+401 CH2+H=>CH3                  
+402 CH+C2H6=>C3H6+H             
+403 CH+C2H6=>C3H7               
+404 CH+H2=>CH2+H                
+405 CH+CH3=>C2H3+H              
+406 CH+CH2=>C2H2+H              
+407 CH+H2=>CH3                  
+408 CH+C2H3=>CH2+C2H2           
+409 C2H6+C2H3=>C2H5+C2H4        
+410 C2H6+C3H7=>C3H8+C2H5        
+411 C2H6+C3H5=>C3H6+C2H5        
+412 C2H6+H=>C2H5+H2             
+413 C2H6+H=>CH4+CH3             
+414 C2H6=>CH3+CH3               
+415 C2H6+C4H9=>C4H9H+C2H5       
+416 C2H6+CH=>C2H4+CH3           
+417 C2H6+CH2=>C2H5+CH3          
+418 C2H5+C2H5=>C2H6+C2H4        
+419 C2H5+C2H4=>C2H6+C2H3        
+420 C2H5+C2H2=>C2H6+C2H         
+421 C2H5+C2H=>C2H4+C2H2         
+422 C2H5+C3H8=>C2H6+C3H7        
+423 C2H5+C3H7=>C3H8+C2H4        
+424 C2H5+C3H7=>C3H6+C2H6        
+425 C2H5+C3H6=>C3H5+C2H6        
+426 C2H5+H2=>C2H6+H             
+427 C2H5+H=>CH3+CH3             
+428 C2H5+H=>C2H4+H2             
+429 C2H5+H=>C2H6                
+430 C2H5=>C2H4+H                
+431 C2H5+C2H5=>C4H9H            
+432 C2H5+C4H9=>C2H4+C4H9H       
+433 C2H5+C2H3=>C2H4+C2H4        
+434 C2H4+H=>C2H3+H2             
+435 C2H4+H=>C2H5                
+436 C2H4+H2=>C2H5+H             
+437 C2H4=>C2H3+H                
+438 C2H4+C3H6=>C3H5+C2H5        
+439 C2H4+C2H2=>C2H3+C2H3        
+440 C2H4+C3H6=>C2H3+C3H7        
+441 C2H4+C2H4=>C2H5+C2H3        
+442 C2H4+CH3=>C3H7              
+443 C2H4=>C2H2+H2               
+444 C2H4+C2H5=>C4H9             
+445 C2H4+H2=>C2H6               
+446 C2H4+CH2=>C3H6              
+447 C2H4+C4H9=>C3H6+C3H7        
+448 C2H3+C2H3=>C2H4+C2H2        
+449 C2H3+C3H8=>C2H4+C3H7        
+450 C2H3+C3H7=>C3H8+C2H2        
+451 C2H3+C3H7=>C3H6+C2H4        
+452 C2H3+C3H6=>C3H5+C2H4        
+453 C2H3+C3H5=>C3H6+C2H2        
+454 C2H3+H2=>C2H4+H             
+455 C2H3+H=>C2H2+H2             
+456 C2H3+H=>C2H4                
+457 C2H3=>C2H2+H                
+458 C2H3+C4H9=>C2H2+C4H9H       
+459 C2H2+H=>C2H3                
+460 C2H2+H2=>C2H4               
+461 C2H2+H2=>C2H3+H             
+462 C2H2+CH3=>C3H5              
+463 C2H2+C4H9=>C3H6+C3H5        
+464 C3H8+C3H5=>C3H6+C3H7        
+465 C3H8+H=>C3H7+H2             
+466 C3H8=>C2H5+CH3              
+467 C3H8+C4H9=>C4H9H+C3H7       
+468 C3H8+CH2=>C4H9H             
+469 C3H7+C3H7=>C3H6+C3H8        
+470 C3H7+C3H6=>C3H5+C3H8        
+471 C3H7+C3H5=>C3H6+C3H6        
+472 C3H7+H2=>C3H8+H             
+473 C3H7+H=>C3H6+H2             
+474 C3H7+H=>C3H8                
+475 C3H7+H=>CH3+C2H5            
+476 C3H7=>C3H6+H                
+477 C3H7=>C2H4+CH3              
+478 C3H7+C4H9=>C4H9H+C3H6       
+479 C3H6+C2H2=>C2H3+C3H5        
+480 C3H6+C3H6=>C3H7+C3H5        
+481 C3H6=>C3H5+H                
+482 C3H6+H=>C3H5+H2             
+483 C3H6+H=>C3H7                
+484 C3H6=>CH3+C2H3              
+485 C3H6+CH3=>C4H9              
+486 C3H6+C4H9=>C4H9H+C3H5       
+487 C3H5+H2=>C3H6+H             
+488 C3H5+H=>C3H6                
+489 C3H5=>C2H2+CH3              
+490 C4H9=>C2H4+C2H5             
+491 C4H9+CH2=>C2H4+C3H7         
+492 C4H9=>C3H6+CH3              
+493 C4H9+H2=>C4H9H+H            
+494 C4H9H+CH3=>CH4+C4H9         
+495 C4H9H=>C3H7+CH3             
+496 C4H9H=>C2H5+C2H5            
+497 C4H9H+H=>C4H9+H2            
+498 C4H9H+CH2=>C4H9+CH3         
+499 C4H9H+C2H3=>C2H4+C4H9       
+500 C4H9H+C3H7=>C3H8+C4H9       
+501 C4H9H+C2H=>C2H2+C4H9        
+502 C4H9H+C2H5=>C2H6+C4H9       
+503 C4H9H+C3H5=>C3H6+C4H9       
+504 C4H9H+CH2=>C5H12            
+505 C5H12=>CH3+C4H9             
+506 H2=>H+H                     
+507 H+H=>H2                     
