@@ -1,2 +1,6 @@
 gfortran -o run_plasRxn.exe dvode_f90_m.F90 zdplaskin_m.F90 run_plasRxn.F90 bolsig_x86_64_g.dll
 gfortran -o run_plasRxn_v2.exe dvode_f90_m.F90 zdplaskin_m.F90 run_plasRxn_v2.F90 bolsig_x86_64_g.dll
+gfortran -o run_plasRxn_v22.exe dvode_f90_m.F90 zdplaskin_m.F90 run_plasRxn_v22.F90 bolsig_x86_64_g.dll
+
+gfortran -o run_plasRxn_r1.exe dvode_f90_m.F90 zdplaskin_m.F90 run_plasRxn_r1.F90 bolsig_x86_64_g.dll
+gfortran -o run_plasRxn_r5.exe dvode_f90_m.F90 zdplaskin_m.F90 run_plasRxn_r5.F90 bolsig_x86_64_g.dll
