@@ -22,11 +22,11 @@ $ double precision, parameter :: f1= 1.00d0
 # f1 = CH3 + H => CH4
 $ double precision, parameter :: f2= 1.00d13
 # f2 = CH3 + CH3 => C2H6
-$ double precision, parameter :: f3= 1.00d2
+$ double precision, parameter :: f3= 2.00d2
 # f3 = C2H6 + e => e + C2H4 + H2
-$ double precision, parameter :: f4= 1.70d-1
+$ double precision, parameter :: f4= 5.00d-1
 # f4 = C2H5 + C2H5 => C4H10
-$ double precision, parameter :: f5= 1.00d-7
+$ double precision, parameter :: f5= 2.00d-7
 # f5 = C2H4 + H2 => C2H5 + H
 $ double precision, parameter :: f6= 1.00d0
 # f6 = C2H4 + e => C2H2 + e + H2
@@ -36,7 +36,7 @@ $ double precision, parameter :: f8= 1.00d-10
 # f8 = C3H8 + e => C3H6 + H2 + e
 $ double precision, parameter :: f9= 1.00d0
 # f9 = C4H10
-$ double precision, parameter :: f10= 1.00d1
+$ double precision, parameter :: f10= 2.00d1
 # f10 = C3H8, C3H6
 $ double precision, parameter :: f11= 0.00d0
 # f11 = C2H5 -> C2H6

@@ -12,7 +12,7 @@
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
-! Thu Oct 24 17:18:33 2024
+! Sat Oct 26 16:43:02 2024
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
@@ -7485,14 +7485,14 @@ subroutine ZDPlasKin_reac_rates(Time)
   DOUBLE PRECISION, PARAMETER :: F0= 1.500D1
   DOUBLE PRECISION, PARAMETER :: F1= 1.00D0
   DOUBLE PRECISION, PARAMETER :: F2= 1.00D13
-  DOUBLE PRECISION, PARAMETER :: F3= 1.00D2
-  DOUBLE PRECISION, PARAMETER :: F4= 1.70D-1
-  DOUBLE PRECISION, PARAMETER :: F5= 1.00D-7
+  DOUBLE PRECISION, PARAMETER :: F3= 2.00D2
+  DOUBLE PRECISION, PARAMETER :: F4= 5.00D-1
+  DOUBLE PRECISION, PARAMETER :: F5= 2.00D-7
   DOUBLE PRECISION, PARAMETER :: F6= 1.00D0
   DOUBLE PRECISION, PARAMETER :: F7= 1.00D-10
   DOUBLE PRECISION, PARAMETER :: F8= 1.00D-10
   DOUBLE PRECISION, PARAMETER :: F9= 1.00D0
-  DOUBLE PRECISION, PARAMETER :: F10= 1.00D1
+  DOUBLE PRECISION, PARAMETER :: F10= 2.00D1
   DOUBLE PRECISION, PARAMETER :: F11= 0.00D0
   call ZDPlasKin_bolsig_rates()
   Tgas = ZDPlasKin_cfg(1)
