@@ -8,7 +8,7 @@ program run_plasRxn
   double precision, parameter :: gas_pressure      = 1.0d0,    & ! pressure, atm
                                  gas_temperature   = 400.0d0,   & ! gas temperature, K
                                  ini_elec_density  = 1.0d6,    & ! initial electron density, cm-3
-                                 ini_gas_density   = 101325.0d0 * gas_pressure & 
+                                 ini_gas_density   = 202650.0d0 * gas_pressure & 
                                                    / gas_temperature / 1.38d-17,  & ! gas density, cm-3
                                  power             = 55,                          & ! Power, W
                                  volume            = 13.6                           ! plasma volume, cm3
@@ -34,7 +34,7 @@ program run_plasRxn
 !
 ! initialization of variables
     time = 0.0d0
-    time_end = 1.6d1
+    time_end = 1.0d-2
     dtime = 1e-4
     EN = sqrt(power/ini_elec_density/(1.6022d-19)/3.5552d23*ini_gas_density/volume)/ini_gas_density/(1d-17)
 
