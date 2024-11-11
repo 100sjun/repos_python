@@ -1,0 +1,12 @@
+EFFECTIVE
+CH2
+3.92E-05
+SPECIES: e / CH2
+PROCESS: E + CH2 -> E + CH2, Effective
+PARAM.:  m/M = 0.000039157, complete set
+UPDATED: 2011-06-06 11:16:58
+COLUMNS: Energy (eV) | Cross section (m2)
+-----------------------------
+ 0.000000e+0    1.000000e-20
+ 2.000000e+2    1.000000e-20
+-----------------------------

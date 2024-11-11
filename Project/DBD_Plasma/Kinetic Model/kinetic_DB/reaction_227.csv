@@ -1,0 +1,20 @@
+Num,Type,Reaction,ELoss,Species,Formula,Energy(eV),Cross_section(m2)
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,23.9,0.0
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,24.0,5.8598500000000015e-24
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,24.5,4.6525700000000004e-23
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,25.0,1.01133e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,25.5,1.64531e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,26.0,2.33155e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,26.5,3.04581e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,27.0,3.77193e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,27.5,4.49946e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,28.0,5.22193e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,29.0,6.63869e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,30.0,8.01103e-22
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,40.0,2.01516e-21
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,50.0,2.9606e-21
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,60.0,3.56577e-21
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,70.0,3.89081e-21
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,80.0,4.02711e-21
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,90.0,4.04578e-21
+103,IONIZATION,C2H2(v2) -> CH CH^+,23.9,e / C2H2(v2),E + C2H2(v2) -> E + E + CH + CH^+,100.0,3.9941e-21
