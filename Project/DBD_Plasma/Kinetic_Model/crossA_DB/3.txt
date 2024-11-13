@@ -1,0 +1,12 @@
+EFFECTIVE
+CH
+4.22E-05
+SPECIES: e / CH
+PROCESS: E + CH -> E + CH, Effective
+PARAM.:  m/M = 0.000042169
+UPDATED: 2012-04-29 12:34:26
+COLUMNS: Energy (eV) | Cross section (m2)
+-----------------------------
+ 0.000000e+0    1.000000e-20
+ 2.000000e+2    1.000000e-20
+-----------------------------
