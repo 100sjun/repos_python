@@ -1,5 +1,5 @@
 IONIZATION	
-C2H2 -> CH + CH+	
+C2H2 -> CH CH+	
 23.9	
 SPECIES: e / C2H2	
 PROCESS: E + C2H2 -> E + E + CH + CH+, Ionization	

@@ -1,5 +1,5 @@
 IONIZATION	
-C2H3 -> H+ C2H2	
+C2H3 -> C2H2 H+
 21.1	
 SPECIES: e / C2H3	
 PROCESS: E + C2H3 -> E + E + C2H2 + H+, Ionization	
