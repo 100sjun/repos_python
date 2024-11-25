@@ -34,7 +34,7 @@ program run_plasRxn
 !
 ! initialization of variables
     time = 0.0d0
-    time_end = 6.33d-4
+    time_end = 6.33d0
     dtime = 1e-6
     EN = sqrt(power/ini_elec_density/(1.6022d-19)/3.5552d23*ini_gas_density/volume)/ini_gas_density/(1d-17)
 
