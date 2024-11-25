@@ -7,8 +7,8 @@ program run_plasRxn
   double precision, parameter :: gas_temperature  = 298.15d0, & ! gas temperature, K
                                  density_ini_ch4   = 2.46d19,  & ! initial CH4 density, cm-3
                                  density_ini_elec = 1.0d0,&      ! initial electron density, cm-3
-                                 reduced_field    = 10       ! reduced electric field
-  double precision            :: time = 0.0d0, time_end = 1.0d-4, dtime = 1.0d-8,  EN = 0.0d0,& ! times, s // Reduced Electric field, Td
+                                 reduced_field    = 2.5935d1       ! reduced electric field
+  double precision            :: time = 0.0d0, time_end = 6.33d0, dtime = 1.0d-6,  EN = 0.0d0,& ! times, s // Reduced Electric field, Td
                                  t1, t2, tc                       ! calculation time
   integer                     :: i
 !

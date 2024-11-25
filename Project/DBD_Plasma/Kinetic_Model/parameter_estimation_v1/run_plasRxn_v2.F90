@@ -11,7 +11,7 @@ program run_plasRxn
                                  ini_gas_density   = 101325.0d0 * gas_pressure & 
                                                    / gas_temperature / 1.38d-17,  & ! gas density, cm-3
                                  power             = 11.7,                          & ! Power, W
-                                 volume            = 1.05                           ! plasma volume, cm3
+                                 volume            = 3.165                           ! plasma volume, cm3
   double precision            :: time, time_end, dtime, EN,& ! times, s // Reduced Electric field, Td
                                  t1, t2, tc, mo, all_neutral                       ! calculation time, mobility
   integer                     :: i
@@ -34,8 +34,8 @@ program run_plasRxn
 !
 ! initialization of variables
     time = 0.0d0
-    time_end = 2.0d-2
-    dtime = 1e-8
+    time_end = 6.33d-4
+    dtime = 1e-6
     EN = sqrt(power/ini_elec_density/(1.6022d-19)/3.5552d23*ini_gas_density/volume)/ini_gas_density/(1d-17)
 
 ! Tells Bolsig the value of the reduced field (to do each time EN changes)
