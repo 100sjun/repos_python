@@ -124,7 +124,7 @@ def run():
     # compensation parameter
     para = []
     for i in range(df_rxn['index'].iloc[-1]+1):
-        para_sentence = f'$ double precision, parameter :: f{i} = 1.000d0'
+        para_sentence = f'$ double precision, parameter :: f{i} = 1.000d-21'
         para.append(para_sentence)
 
     kinet = ''

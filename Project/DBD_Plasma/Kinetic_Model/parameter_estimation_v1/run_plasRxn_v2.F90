@@ -6,12 +6,12 @@ program run_plasRxn
   use ZDPlasKin
   implicit none
   double precision, parameter :: gas_pressure      = 1.0d0,    & ! pressure, atm
-                                 gas_temperature   = 400.0d0,   & ! gas temperature, K
+                                 gas_temperature   = 298.0d0,   & ! gas temperature, K
                                  ini_elec_density  = 1.0d6,    & ! initial electron density, cm-3
                                  ini_gas_density   = 101325.0d0 * gas_pressure & 
                                                    / gas_temperature / 1.38d-17,  & ! gas density, cm-3
-                                 power             = 11.7,                          & ! Power, W
-                                 volume            = 3.165                           ! plasma volume, cm3
+                                 power             = 11.2,                          & ! Power, W
+                                 volume            = 1.06                           ! plasma volume, cm3
   double precision            :: time, time_end, dtime, EN,& ! times, s // Reduced Electric field, Td
                                  t1, t2, tc, mo, all_neutral                       ! calculation time, mobility
   integer                     :: i
@@ -34,7 +34,7 @@ program run_plasRxn
 !
 ! initialization of variables
     time = 0.0d0
-    time_end = 6.33d0
+    time_end = 2.12d0
     dtime = 1e-4
     EN = sqrt(power/ini_elec_density/(1.6022d-19)/3.5552d23*ini_gas_density/volume)/ini_gas_density/(1d-17)
 
