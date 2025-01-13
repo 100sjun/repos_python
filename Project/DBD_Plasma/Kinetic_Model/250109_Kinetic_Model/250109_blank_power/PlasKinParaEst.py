@@ -9,11 +9,11 @@ from sklearn.gaussian_process.kernels import RBF, ConstantKernel
 import ast
 from scipy.stats import norm
 
-# time 
-time_opt = 5.6
-exex = [9.05848,58.23691,21.87466,2.52725,1.87428,8.83052,0.56969,1.45217,0,0,0,0,0,0,0,0,0]
-step = 0.005
-max_error = 20
+# Hyperparameters
+step = 0.1
+pre_size = 20
+max_error = 1000
+
 # compile zdplaskin
 def run_prep(inp_path):
     try:
@@ -36,18 +36,31 @@ def run_prep(inp_path):
     print('check the run of preprocessor')
     return process
 
-# Compile exe2412
-def compile_zdp(name):
+# Compile exe
+def compile_zdp2(name):
     compile_command = [
         'gfortran', '-o', name, 'dvode_f90_m.F90', 'zdplaskin_m.F90',
-        'run_plasRxn_v2.F90', 'bolsig_x86_64_g.dll'
+        'run_plasRxn2.F90', 'bolsig_x86_64_g.dll'
     ]
     
     try:
         subprocess.run(compile_command)
     except:
         pass
-    print('check the compiler')
+    print('check the compiler_run2')
+
+# Compile exe
+def compile_zdp3(name):
+    compile_command = [
+        'gfortran', '-o', name, 'dvode_f90_m.F90', 'zdplaskin_m.F90',
+        'run_plasRxn3.F90', 'bolsig_x86_64_g.dll'
+    ]
+    
+    try:
+        subprocess.run(compile_command)
+    except:
+        pass
+    print('check the compiler_run3')
 
 # Run exe
 def run_exe(exe_path):
@@ -168,13 +181,10 @@ def cal_error(exp_result):
     sim.append(sim_SC3H7)
     sim.append(sim_SC4H9)
 
-    
-
     err =  float(np.sum((np.asarray(exp) - np.asarray(sim))**2))
     
     return err, top_rate, sim, df_cd['Time [s]'].iloc[-1], sim_XCH4, sim_SC2H6, sim_SC2H4, sim_SC2H2
 
-    
 # initial variable sset sampling: latin_hypercube sampling
 def latin_hypercube_sampling(bounds, n_samples):
     return np.random.uniform(
@@ -184,26 +194,42 @@ def latin_hypercube_sampling(bounds, n_samples):
     )
 
 # update kinet.inp
-def update_kinet(samples,index):
-    with open(f'kinet.inp','r') as file:
+def update_kinet2(samples,index):
+    with open(f'kinet2.inp','r') as file:
         lines = file.readlines()
         file.close()
     new_lines=[]
-    for i in range(316):
-        new_value = 10**samples[i]
-        new_value2 = f'{new_value:.4e}'.replace('e-0','e-').replace('e+00','e0').replace('e+0','e+').replace('e','d')
-        new_line = f'$ double precision, parameter :: f{i} = {new_value2}\n'
+    for i in range(16):
+        new_value = samples[i]
+        new_value2 = f'{new_value: .4e}'.replace('e-0','e-').replace('e+0','e').replace('e','d')
+        new_line = f'$ double precision, parameter :: a{i} = {new_value2}\n'
         new_lines.append(new_line)
-    new_inp = lines[:18] + new_lines + lines[334:]
-    with open(f'./kinet{index}.inp', 'w') as file:
+
+    new_inp = lines[:337] + new_lines + lines[353:]
+    with open(f'./kinet2_{index}.inp', 'w') as file:
+        file.writelines(new_inp)
+
+def update_kinet3(samples,index):
+    with open(f'kinet3.inp','r') as file:
+        lines = file.readlines()
+        file.close()
+    new_lines=[]
+    for i in range(16):
+        new_value = samples[i]
+        new_value2 = f'{new_value: .4e}'.replace('e-0','e-').replace('e+0','e').replace('e','d')
+        new_line = f'$ double precision, parameter :: a{i} = {new_value2}\n'
+        new_lines.append(new_line)
+
+    new_inp = lines[:337] + new_lines + lines[353:]
+    with open(f'./kinet3_{index}.inp', 'w') as file:
         file.writelines(new_inp)
 
 def GP_Model(X,y):
     avg_pre_Y = sum(y)/len(y)
     X_range = X.max(axis=0) - X.min(axis=0)
     # Gaussian Process Surrogate Model
-    constant_kernel = ConstantKernel(constant_value=1.0, constant_value_bounds=(1e-5,1e5))
-    RBF_kernel = RBF(1.0, length_scale_bounds = (1e-5,1e5))
+    constant_kernel = ConstantKernel(constant_value=1.0, constant_value_bounds=(1e-8,1e8))
+    RBF_kernel = RBF(1.0, length_scale_bounds = (1e-8,1e8))
     kernel = constant_kernel * RBF_kernel
 
     gp_model = GaussianProcessRegressor(kernel=kernel, n_restarts_optimizer=10, alpha=1e-6)
@@ -241,24 +267,37 @@ def BO(gp, bounds, n_iter, X, y, exp_result):
         x_next = random_search(bounds, gp, y_best)
 
         # 새로운 관측값 추가 (사용자 정의 시뮬레이션 함수 호출 필요)
-        para_index = [12,13,14,24,134,220,34,276,273,223,46,116,226,313,315,22]
-        paraset = -21 * np.ones(316)
-        paraset[list(range(12))] = 0
-        paraset[list(range(90,102))] = 0
-        for j in range(len(para_index)):
-            paraset[para_index[j]] = x_next[j]
-     
+        inp_path2 = f'kinet2_{i+pre_size}.inp\n'
+        exe_path2 = f'run_plasRxn2.exe'
+        inp_path3 = f'kinet3_{i+pre_size}.inp\n'
+        exe_path3 = f'run_plasRxn3.exe'
 
-        update_kinet(paraset,i+20)
-        inp_path = f'kinet{i+20}.inp\n'
-        exe_path = 'run_plasRxn_v2.exe'
-        run_prep(inp_path)
-        compile_zdp(exe_path)
-        run_exe(exe_path)
-        y_next, _, _, t_time, XCH4, SC2H6, SC2H4, SC2H2 = cal_error(exp_result)  # 사용자의 실제 목적 함수
-        
+        print(f'run {i}')
+        print(inp_path2)
+        print(inp_path3)
+        update_kinet2(x_next,i+pre_size)
+        prep_process = run_prep(inp_path2)
+        prep_process.wait()
+        compile_zdp2(exe_path2)
+        exe_process = run_exe(exe_path2)
+        exe_process.wait()
+        y2,_,_,t_time2,_,_,_,_ = cal_error(exp_result[0])
+        print(f'run {i} set2 completion')
+
+        update_kinet3(x_next,i+pre_size)
+        prep_process = run_prep(inp_path3)
+        prep_process.wait()
+        compile_zdp3(exe_path3)
+        exe_process = run_exe(exe_path3)
+        exe_process.wait()
+        y3,_,_,t_time3,_,_,_,_ = cal_error(exp_result[1])
+        print(f'run {i} set3 completion')
+
+        print(f'y2: {y2}, y3: {y3}, y_next: {y2+y3}')
+        y_next = y2 + y3
+      
         # 데이터셋 업데이트
-        if t_time > time_opt:
+        if (t_time2 > 3.5) & (t_time3 > 5.6):
             X = np.vstack([X, x_next])
             y = np.append(y, y_next)
             
@@ -276,12 +315,10 @@ def BO(gp, bounds, n_iter, X, y, exp_result):
             X = np.vstack([X, x_next])
             y = np.append(y, max_error)
 
-        
         # Surrogate 모델 업데이트
         gp = GP_Model(X, y)
         clear_output()
-        print(f'''현재 iteration: {i}, dataset 크기: {len(X)}, 현재 최소값: {y_best}, 이번 y: {y[-1]}\n 
-              전환율: {XCH4}, C2H6: {SC2H6}, C2H4: {SC2H4}, C2H2: {SC2H2}''',)
+        print(f'현재 iteration: {i}, dataset 크기: {len(X)}, 현재 최소값: {y_best}, 이번 y: {y[-1]}\n')
     return X, y
 
 # Optimization
@@ -291,39 +328,43 @@ problem = {
     'num_vars': len(para_index),
     'bounds': [[-1*step,step]] * len(para_index)
 }
-
-initial_samples = latin_hypercube_sampling(problem['bounds'],20)
+initial_samples = latin_hypercube_sampling(problem['bounds'],pre_size)
 
 db_error = []
 db_paraset = []
 db_toprate = []
 db_leng = []
 result_list = ['XCH4','SH2','SC2H6','SC2H4','SC2H2','SC3H8','SC3H6','SC4+','SH','SCH','SCH2','SCH3','SC2H3','SC2H5','SC3H5','SC3H7','SC4H9']
-exp_result = exex
+exp_result = [[18.873,74.645,14.318,1.739,1.556,3.968,0.555,0.508,0,0,0,0,0,0,0,0,0],[9.05848,58.23691,21.87466,2.52725,1.87428,8.83052,0.56969,1.45217,0,0,0,0,0,0,0,0,0]]
 
 for i in range(len(initial_samples)):
-    inp_path = f'kinet{i}.inp\n'
-    exe_path = 'run_plasRxn_v2.exe'
+    inp_path2 = f'kinet2_{i}.inp\n'
+    exe_path2 = f'run_plasRxn2.exe'
+    inp_path3 = f'kinet3_{i}.inp\n'
+    exe_path3 = f'run_plasRxn3.exe'
 
     print(f'run {i}')
 
-    paraset = -21 * np.ones(316)
-    paraset[list(range(12))] = 0
-    paraset[list(range(90,102))] = 0
-    for j in range(len(para_index)):
-        paraset[para_index[j]] = initial_samples[i][j]
-
-    update_kinet(paraset,i)
-    prep_process = run_prep(inp_path)
+    update_kinet2(initial_samples[i],i)
+    prep_process = run_prep(inp_path2)
     prep_process.wait()
-    compile_zdp(exe_path)
-    exe_process = run_exe(exe_path)
+    compile_zdp2(exe_path2)
+    exe_process = run_exe(exe_path2)
     exe_process.wait()
-    error, top_rate, sim_result, total_time,_,_,_,_ = cal_error(exp_result)
-    if float(total_time) > time_opt:
-        db_error.append(error)
+    error2,_,_,total_time2,_,_,_,_ = cal_error(exp_result[0])
+    print(f'run {i} set2 completion')
+
+    update_kinet3(initial_samples[i],i)
+    prep_process = run_prep(inp_path3)
+    prep_process.wait()
+    compile_zdp3(exe_path3)
+    exe_process = run_exe(exe_path3)
+    exe_process.wait()
+    error3,_,_,total_time3,_,_,_,_ = cal_error(exp_result[1])
+    print(f'run {i} set3 completion')
+    if (float(total_time2) > 3.5) & (float(total_time3) > 5.6):
+        db_error.append(error2+error3)
         db_paraset.append(initial_samples[i])
-        db_toprate.append(top_rate)
     clear_output()
 
 with open('db_error.txt', 'w') as file:
@@ -346,21 +387,6 @@ with open('db_paraset.txt', 'r') as file:
     file.close()
 pre_X = np.array([ast.literal_eval(i) for i in lines_paraset])
 pre_Y = np.array([float(i[:-1]) for i in lines_error])
-
-# Main Reaction
-rank_toprate = []
-db_toprate[0].index[0]
-for i in range(len(db_toprate)):
-    rank_set = []
-    for j in range(len(db_toprate[0])):
-        rank_set.append(int(df_set.loc[df_set['Reaction'] == db_toprate[i].index[j], 'index'].values[0]))
-    rank_toprate.append(rank_set)
-
-with open('rank_toprate.txt', 'w') as file:
-    for i in range(len(rank_toprate)):
-        file.writelines(str(rank_toprate[i]))
-        file.writelines('\n')
-    file.close()
 
 gp_model = GP_Model(pre_X,pre_Y)
 gp_model.predict(pre_X)
