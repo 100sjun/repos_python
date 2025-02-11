@@ -1,0 +1,12 @@
+ 1 bolsig:CH4->CH4(V24)  
+ 2 bolsig:CH4->CH4(V13)  
+ 3 bolsig:CH4(V24)->CH4  
+ 4 bolsig:CH4(V24)->CH4  
+ 5 bolsig:CH4->CH4^+     
+ 6 bolsig:CH4(V24)->CH4^+
+ 7 bolsig:CH4(V13)->CH4^+
+ 8 bolsig:CH4^+->CH4     
+ 9 bolsig:CH4^+->CH4(V24)
+10 bolsig:CH4^+->CH4(V13)
+11 bolsig:CH4->CH3H      
+12 H+H=>H2               
