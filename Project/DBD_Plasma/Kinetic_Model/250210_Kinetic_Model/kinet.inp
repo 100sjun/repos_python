@@ -17,9 +17,9 @@ $ double precision, parameter :: R = 8.314d-3
 # Compensation Parameters
 $ double precision, parameter :: f0 = 1.0000d0
 $ double precision, parameter :: f1 = 1.0000d0
-$ double precision, parameter :: f2 = 1.0000d3
+$ double precision, parameter :: f2 = 1.0000d0
 $ double precision, parameter :: f3 = 1.0000d0
-$ double precision, parameter :: f4 = 1.0000d16
+$ double precision, parameter :: f4 = 1.0000d0
 
 # Electron Collision Reaction
 e + CH4 => e + CH4(v24)		    ! f0 * Bolsig+ CH4 -> CH4(v24)
