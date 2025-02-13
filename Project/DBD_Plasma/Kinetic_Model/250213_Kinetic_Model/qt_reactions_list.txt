@@ -1,0 +1,4 @@
+1 bolsig:CH4->CH4(V24)
+2 bolsig:CH4->CH4(V13)
+3 bolsig:CH4(V24)->CH4
+4 bolsig:CH4(V13)->CH4

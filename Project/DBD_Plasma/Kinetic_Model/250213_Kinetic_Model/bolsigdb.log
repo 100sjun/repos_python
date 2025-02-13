@@ -1,0 +1,31 @@
+# List of loaded electron processes to BOLSIG+ solver.
+# Can be used as references for reaction rates in input kinetics.
+C1_CH4_Elastic
+CH4->CH4(V24)
+CH4->CH4(V13)
+CH4->CH3H
+CH4->CH2H2
+CH4->CHH2H
+CH4->CH2H2
+CH4->CH4^+
+CH4->HCH3^+
+CH4->H2CH2^+
+CH4->H2HCH^+
+CH4(V13)->CH4
+CH4(V13)->CH3H
+CH4(V13)->CH2H2
+CH4(V13)->CHH2H
+CH4(V13)->CH2H2
+CH4(V13)->CH4^+
+CH4(V13)->HCH3^+
+CH4(V13)->H2CH2^+
+CH4(V13)->H2HCH^+
+CH4(V24)->CH4
+CH4(V24)->CH3H
+CH4(V24)->CH2H2
+CH4(V24)->CHH2H
+CH4(V24)->CH2H2
+CH4(V24)->CH4^+
+CH4(V24)->HCH3^+
+CH4(V24)->H2CH2^+
+CH4(V24)->H2HCH^+

@@ -1,0 +1,26 @@
+ELEMENTS
+e C H
+END
+
+SPECIES
+e CH4 CH4(v13) CH4(v24) CH4^+
+END
+
+BOLSIG
+CH4 CH4(v13) CH4(v24)
+END
+
+REACTIONS
+# Gas Constant
+$ double precision, parameter :: R = 8.314d-3
+
+# Compensation Parameters
+$ double precision, parameter :: f0 = 1.0000d0
+
+# Electron Collision Reaction
+e + CH4 => e + CH4(v24)		    ! f0 * Bolsig+ CH4 -> CH4(v24)
+e + CH4 => e + CH4(v13)		    ! f0 * Bolsig+ CH4 -> CH4(v13)
+e + CH4(v24) => e + CH4		    ! f0 * Bolsig+ CH4(v24) -> CH4
+e + CH4(v13) => e + CH4		    ! f0 * Bolsig+ CH4(v13) -> CH4
+
+END
