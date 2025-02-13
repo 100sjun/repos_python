@@ -3,11 +3,13 @@ e C H
 END
 
 SPECIES
-e CH4 CH4(v13) CH4(v24) CH4^+
+e CH3 CH4 CH4(v13) CH4(v24) CH4^+ C2H2 C2H2(v13) C2H2(v2) C2H2(v5) C2H4 C2H4(v1) C2H4(v2) C2H6 C2H6(v13) C2H6(v24)
+C3H6 C3H6(v) C3H8 C3H8(v1) C3H8(v2) H
 END
 
 BOLSIG
-CH4 CH4(v13) CH4(v24)
+CH4 CH4(v13) CH4(v24) CH4^+ C2H2 C2H2(v13) C2H2(v2) C2H2(v5) C2H4 C2H4(v1) C2H4(v2) C2H6 C2H6(v13) C2H6(v24)
+C3H6 C3H6(v) C3H8 C3H8(v1) C3H8(v2)
 END
 
 REACTIONS
@@ -16,11 +18,49 @@ $ double precision, parameter :: R = 8.314d-3
 
 # Compensation Parameters
 $ double precision, parameter :: f0 = 1.0000d0
+$ double precision, parameter :: f1 = 1.0000d0
+$ double precision, parameter :: f2 = 1.0000d0
+$ double precision, parameter :: f3 = 1.0000d0
+$ double precision, parameter :: f4 = 1.0000d0
+$ double precision, parameter :: f5 = 1.0000d0
+$ double precision, parameter :: f6 = 1.0000d0
 
 # Electron Collision Reaction
-e + CH4 => e + CH4(v24)		    ! f0 * Bolsig+ CH4 -> CH4(v24)
-e + CH4 => e + CH4(v13)		    ! f0 * Bolsig+ CH4 -> CH4(v13)
-e + CH4(v24) => e + CH4		    ! f0 * Bolsig+ CH4(v24) -> CH4
-e + CH4(v13) => e + CH4		    ! f0 * Bolsig+ CH4(v13) -> CH4
+e + CH4 => e + CH4(v24)		            ! f0 * Bolsig+ CH4 -> CH4(v24)
+e + CH4 => e + CH4(v13)		            ! f0 * Bolsig+ CH4 -> CH4(v13)
+e + CH4(v24) => e + CH4		            ! f0 * Bolsig+ CH4(v24) -> CH4
+e + CH4(v13) => e + CH4		            ! f0 * Bolsig+ CH4(v13) -> CH4
+e + C2H2 => e + C2H2(v2)		        ! f1 * Bolsig+ C2H2 -> C2H2(v2)
+e + C2H2 => e + C2H2(v5)		        ! f1 * Bolsig+ C2H2 -> C2H2(v5)
+e + C2H2 => e + C2H2(v13)		        ! f1 * Bolsig+ C2H2 -> C2H2(v13)
+e + C2H2(v2) => e + C2H2		        ! f1 * Bolsig+ C2H2(v2) -> C2H2
+e + C2H2(v5) => e + C2H2		        ! f1 * Bolsig+ C2H2(v5) -> C2H2
+e + C2H2(v13) => e + C2H2		        ! f1 * Bolsig+ C2H2(v13) -> C2H2
+e + C2H4 => e + C2H4(v2)		        ! f2 * Bolsig+ C2H4 -> C2H4(v2)
+e + C2H4 => e + C2H4(v1)		        ! f2 * Bolsig+ C2H4 -> C2H4(v1)
+e + C2H4(v2) => e + C2H4		        ! f2 * Bolsig+ C2H4(v2) -> C2H4
+e + C2H4(v1) => e + C2H4		        ! f2 * Bolsig+ C2H4(v1) -> C2H4
+e + C2H6 => e + C2H6(v24)		        ! f3 * Bolsig+ C2H6 -> C2H6(v24)
+e + C2H6 => e + C2H6(v13)		        ! f3 * Bolsig+ C2H6 -> C2H6(v13)
+e + C2H6(v24) => e + C2H6		        ! f3 * Bolsig+ C2H6(v24) -> C2H6
+e + C2H6(v13) => e + C2H6		        ! f3 * Bolsig+ C2H6(v13) -> C2H6
+e + C3H6 => e + C3H6(v)		            ! f4 * Bolsig+ C3H6 -> C3H6(v)
+e + C3H6(v) => e + C3H6		            ! f4 * Bolsig+ C3H6(v) -> C3H6
+e + C3H8 => e + C3H8(v2)		        ! f5 * Bolsig+ C3H8 -> C3H8(v2)
+e + C3H8 => e + C3H8(v1)		        ! f5 * Bolsig+ C3H8 -> C3H8(v1)
+e + C3H8(v2) => e + C3H8		        ! f5 * Bolsig+ C3H8(v2) -> C3H8
+e + C3H8(v1) => e + C3H8		        ! f5 * Bolsig+ C3H8(v1) -> C3H8
+e + CH4 => e + CH3 + H		            ! f6 * Bolsig+ CH4 -> CH3 H
+e + CH4(v24) => e + CH3 + H		        ! f6 * Bolsig+ CH4(v24) -> CH3 H
+e + CH4(v13) => e + CH3 + H		        ! f6 * Bolsig+ CH4(v13) -> CH3 H
+
+
+
+
+
+
+
+
+
 
 END

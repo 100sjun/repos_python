@@ -72,7 +72,8 @@ exe_name = 'run.exe'  # 실행 파일 이름 설정
 compile_zdp(exe_name)  # ZDPlaskin 컴파일 실행
 run_exe(exe_name)
 
-exp = 90.80403
+exp_list = ['CH4', 'C2H6', 'C2H4', 'C2H2', 'C3H8', 'C3H6', 'CH3', 'H']
+exp = [90.80403, 2.428802, 0.197735, 0.171795, 0.717088, 0.046734, 0, 0]
 
 
 species = []
@@ -83,17 +84,32 @@ with open('qt_species_list.txt','r') as f:
     f.close()
 df_sp = pd.read_csv('qt_densities.txt', sep=r'\s+', header=0, names=['Time [s]']+species)
 CH4 = (df_sp['CH4'] + df_sp['CH4(V13)'] + df_sp['CH4(V24)'])
+C2H2 = (df_sp['C2H2'] + df_sp['C2H2(V2)'] + df_sp['C2H2(V5)'] + df_sp['C2H2(V13)'])
+C2H4 = (df_sp['C2H4'] + df_sp['C2H4(V1)'] + df_sp['C2H4(V2)'])
+C2H6 = (df_sp['C2H6'] + df_sp['C2H6(V13)'] + df_sp['C2H6(V24)'])
+C3H6 = (df_sp['C3H6'] + df_sp['C3H6(V)'])
+C3H8 = (df_sp['C3H8'] + df_sp['C3H8(V1)'] + df_sp['C3H8(V2)'])
+CH3 = (df_sp['CH3'])
+H = (df_sp['H'])
+
 all_sp = df_sp.sum(axis=1) - df_sp['E']
 
 t = abs(df_sp['Time [s]']-16.96).argmin()
 
 sim = []
 sim_CH4 = CH4.iloc[t]/all_sp.iloc[t]*100
+sim_C2H2 = C2H2.iloc[t]/all_sp.iloc[t]*100
+sim_C2H4 = C2H4.iloc[t]/all_sp.iloc[t]*100
+sim_C2H6 = C2H6.iloc[t]/all_sp.iloc[t]*100
+sim_C3H6 = C3H6.iloc[t]/all_sp.iloc[t]*100
+sim_C3H8 = C3H8.iloc[t]/all_sp.iloc[t]*100
+sim_CH3 = CH3.iloc[t]/all_sp.iloc[t]*100
+sim_H = H.iloc[t]/all_sp.iloc[t]*100
 
 result = pd.DataFrame({
-    'species': ['CH4'],
-    'exp': [exp],
-    'sim': [sim_CH4]
+    'species': exp_list,
+    'exp': exp,
+    'sim': [sim_CH4, sim_C2H6, sim_C2H4, sim_C2H2, sim_C3H8, sim_C3H6, sim_CH3, sim_H]
 })
 
 print(result)

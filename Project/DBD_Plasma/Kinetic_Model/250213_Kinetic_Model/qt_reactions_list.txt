@@ -1,4 +1,27 @@
-1 bolsig:CH4->CH4(V24)
-2 bolsig:CH4->CH4(V13)
-3 bolsig:CH4(V24)->CH4
-4 bolsig:CH4(V13)->CH4
+ 1 bolsig:CH4->CH4(V24)  
+ 2 bolsig:CH4->CH4(V13)  
+ 3 bolsig:CH4(V24)->CH4  
+ 4 bolsig:CH4(V13)->CH4  
+ 5 bolsig:C2H2->C2H2(V2) 
+ 6 bolsig:C2H2->C2H2(V5) 
+ 7 bolsig:C2H2->C2H2(V13)
+ 8 bolsig:C2H2(V2)->C2H2 
+ 9 bolsig:C2H2(V5)->C2H2 
+10 bolsig:C2H2(V13)->C2H2
+11 bolsig:C2H4->C2H4(V2) 
+12 bolsig:C2H4->C2H4(V1) 
+13 bolsig:C2H4(V2)->C2H4 
+14 bolsig:C2H4(V1)->C2H4 
+15 bolsig:C2H6->C2H6(V24)
+16 bolsig:C2H6->C2H6(V13)
+17 bolsig:C2H6(V24)->C2H6
+18 bolsig:C2H6(V13)->C2H6
+19 bolsig:C3H6->C3H6(V)  
+20 bolsig:C3H6(V)->C3H6  
+21 bolsig:C3H8->C3H8(V2) 
+22 bolsig:C3H8->C3H8(V1) 
+23 bolsig:C3H8(V2)->C3H8 
+24 bolsig:C3H8(V1)->C3H8 
+25 bolsig:CH4->CH3H      
+26 bolsig:CH4(V24)->CH3H 
+27 bolsig:CH4(V13)->CH3H 
