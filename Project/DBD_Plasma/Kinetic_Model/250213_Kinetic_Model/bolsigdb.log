@@ -1,6 +1,17 @@
 # List of loaded electron processes to BOLSIG+ solver.
 # Can be used as references for reaction rates in input kinetics.
-C1_CH4_Elastic
+C1_CH_Effective_(momentum)
+CH->CH
+CH->CH^+
+C4_CH3_Effective_(momentum)
+CH3->CH2H
+CH3->CHH2
+CH3->CH2H
+CH3->CH3^+
+CH3->HCH2^+
+CH3->H2CH^+
+CH3^+->CH3
+C12_CH4_Elastic
 CH4->CH4(V24)
 CH4->CH4(V13)
 CH4->CH3H
@@ -32,7 +43,7 @@ CH4(V24)->H2HCH^+
 CH4^+->CH4
 CH4^+->CH4(V24)
 CH4^+->CH4(V13)
-C33_C2H2_Elastic
+C44_C2H2_Elastic
 C2H2->C2H2(V5)
 C2H2->C2H2(V2)
 C2H2->C2H2(V13)
@@ -51,7 +62,11 @@ C2H2(V5)->C2H2
 C2H2(V5)->CHCH
 C2H2(V5)->C2H2^+
 C2H2(V5)->CHCH^+
-C52_C2H4_Elastic
+C2H2^+->C2H2
+C2H2^+->C2H2(V5)
+C2H2^+->C2H2(V2)
+C2H2^+->C2H2(V13)
+C67_C2H4_Elastic
 C2H4->C2H4(V1)
 C2H4->C2H4(V2)
 C2H4->C2H3H
@@ -86,7 +101,11 @@ C2H4(V2)->HC2H3^+
 C2H4(V2)->CHCH3^+
 C2H4(V2)->CH2CH2^+
 C2H4(V2)->CH3CH^+
-C87_C2H6_Elastic
+C2H4^+->C2H4
+C2H4^+->C2H4(V1)
+C2H4^+->C2H4(V2)
+C2H5^+->C2H5
+C106_C2H6_Elastic
 C2H6->C2H6(V24)
 C2H6->C2H6(V13)
 C2H6->C2H5H
@@ -130,7 +149,10 @@ C2H6(V24)->H2HC2H3^+
 C2H6(V24)->H2H2C2H2^+
 C2H6(V24)->CH3CH3^+
 C2H6(V24)->CH4CH2^+
-C131_C3H6_Elastic
+C2H6^+->C2H6
+C2H6^+->C2H6(V24)
+C2H6^+->C2H6(V13)
+C153_C3H6_Elastic
 C3H6->C3H6(V)
 C3H6->C3H6^+
 C3H6->C2H2CH4
@@ -139,7 +161,9 @@ C3H6(V)->C3H6
 C3H6(V)->C3H6^+
 C3H6(V)->C2H2CH4
 C3H6(V)->C2H2CH4^+
-C140_C3H8_Effective_(momentum)
+C3H6^+->C3H6
+C3H6^+->C3H6(V)
+C164_C3H8_Effective_(momentum)
 C3H8->C3H8(V1)
 C3H8->C3H8(V2)
 C3H8->C3H7H
@@ -159,3 +183,6 @@ C3H8(V2)->C3H6H2
 C3H8(V2)->C3H8^+
 C3H8(V2)->HC3H7^+
 C3H8(V2)->H2C3H6^+
+C3H8^+->C3H8
+C3H8^+->C3H8(V1)
+C3H8^+->C3H8(V2)

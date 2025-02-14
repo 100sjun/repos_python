@@ -72,8 +72,8 @@ exe_name = 'run.exe'  # 실행 파일 이름 설정
 compile_zdp(exe_name)  # ZDPlaskin 컴파일 실행
 run_exe(exe_name)
 
-exp_list = ['CH4', 'C2H6', 'C2H4', 'C2H2', 'C3H8', 'C3H6', 'CH3', 'H']
-exp = [90.80403, 2.428802, 0.197735, 0.171795, 0.717088, 0.046734, 0, 0]
+exp_list = ['H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'C3H8', 'C3H6', 'C4H10', 'C5H12', 'C', 'CH', 'CH2', 'CH3', 'C2H3', 'C2H5', 'C3H7', 'H', 'CH3^+', 'CH4^+', 'CH5^+', 'C2H2^+', 'C2H4^+', 'C2H5^+', 'C2H6^+', 'C3H6^+', 'C3H8^+']
+exp = [5.319082, 90.80403, 2.428802, 0.197735, 0.171795, 0.717088, 0.046734, 0.114829, 0.119573, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
 species = []
@@ -83,33 +83,72 @@ with open('qt_species_list.txt','r') as f:
         species.append(comp.strip())
     f.close()
 df_sp = pd.read_csv('qt_densities.txt', sep=r'\s+', header=0, names=['Time [s]']+species)
+H2 = (df_sp['H2'])
 CH4 = (df_sp['CH4'] + df_sp['CH4(V13)'] + df_sp['CH4(V24)'])
 C2H2 = (df_sp['C2H2'] + df_sp['C2H2(V2)'] + df_sp['C2H2(V5)'] + df_sp['C2H2(V13)'])
 C2H4 = (df_sp['C2H4'] + df_sp['C2H4(V1)'] + df_sp['C2H4(V2)'])
 C2H6 = (df_sp['C2H6'] + df_sp['C2H6(V13)'] + df_sp['C2H6(V24)'])
 C3H6 = (df_sp['C3H6'] + df_sp['C3H6(V)'])
 C3H8 = (df_sp['C3H8'] + df_sp['C3H8(V1)'] + df_sp['C3H8(V2)'])
+C4H10 = (df_sp['C4H9H'])
+C5H12 = (df_sp['C5H12'])
+C = (df_sp['C'])
+CH = (df_sp['CH'])
+CH2 = (df_sp['CH2'])
 CH3 = (df_sp['CH3'])
+C2H3 = (df_sp['C2H3'])
+C2H5 = (df_sp['C2H5'])
+C3H7 = (df_sp['C3H7'])
 H = (df_sp['H'])
+CH3_plus = (df_sp['CH3^+'])
+CH4_plus = df_sp['CH4^+']
+CH5_plus = df_sp['CH5^+']
+C2H2_plus = df_sp['C2H2^+']
+C2H4_plus = df_sp['C2H4^+']
+C2H5_plus = df_sp['C2H5^+']
+C2H6_plus = df_sp['C2H6^+']
+C3H6_plus = df_sp['C3H6^+']
+C3H8_plus = df_sp['C3H8^+']
 
 all_sp = df_sp.sum(axis=1) - df_sp['E']
 
 t = abs(df_sp['Time [s]']-16.96).argmin()
 
 sim = []
-sim_CH4 = CH4.iloc[t]/all_sp.iloc[t]*100
-sim_C2H2 = C2H2.iloc[t]/all_sp.iloc[t]*100
-sim_C2H4 = C2H4.iloc[t]/all_sp.iloc[t]*100
-sim_C2H6 = C2H6.iloc[t]/all_sp.iloc[t]*100
-sim_C3H6 = C3H6.iloc[t]/all_sp.iloc[t]*100
-sim_C3H8 = C3H8.iloc[t]/all_sp.iloc[t]*100
-sim_CH3 = CH3.iloc[t]/all_sp.iloc[t]*100
-sim_H = H.iloc[t]/all_sp.iloc[t]*100
+sim_H2 = float(format(H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH4 = float(format(CH4.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H2 = float(format(C2H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H4 = float(format(C2H4.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H6 = float(format(C2H6.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C3H6 = float(format(C3H6.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C3H8 = float(format(C3H8.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C4H10 = float(format(C4H10.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C5H12 = float(format(C5H12.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C = float(format(C.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH = float(format(CH.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH2 = float(format(CH2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH3 = float(format(CH3.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H3 = float(format(C2H3.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H5 = float(format(C2H5.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C3H7 = float(format(C3H7.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_H = float(format(H.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH3_plus = float(format(CH3_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH4_plus = float(format(CH4_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_CH5_plus = float(format(CH5_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H2_plus = float(format(C2H2_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H4_plus = float(format(C2H4_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H5_plus = float(format(C2H5_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C2H6_plus = float(format(C2H6_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C3H6_plus = float(format(C3H6_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+sim_C3H8_plus = float(format(C3H8_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
 
 result = pd.DataFrame({
     'species': exp_list,
     'exp': exp,
-    'sim': [sim_CH4, sim_C2H6, sim_C2H4, sim_C2H2, sim_C3H8, sim_C3H6, sim_CH3, sim_H]
+    'sim': [sim_H2, sim_CH4, sim_C2H6, sim_C2H4, sim_C2H2, sim_C3H8, sim_C3H6, sim_C4H10, sim_C5H12, 
+            sim_C, sim_CH, sim_CH2, sim_CH3, sim_C2H3, sim_C2H5, sim_C3H7, sim_H,  # 라디칼 종
+            sim_CH3_plus, sim_CH4_plus, sim_CH5_plus, sim_C2H2_plus, sim_C2H4_plus, 
+            sim_C2H5_plus, sim_C2H6_plus, sim_C3H6_plus, sim_C3H8_plus]  # 이온 종
 })
 
 print(result)

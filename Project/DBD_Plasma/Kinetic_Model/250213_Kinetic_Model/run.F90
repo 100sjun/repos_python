@@ -57,10 +57,8 @@ program run_plasRxn
       dtime = 1.0d-4
     else if (time .lt. 1.0d-1) then
       dtime = 1.0d-3
-    else if (time .lt. 1.0d0) then
-      dtime = 1.0d-2
     else
-      dtime = 1.0d-1
+      dtime = 1.0d-2
     end if
 
     call ZDPlasKin_set_conditions(REDUCED_FIELD=EN)
