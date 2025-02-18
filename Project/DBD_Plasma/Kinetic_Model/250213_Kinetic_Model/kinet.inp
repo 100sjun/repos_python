@@ -17,29 +17,29 @@ REACTIONS
 $ double precision, parameter :: R = 8.314d-3
 
 # Compensation Parameters
-$ double precision, parameter :: i0 = 1.0000d4
-$ double precision, parameter :: i1 = 1.0000d-6
-$ double precision, parameter :: i2 = 1.0000d14
+$ double precision, parameter :: i0 = 1.0000d0
+$ double precision, parameter :: i1 = 1.4000d-10
+$ double precision, parameter :: i2 = i1 * 1.0000d7
 $ double precision, parameter :: f0 = 1.0000d0
-$ double precision, parameter :: f1 = 1.0000d-3
+$ double precision, parameter :: f1 = 1.0000d0
 $ double precision, parameter :: f2 = 1.0000d8
 $ double precision, parameter :: f3 = 1.0000d0
-$ double precision, parameter :: f4 = 1.0000d2
-$ double precision, parameter :: f5 = 1.0000d3
+$ double precision, parameter :: f4 = 1.0000d0
+$ double precision, parameter :: f5 = 1.0000d1
 $ double precision, parameter :: f6 = 1.0000d0
 $ double precision, parameter :: f7 = 1.0000d0
-$ double precision, parameter :: f8 = 1.0000d6
-$ double precision, parameter :: f9 = 1.0000d1
+$ double precision, parameter :: f8 = 1.0000d-2
+$ double precision, parameter :: f9 = 1.0000d0
 $ double precision, parameter :: f10 = 1.0000d0
 $ double precision, parameter :: f11 = 1.0000d0
 $ double precision, parameter :: f12 = 1.0000d0
-$ double precision, parameter :: f13 = 1.0000d0
+$ double precision, parameter :: f13 = 1.0000d8
 $ double precision, parameter :: f14 = 1.0000d0
-$ double precision, parameter :: f15 = 1.0000d0
+$ double precision, parameter :: f15 = 1.0000d8
 $ double precision, parameter :: f16 = 1.0000d0
 $ double precision, parameter :: f17 = 1.0000d0
 $ double precision, parameter :: f18 = 1.0000d0
-$ double precision, parameter :: f19 = 1.0000d1
+$ double precision, parameter :: f19 = 1.0000d0
 $ double precision, parameter :: f20 = 1.0000d0
 $ double precision, parameter :: f21 = 1.0000d0
 $ double precision, parameter :: f22 = 1.0000d0
@@ -48,9 +48,9 @@ $ double precision, parameter :: f24 = 1.0000d0
 $ double precision, parameter :: f25 = 1.0000d0
 $ double precision, parameter :: f26 = 1.0000d0
 $ double precision, parameter :: f27 = 1.0000d0
-$ double precision, parameter :: f28 = 1.0000d1
+$ double precision, parameter :: f28 = 1.0000d0
 $ double precision, parameter :: f29 = 1.0000d0
-$ double precision, parameter :: f30 = 1.0000d2
+$ double precision, parameter :: f30 = 1.0000d0
 $ double precision, parameter :: f31 = 1.0000d0
 $ double precision, parameter :: f32 = 1.0000d0
 $ double precision, parameter :: f33 = 1.0000d0
@@ -176,8 +176,6 @@ CH4 + CH3^+ => H2 + C2H5^+                     ! f29 * 1.20d-9
 CH4(v24) + CH3^+ => H2 + C2H5^+                 ! f29 * 1.20d-9
 CH4(v13) + CH3^+ => H2 + C2H5^+                 ! f29 * 1.20d-9
 H + H => H2                                      ! f33 * 5.52d-30*Tgas**(-1.00)
-
-
 
 
 END

@@ -26,7 +26,7 @@ def run_preprocessor(input_path):  # 입력 파일 경로를 매개변수로 받
 
 def compile_zdp(name):  # ZDPlaskin 컴파일 함수 정의
     compile_command = [  # 컴파일 명령어 리스트 생성
-        'gfortran', '-o', name, 'dvode_f90_m.F90', 'zdplaskin_m.F90', 'run.F90', 'bolsig_x86_64_g.dll'
+        'gfortran', '-o', name, 'dvode_f90_m.F90', 'zdplaskin_m.F90', 'run2.F90', 'bolsig_x86_64_g.dll'
     ]
     result = subprocess.run(compile_command, capture_output=True, text=True)  # 컴파일 명령 실행
     
@@ -68,7 +68,7 @@ def run_exe(exe_path):  # ZDPlaskin 실행 함수 정의
 
 kinet_path = 'kinet.inp'  # 입력 파일 경로 설정
 run_preprocessor(kinet_path)  # 전처리기 실행
-exe_name = 'run.exe'  # 실행 파일 이름 설정
+exe_name = 'run2.exe'  # 실행 파일 이름 설정
 compile_zdp(exe_name)  # ZDPlaskin 컴파일 실행
 run_exe(exe_name)
 
