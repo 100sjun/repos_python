@@ -1,0 +1,13 @@
+{
+    "best_value": 0.9347395777702332,
+    "best_params": {
+        "hidden_layers": 7,
+        "hidden_nodes": 128,
+        "learning_rate": 0.00048062166934883697,
+        "num_epochs": 1000,
+        "batch_size": 156,
+        "weight_decay": 1.307297716773225e-06
+    },
+    "n_trials": 20,
+    "trial_number": 19
+}
