@@ -72,7 +72,7 @@ def run_exe(exe_path):  # ZDPlaskin 실행 함수 정의
         pass
     return process
 
-kinet_path = 'kinet.inp'  # 입력 파일 경로 설정
+kinet_path = 'kinet_opt.inp'  # 입력 파일 경로 설정
 run_preprocessor(kinet_path)  # 전처리기 실행
 exe_name = 'run_15kV.exe'  # 실행 파일 이름 설정
 compile_zdp(exe_name)  # ZDPlaskin 컴파일 실행
