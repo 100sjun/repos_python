@@ -1,0 +1,20 @@
+{
+    "name": "bmed-NN",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "uv-app",
+    "workspaceFolder": "/app",
+    "remoteUser": "root",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-toolsai.jupyter",
+          "ms-python.vscode-pylance"
+        ],
+        "settings": {
+          "python.defaultInterpreterPath": "/opt/uv-venv/bin/python"
+        }
+      }
+    }
+  }
+  
