@@ -1,13 +1,13 @@
 {
-    "best_value": 0.9347395777702332,
+    "best_value": 0.9488087177276612,
     "best_params": {
-        "hidden_layers": 7,
+        "hidden_layers": 6,
         "hidden_nodes": 128,
-        "learning_rate": 0.00048062166934883697,
-        "num_epochs": 1000,
-        "batch_size": 156,
-        "weight_decay": 1.307297716773225e-06
+        "learning_rate": 0.0009891646579354059,
+        "num_epochs": 810,
+        "batch_size": 184,
+        "weight_decay": 1.1517123421468006e-05
     },
-    "n_trials": 20,
-    "trial_number": 19
+    "n_trials": 74,
+    "trial_number": 73
 }

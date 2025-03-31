@@ -1,0 +1,38 @@
+{
+  "name": "torch-dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["--gpus", "all"],
+  "workspaceFolder": "/app",
+  "mounts": [
+    "source=${localWorkspaceFolder}/app,target=/app,type=bind,consistency=cached"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "python.defaultInterpreterPath": "/opt/venv/bin/python",
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "jupyter.alwaysTrustNotebooks": true
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.jupyter-keymap",
+        "njpwerner.autodocstring",
+        "kevinrose.vsc-python-indent",
+        "donjayamanne.python-extension-pack"
+      ]
+    }
+  }
+}
