@@ -12,7 +12,7 @@ from sklearn.metrics import r2_score
 
 # load data
 class RawDataLoader():
-    def __init__(self, path='BMED_train_data_v2.xlsx'):
+    def __init__(self, path='250314_BMED_train data_v4.xlsx'):
         self.path = path
         self.X_data, self.Y_data = self.RawData()
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -67,7 +67,7 @@ class CustomModel(nn.Module):
 
 # Set the hyperparameters
 class NNmodel():
-    def __init__(self, hidden_layers=4, hidden_nodes = 128, learning_rate=0.0005791697935397798, num_epochs=9680, batch_size=16, weight_decay=1.0000000000000004e-06, title='bmed_flux_batch_NN_model.pth'):
+    def __init__(self, hidden_layers=6, hidden_nodes = 128, learning_rate=0.0009891646579354059, num_epochs=8100, batch_size=184, weight_decay=1.1517123421468006e-05, title='bmed_flux_batch_NN_model.pth'):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.hidden_layers = hidden_layers
         self.hidden_nodes = hidden_nodes
@@ -188,8 +188,8 @@ class NNmodel():
         torch.save(model_state, title)
         print(f"Model saved to {title}")            
         
-    def load_model(self, filepath):
-        model_state = torch.load(filepath)
+    def load_model(self, filepath, weights_only=False):
+        model_state = torch.load(filepath, weights_only=weights_only)
 
         # load hyperparameters
         hyperparameters = model_state['hyperparameters']
