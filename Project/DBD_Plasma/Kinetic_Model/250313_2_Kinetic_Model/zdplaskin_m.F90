@@ -12,7 +12,7 @@
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
-! Fri Mar 14 10:20:01 2025
+! Mon Mar 24 15:04:45 2025
 !
 !-----------------------------------------------------------------------------------------------------------------------------------
 !
@@ -2312,7 +2312,7 @@ subroutine ZDPlasKin_reac_rates(Time)
   DOUBLE PRECISION, PARAMETER :: F15 = 4.0357D-03
   DOUBLE PRECISION, PARAMETER :: F16 = 2.2334D+09
   DOUBLE PRECISION, PARAMETER :: F17 = 1.0874D-02
-  DOUBLE PRECISION, PARAMETER :: F18 = 1.2339D+14
+  DOUBLE PRECISION, PARAMETER :: F18 = 1.2339D+06
   DOUBLE PRECISION, PARAMETER :: F19 = 1.0769D-04
   DOUBLE PRECISION, PARAMETER :: F20 = 1.7496D-01
   DOUBLE PRECISION, PARAMETER :: F21 = 4.4750D-02
