@@ -53,7 +53,7 @@ Y_batch = torch.stack(Y_batches)
 # Model parameter settings
 x_size = X_batch[0].shape[0]  # Update x_size based on first experiment
 s_size = S_batch[0].shape[0]  # Update s_size based on first experiment
-dt = 0.01
+dt = 0.1
 max_time = times_list[0][-1]  # First experiment's end time
 
 # CUDA 사용 가능 여부 확인 및 device 설정
