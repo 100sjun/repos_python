@@ -44,7 +44,7 @@ class BMEDDataset(Dataset):
         # 실험을 n_folds 개의 그룹으로 나누기
         fold_size = len(all_exps) // n_folds
         test_start = fold_idx * fold_size
-        test_end = (fold_idx + 1) * fold_size if fold_idx < n_folds - 1 else len(all_exps)
+        test_end = (fold_idx + 1) * fold_size if fold_idx < 4 else len(all_exps)
         
         if train:
             # 현재 fold를 제외한 모든 실험을 훈련 데이터로 사용
