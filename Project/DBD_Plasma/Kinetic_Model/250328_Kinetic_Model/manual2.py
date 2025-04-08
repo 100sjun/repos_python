@@ -238,3 +238,31 @@ def plot_comparison(exp, sim, residence_times, exp_list):
 
 # 모든 데이터에 대한 그래프 생성
 plot_comparison(exp, sim, residence_times, exp_list)
+
+# 그래프 데이터를 CSV 파일로 저장
+def save_results_to_csv(exp, sim, residence_times, exp_list):
+    # 데이터 준비
+    data = {}
+    
+    # 체류 시간 추가
+    data['Residence_Time'] = residence_times
+    
+    # 실험 데이터 추가
+    for i, species in enumerate(exp_list):
+        exp_values = [exp_data[i] for exp_data in exp]
+        data[f'{species}_Experimental'] = exp_values
+    
+    # 시뮬레이션 데이터 추가
+    for i, species in enumerate(exp_list):
+        sim_values = [sim_data[i] for sim_data in sim]
+        data[f'{species}_Simulation'] = sim_values
+    
+    # 데이터프레임 생성 및 CSV 저장
+    df_results = pd.DataFrame(data)
+    csv_filename = 'comparison_results.csv'
+    df_results.to_csv(csv_filename, index=False)
+    
+    print(f'그래프 데이터가 {csv_filename}에 저장되었습니다.')
+
+# 그래프 데이터 CSV 저장 함수 호출
+save_results_to_csv(exp, sim, residence_times, exp_list)
