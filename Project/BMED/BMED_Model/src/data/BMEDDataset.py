@@ -52,6 +52,17 @@ class BMEDDataset(Dataset):
         # 데이터 준비
         self.prepare_data()
 
+        # 실험별 인덱스 저장 (BatchSampler 사용)
+        self.exp_indices = []
+        cur_idx = 0
+        for exp_id in self.exps_to_use:
+            exp_data = self.dict_spline[exp_id]
+            # 각 데이터 포인테에 대해 하나의 샘플 생성
+            n_samples = len(exp_data) - 1
+            indices = list(range(cur_idx, cur_idx + n_samples))
+            self.exp_indices.append((exp_id, indices))
+            cur_idx += n_samples
+
     def get_scalers(self):
         """스케일러 반환"""
         return {
@@ -139,4 +150,4 @@ class BMEDDataset(Dataset):
 
 
 
-        
+
