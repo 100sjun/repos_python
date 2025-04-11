@@ -30,6 +30,7 @@ def main(mode, datapath):
     # Model Selection
     if mode == 1:
         model = model_with_kfold(mode, datapath)
+        print(model)
 
 if __name__ == '__main__':
     '''mode

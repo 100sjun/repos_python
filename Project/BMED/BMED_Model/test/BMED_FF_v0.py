@@ -150,11 +150,11 @@ class BMEDDataset(Dataset):
         return len(self.features)
                         
     def __getitem__(self, idx):
-        # 3D 텐서가 아니라 2D 텐서를 반환 (배치 차원, 특성 차원만 유지)
+        # 피드포워드 네트워크를 위한 간단한 2D 텐서 반환
         return (
-            torch.FloatTensor(self.features[idx]).unsqueeze(0),  # [1, 10] 형태로 변환 (유연성을 위해)
-            torch.FloatTensor(self.mol_changes_targets[idx]),
-            torch.FloatTensor(self.states_targets[idx]).unsqueeze(0)  # [1, 10] 형태로 변환
+            torch.FloatTensor(self.features[idx]),  # [10] 형태
+            torch.FloatTensor(self.mol_changes_targets[idx]),  # [4] 형태
+            torch.FloatTensor(self.states_targets[idx])  # [10] 형태
         )
     
     def inverse_transform_predictions(self, mol_pred, state_pred=None):

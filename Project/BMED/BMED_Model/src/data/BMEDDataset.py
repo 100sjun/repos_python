@@ -138,10 +138,11 @@ class BMEDDataset(Dataset):
         return len(self.features)
     
     def __getitem__(self, idx):
+        # 피드포워드 네트워크를 위한 간단한 2D 텐서 반환
         return (
-            torch.FloatTensor(self.features[idx]).unsqueeze(0),
-            torch.FloatTensor(self.migrations[idx]).unsqueeze(0),
-            torch.FloatTensor(self.states[idx]).unsqueeze(0)
+            torch.FloatTensor(self.features[idx]), # [10] 형태
+            torch.FloatTensor(self.migrations[idx]), # [4] 형태
+            torch.FloatTensor(self.states[idx]) # [10] 형태
         )
         
 
