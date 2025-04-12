@@ -5,7 +5,7 @@ from src.model.MembraneSystemTrainer import MembraneSystemTrainer
 from torch.utils.data import DataLoader
 import numpy as np
 
-def model_with_kfold(mode, datapath, hidden_nodes=256, hidden_layers=10, epochs=1000, lr = 0.0001, rstop = 0.1, weight_decay = 1e-2):
+def model_with_kfold(mode, datapath, hidden_nodes=64, hidden_layers=3, epochs=100, lr = 0.01, rstop = 0.1, weight_decay = 1e-2):
     fold_results = []
     min_r2_per_fold = []
     for fold in range(5):
@@ -61,7 +61,7 @@ def model_with_kfold(mode, datapath, hidden_nodes=256, hidden_layers=10, epochs=
             'worst_var': worst_var
         })
 
-        print(f'\nFold {fold+1} - min R2: {r2_min:.6f}, Worst Var: {worst_var}')
+        print(f'Fold {fold+1} - min R2: {r2_min:.6f}, Worst Var: {worst_var}')
 
     # calcualte average min r2
     avg_min_r2 = np.mean(min_r2_per_fold)

@@ -124,11 +124,11 @@ class MembraneSystemTrainer:
                         self.model.load_state_dict(best_model_state)
                         return train_losses, val_losses, r2_final, r2_min, worst_var
                 # Print epoch, train loss, val loss
-                print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}, Val Loss: {avg_val_loss:.6f}, Best Val Loss: {best_val_loss:.6f}, Min R2: {r2_min:.6f}, Worst Var: {worst_var}, EarlyStopping counter: {counter} out of {patience}                   ', end='')
+                # print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}, Val Loss: {avg_val_loss:.6f}, Best Val Loss: {best_val_loss:.6f}, Min R2: {r2_min:.6f}, Worst Var: {worst_var}, EarlyStopping counter: {counter} out of {patience}                   ', end='')
 
                 self.model.train() # set the train mode after validation
-            else:
-                print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}', end='')
+            # else:
+            #     print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}', end='')
 
         # All epochs completion
         if best_model_state is not None:
