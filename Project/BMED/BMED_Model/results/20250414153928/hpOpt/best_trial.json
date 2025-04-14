@@ -1,0 +1,18 @@
+{
+    "timestamp": "20250414153930",
+    "trial_number": 68,
+    "best_value": 0.991942310333252,
+    "best_params": {
+        "hidden_nodes": 345,
+        "hidden_layers": 47,
+        "lr": 0.0002491498887136436,
+        "rstop": 0.3,
+        "weight_decay": 0.1,
+        "epochs": 311
+    },
+    "study_settings": {
+        "n_trials": 110,
+        "datetime_start": "2025-04-11 23:51:48",
+        "datetime_complete": "2025-04-12 17:25:52"
+    }
+}

@@ -46,7 +46,7 @@ def model_with_kfold(mode, datapath, hidden_nodes=64, hidden_layers=3, epochs=10
         trainer = MembraneSystemTrainer(model, epochs=epochs, lr=lr, rstop=rstop, weight_decay=weight_decay)
         
         # 모델 훈련
-        train_losses, val_losses, r2_final, r2_min, worst_var = trainer.train(
+        train_losses, val_losses, r2_final, r2_min, worst_var, best_model_state = trainer.train(
             train_loader = train_loader, 
             val_loader = test_loader
         )

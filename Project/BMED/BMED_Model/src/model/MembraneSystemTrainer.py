@@ -18,7 +18,7 @@ class MembraneSystemTrainer:
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr, weight_decay=self.weight_decay)
         self.criterion = self.custom_max_mse_loss
 
-    def train(self, train_loader, val_loader=None):
+    def train(self, train_loader, val_loader=None,mode=1):
         # model 훈련
         self.model.train()
         train_losses = []
@@ -122,19 +122,23 @@ class MembraneSystemTrainer:
                     if counter >= patience:
                         # restore best model parameters
                         self.model.load_state_dict(best_model_state)
-                        return train_losses, val_losses, r2_final, r2_min, worst_var
+                        return train_losses, val_losses, r2_final, r2_min, worst_var, best_model_state
                 # Print epoch, train loss, val loss
-                # print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}, Val Loss: {avg_val_loss:.6f}, Best Val Loss: {best_val_loss:.6f}, Min R2: {r2_min:.6f}, Worst Var: {worst_var}, EarlyStopping counter: {counter} out of {patience}                   ', end='')
+                if mode == 2:
+                    if epoch % 10 == 0:
+                        print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}, Val Loss: {avg_val_loss:.6f}, Best Val Loss: {best_val_loss:.6f}, Min R2: {r2_min:.6f}, Worst Var: {worst_var}, EarlyStopping counter: {counter} out of {patience}                   ', end='')
 
                 self.model.train() # set the train mode after validation
-            # else:
-            #     print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}', end='')
+            else:
+                if mode == 2:
+                    if epoch % 10 == 0:
+                        print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}', end='')
 
         # All epochs completion
         if best_model_state is not None:
             self.model.load_state_dict(best_model_state)
 
-        return train_losses, val_losses, r2_final, r2_min, worst_var
+        return train_losses, val_losses, r2_final, r2_min, worst_var, best_model_state
     
     def custom_max_mse_loss(self,predictions, targets):
 

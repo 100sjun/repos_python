@@ -12,10 +12,7 @@ class BMEDDataset(Dataset):
         self.train = train
 
         # 데이터 로드
-        if mode == 1 or mode == 2:
-            self.df = pd.read_excel(data_path, sheet_name='spline_data')
-        elif mode == 3:
-            self.df = pd.read_excel(data_path, sheet_name='raw_data')
+        self.df = pd.read_excel(data_path, sheet_name='spline_data')
 
         # 스케일러 초기화 혹은 전달받은 스케일러 사용
         if scalers is None:
@@ -48,6 +45,15 @@ class BMEDDataset(Dataset):
                 self.exps_to_use = all_exps[:test_start] + all_exps[test_end:]
             else:
                 self.exps_to_use = all_exps[test_start:test_end]
+
+        elif mode == 2:
+            train_size = int(len(all_exps) * 0.8)
+            if train:
+                self.exps_to_use = all_exps[:train_size]
+            else:
+                self.exps_to_use = all_exps[train_size:]
+        elif mode == 3:
+            self.exps_to_use = all_exps
 
         # 데이터 준비
         self.prepare_data()
