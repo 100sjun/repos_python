@@ -39,12 +39,12 @@ def main(mode, datapath):
     # Model Selection
     if mode == 1:
         hp_ranges = {
-            'hidden_nodes': (16, 512),
-            'hidden_layers': (3, 50),
+            'hidden_nodes': (8, 64),
+            'hidden_layers': (3, 10),
             'lr': (1e-5, 1e-1),
-            'rstop': (0.05, 0.3),
-            'weight_decay': (1e-5, 1e-1),
-            'epochs': (50, 3000)
+            'rstop': (0.05, 0.2),
+            'weight_decay': (1e-5, 1e-2),
+            'epochs': (50, 500)
         }
         hpOptimizer = hpOpt(n_trials=1000, mode=mode, datapath=datapath, hp_ranges=hp_ranges, result_dir=result_dir)
         results = hpOptimizer.optimize()
@@ -96,6 +96,6 @@ if __name__ == '__main__':
     3: simulation
     4: CV selection
     '''
-    mode = 2
+    mode = 1
     datapath = './data/BMED_data_v6+spline.xlsx'
     main(mode, datapath)

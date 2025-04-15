@@ -34,17 +34,3 @@ class MembraneSystemModel(nn.Module):
         new_states = self.physics_layer(migrations, x) #[batch_size, 10]
 
         return migrations, new_states
-
-#     def forward(self, x, _=None):  # hidden 상태는 이제 사용하지 않음
-#         '''특성 추출'''
-#         # 시퀀스 차원 제거 (배치 처리를 위해)
-#         x_flat = x.squeeze(1)  # [batch_size, 10]
-        
-#         '''몰 변화량 예측'''
-#         mol_changes = self.flux_predictor(x_flat)  # [batch_size, 4]
-        
-#         '''물리 법칙 적용'''
-#         new_states = self.physics_layer(mol_changes, x_flat)  # [batch_size, 10]
-        
-#         # API 호환성을 위해 None 반환 (기존 코드에서 hidden 상태가 사용되던 자리)
-#         return mol_changes, new_states, None

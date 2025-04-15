@@ -126,13 +126,13 @@ class MembraneSystemTrainer:
                 # Print epoch, train loss, val loss
                 if mode == 2:
                     if epoch % 10 == 0:
-                        print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}, Val Loss: {avg_val_loss:.6f}, Best Val Loss: {best_val_loss:.6f}, Min R2: {r2_min:.6f}, Worst Var: {worst_var}, EarlyStopping counter: {counter} out of {patience}                   ', end='')
+                        print(f'Epoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}, Val Loss: {avg_val_loss:.6f}, Best Val Loss: {best_val_loss:.6f}, Min R2: {r2_min:.6f}, Worst Var: {worst_var}, EarlyStopping counter: {counter} out of {patience}')
 
                 self.model.train() # set the train mode after validation
             else:
                 if mode == 2:
                     if epoch % 10 == 0:
-                        print(f'\rEpoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}', end='')
+                        print(f'Epoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}')
 
         # All epochs completion
         if best_model_state is not None:

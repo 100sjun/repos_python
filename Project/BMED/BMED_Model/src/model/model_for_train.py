@@ -44,7 +44,7 @@ def model_for_train(mode, datapath, fold_idx=0, hidden_nodes=64, hidden_layers=3
         lr=lr,
         rstop=rstop,
         weight_decay=weight_decay,
-        epochs=epochs*10
+        epochs=epochs
     )
 
     # 학습 시작
