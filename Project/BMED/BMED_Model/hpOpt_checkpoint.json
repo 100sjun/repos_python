@@ -2,9 +2,13 @@
     "best_params": {
         "hidden_nodes": 16,
         "hidden_layers": 2,
-        "lr": 0.00014105290649397186,
-        "weight_decay": 0.00014739285208744944,
-        "epochs": 5
+        "lr": 0.0031244800418035565,
+        "weight_decay": 9.445544766177332e-06,
+        "epochs": 11,
+        "dropout": 30,
+        "clip_norm": 30,
+        "schd_factor": 50
     },
-    "best_value": -5.074154273101262
+    "best_value": 0.08983872566372156,
+    "best_avg_epoch": 11.0
 }
