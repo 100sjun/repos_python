@@ -132,7 +132,7 @@ class MembraneSystemTrainer:
             else:
                 if mode == 2:
                     if epoch % 10 == 0:
-                        print(f'Epoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}')
+                print(f'Epoch {epoch+1}/{self.epochs}, Train Loss: {avg_loss:.6f}')
 
         # All epochs completion
         if best_model_state is not None:

@@ -12,6 +12,7 @@ import optuna
 from optuna.samplers import GPSampler
 import pickle
 import json
+import os
 
 # Fix the random seed
 np.random.seed(42)
@@ -378,24 +379,39 @@ def objective(trial):
     return np.mean(fold_scores)
 
 # Main funciton
-sampler = GPSampler(n_startup_trials=10, seed=42)
-n_trials = 100
-study = optuna.create_study(
-    study_name = 'hpOpt',
-    direction='minimize',
-    sampler=sampler,
-    load_if_exists = True)
+if os.path.exists('hpOpt_study.pkl'):
+    print('기존 study 파일을 불러옵니다.')
+    with open('hpOpt_study.pkl', 'rb') as f:
+        study = pickle.load(f)
+else:
+    print('새로운 study 파일을 생성합니다.')
+    sampler = GPSampler(n_startup_trials=10, seed=42)
+    study = optuna.create_study(
+        study_name = 'hpOpt',
+        direction='minimize',
+        sampler=sampler,
+        load_if_exists = True)
+    
+n_trials = 1000
 
-# optimize the hyperparameters
-study.optimize(objective, n_trials=n_trials, n_jobs=5, callbacks=[save_callback])
+# check number of trials already done
+completed_trials = len(study.trials)
+remaining_trials = max(0, n_trials - completed_trials)
+print(f'trials already done: {completed_trials}, remaining trials: {remaining_trials}')
 
-# return the best hyperparameters
-best_params = study.best_trial.params
-best_value = study.best_value
+# # optimize the hyperparameters
+# if remaining_trials > 0:
+#     study.optimize(objective, n_trials=remaining_trials, n_jobs=5, callbacks=[save_callback])
+# else:
+#     print('already reached the maximum number of trials')
 
-# optimize the model with the best hyperparameters
-results = {
-    'best_params': best_params,
-    'best_value': best_value,
-    'study': study
-}
+# # return the best hyperparameters
+# best_params = study.best_trial.params
+# best_value = study.best_value
+
+# # optimize the model with the best hyperparameters
+# results = {
+#     'best_params': best_params,
+#     'best_value': best_value,
+#     'study': study
+# }
