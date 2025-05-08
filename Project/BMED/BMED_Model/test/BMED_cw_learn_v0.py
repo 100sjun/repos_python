@@ -274,7 +274,7 @@ def train_model(model, train_loader, val_loader,epochs = 100, learning_rate = 0.
             patience_counter = 0
             best_model_state = model.state_dict().copy()
             # 모델 저장
-            torch.save(model.state_dict(), f'best_model_epoch_{epoch+1}.pt')
+            torch.save(model.state_dict(), f'best_model_epoch.pt')
             print(f'에포크 {epoch+1}/{epochs} - 훈련 손실: {avg_train_loss:.6f}, 검증 손실: {val_loss:.6f}, 학습률: {current_lr:.8f}, 인내심 카운터: {patience_counter}')
             print(f'검증 손실 개선! 최고 검증 손실: {best_val_loss:.6f}, 모델 저장됨')
         else:
