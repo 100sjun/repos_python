@@ -121,13 +121,14 @@ C3H8_plus = df_sp['C3H8^+']
 
 all_sp = df_sp.sum(axis=1) - df_sp['E']
 
+t0 = abs(df_sp['Time [s]']-80).argmin()
 t1 = abs(df_sp['Time [s]']-16.9646).argmin()
 t2 = abs(df_sp['Time [s]']-10.17876).argmin()
 t3 = abs(df_sp['Time [s]']-7.270543).argmin()
 t4 = abs(df_sp['Time [s]']-5.654867).argmin()
 
 sim = []  
-for t in [t1, t2, t3, t4]:
+for t in [t0, t1, t2, t3, t4]:
     sim_H2 = float(format(H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
     sim_CH4 = float(format(CH4.iloc[t]/all_sp.iloc[t]*100, '.6f'))
     sim_C2H2 = float(format(C2H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
@@ -196,7 +197,7 @@ def compare_results(exp_data, sim_data, residence_time):
     return mse
 
 # 각 체류시간별 결과 비교
-residence_times = [16.96, 10.18, 7.27, 5.65]
+residence_times = [80, 16.96, 10.18, 7.27, 5.65]
 for i, (e, s, rt) in enumerate(zip(exp, sim, residence_times)):
     compare_results(e, s, rt)
 

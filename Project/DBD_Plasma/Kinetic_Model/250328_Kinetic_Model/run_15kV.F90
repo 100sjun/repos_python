@@ -32,7 +32,7 @@ program run_plasRxn
 !
 ! initialization of variables
     time = 0.0d0
-    time_end = 3.0d1
+    time_end = 2.0d2
     dtime = 1.0d-6    ! 초기 dtime 값을 1e-6으로 설정
     EN = sqrt(pd/ini_elec_density/(1.6022d-19)/3.5552d23*ini_gas_density)/ini_gas_density/(1d-17)
 
