@@ -74,41 +74,43 @@
  74 bolsig:CH4->CHH2H             
  75 bolsig:CH4(V24)->CHH2H        
  76 bolsig:CH4(V13)->CHH2H        
- 77 bolsig:CH->CH                 
- 78 CH3+H=>CH4                    
- 79 CH3+CH3=>C2H6                 
- 80 C2H4+H=>C2H5                  
- 81 C2H4(V1)+H=>C2H5              
- 82 C2H4(V2)+H=>C2H5              
- 83 CH+CH4=>C2H4+H                
- 84 CH+CH4(V24)=>C2H4+H           
- 85 CH+CH4(V13)=>C2H4+H           
- 86 C2H5+H=>C2H6                  
- 87 C2H5+C2H5=>C4H9H              
- 88 CH2+H=>CH+H2                  
- 89 CH2+CH3=>C2H4+H               
- 90 C2H5+H=>CH3+CH3               
- 91 CH4+CH4^+=>CH3+CH5^+          
- 92 CH4(V24)+CH4^+=>CH3+CH5^+     
- 93 CH4(V13)+CH4^+=>CH3+CH5^+     
- 94 CH3+C2H5=>C3H8                
- 95 CH3+C2H3=>C3H6                
- 96 C3H6+H=>C3H7                  
- 97 C3H6(V)+H=>C3H7               
- 98 C4H9H+CH2=>C5H12              
- 99 C3H7+H2=>C3H8+H               
-100 C2H6+CH5^+=>CH4+H2+C2H5^+     
-101 C2H6(V24)+CH5^+=>CH4+H2+C2H5^+
-102 C2H6(V13)+CH5^+=>CH4+H2+C2H5^+
-103 C2H4+CH5^+=>CH4+C2H5^+        
-104 C2H4(V1)+CH5^+=>CH4+C2H5^+    
-105 C2H4(V2)+CH5^+=>CH4+C2H5^+    
-106 C3H7+H=>C3H8                  
-107 C2H3+H=>C2H2+H2               
-108 C3H8+CH2=>C4H9H               
-109 C3H8(V1)+CH2=>C4H9H           
-110 C3H8(V2)+CH2=>C4H9H           
-111 CH4+CH3^+=>H2+C2H5^+          
-112 CH4(V24)+CH3^+=>H2+C2H5^+     
-113 CH4(V13)+CH3^+=>H2+C2H5^+     
-114 H+H=>H2                       
+ 77 bolsig:CH4->CH2H2             
+ 78 bolsig:CH4(V24)->CH2H2        
+ 79 bolsig:CH4(V13)->CH2H2        
+ 80 CH3+H=>CH4                    
+ 81 CH3+CH3=>C2H6                 
+ 82 C2H4+H=>C2H5                  
+ 83 C2H4(V1)+H=>C2H5              
+ 84 C2H4(V2)+H=>C2H5              
+ 85 CH+CH4=>C2H4+H                
+ 86 CH+CH4(V24)=>C2H4+H           
+ 87 CH+CH4(V13)=>C2H4+H           
+ 88 C2H5+H=>C2H6                  
+ 89 C2H5+C2H5=>C4H9H              
+ 90 CH2+H=>CH+H2                  
+ 91 CH2+CH3=>C2H4+H               
+ 92 C2H5+H=>CH3+CH3               
+ 93 CH4+CH4^+=>CH3+CH5^+          
+ 94 CH4(V24)+CH4^+=>CH3+CH5^+     
+ 95 CH4(V13)+CH4^+=>CH3+CH5^+     
+ 96 CH3+C2H5=>C3H8                
+ 97 CH3+C2H3=>C3H6                
+ 98 C3H6+H=>C3H7                  
+ 99 C3H6(V)+H=>C3H7               
+100 C4H9H+CH2=>C5H12              
+101 C3H7+H2=>C3H8+H               
+102 C2H6+CH5^+=>CH4+H2+C2H5^+     
+103 C2H6(V24)+CH5^+=>CH4+H2+C2H5^+
+104 C2H6(V13)+CH5^+=>CH4+H2+C2H5^+
+105 C2H4+CH5^+=>CH4+C2H5^+        
+106 C2H4(V1)+CH5^+=>CH4+C2H5^+    
+107 C2H4(V2)+CH5^+=>CH4+C2H5^+    
+108 C3H7+H=>C3H8                  
+109 C2H3+H=>C2H2+H2               
+110 C3H8+CH2=>C4H9H               
+111 C3H8(V1)+CH2=>C4H9H           
+112 C3H8(V2)+CH2=>C4H9H           
+113 CH4+CH3^+=>H2+C2H5^+          
+114 CH4(V24)+CH3^+=>H2+C2H5^+     
+115 CH4(V13)+CH3^+=>H2+C2H5^+     
+116 H+H=>H2                       

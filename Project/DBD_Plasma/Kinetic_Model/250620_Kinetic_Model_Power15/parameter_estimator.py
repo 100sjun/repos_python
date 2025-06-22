@@ -21,13 +21,7 @@ class ParameterOptmizer:
                            df_mol.iloc[1].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                            df_mol.iloc[2].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                            df_mol.iloc[3].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[4].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[5].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[6].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[7].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[8].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[9].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[10].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+                           df_mol.iloc[4].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
         
         # define the file path
         self.kinet_path = 'kinet.inp'
@@ -38,8 +32,8 @@ class ParameterOptmizer:
         self.load_current_parameters(init=True)
 
         # define manipulated variables
-        self.max_error = 1000
-        self.lr = 0.01 # bounds learning rate
+        self.max_error = 10000
+        self.lr = 0.5 # bounds learning rate
         self.pre_iter = 20 # pre-train iteration
         self.iter = 100000 # BO iteration
         self.xi = 0.05 # EI parameters (0.05 is a balance between exploration and exploitation)
@@ -181,21 +175,15 @@ class ParameterOptmizer:
 
         all_sp = df_sp.sum(axis=1) - df_sp['E']
 
-        t0 = abs(df_sp['Time [s]']-2).argmin()
-        t1 = abs(df_sp['Time [s]']-5.654867).argmin()
-        t2 = abs(df_sp['Time [s]']-7.270543).argmin()
-        t3 = abs(df_sp['Time [s]']-10.17876).argmin()
-        t4 = abs(df_sp['Time [s]']-16.9646).argmin()
-        t5 = abs(df_sp['Time [s]']-20).argmin()
-        t6 = abs(df_sp['Time [s]']-30).argmin()
-        t7 = abs(df_sp['Time [s]']-40).argmin()
-        t8 = abs(df_sp['Time [s]']-50).argmin()
-        t9 = abs(df_sp['Time [s]']-60).argmin()
-        t10 = abs(df_sp['Time [s]']-70).argmin()
+        t0 = abs(df_sp['Time [s]']-5.654867).argmin()
+        t1 = abs(df_sp['Time [s]']-7.270543).argmin()
+        t2 = abs(df_sp['Time [s]']-10.17876).argmin()
+        t3 = abs(df_sp['Time [s]']-16.9646).argmin()
+        t4 = abs(df_sp['Time [s]']-70).argmin()
 
 
         sim = []
-        for t in [t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10]:
+        for t in [t0, t1, t2, t3, t4]:
             sim_H2 = float(format(H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
             sim_CH4 = float(format(CH4.iloc[t]/all_sp.iloc[t]*100, '.6f'))
             sim_C2H2 = float(format(C2H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
@@ -261,7 +249,7 @@ class ParameterOptmizer:
     
     def GP_Model(self,X,y):
         # Gaussian Process 모델 생성
-        kernel = C(6.3442, (1e-8, 1e8)) * RBF(length_scale=1.0, length_scale_bounds=(1e-6, 1e6))
+        kernel = C(6.3442, (1e-8, 1e8)) * RBF(length_scale=1.0, length_scale_bounds=(1e-8, 1e8))
         gp_model = GaussianProcessRegressor(kernel=kernel, n_restarts_optimizer=10)
         gp_model.fit(X,y)
         return gp_model

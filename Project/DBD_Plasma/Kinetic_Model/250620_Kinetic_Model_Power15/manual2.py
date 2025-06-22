@@ -83,13 +83,7 @@ exp = [df_mol.iloc[0].tolist(),
         df_mol.iloc[1].tolist(),
         df_mol.iloc[2].tolist(),
         df_mol.iloc[3].tolist(),
-        df_mol.iloc[4].tolist(),
-        df_mol.iloc[5].tolist(),
-        df_mol.iloc[6].tolist(),
-        df_mol.iloc[7].tolist(),
-        df_mol.iloc[8].tolist(),
-        df_mol.iloc[9].tolist(),
-        df_mol.iloc[10].tolist()]
+        df_mol.iloc[4].tolist()]
 
 
 species = []
@@ -126,61 +120,53 @@ C2H6_plus = df_sp['C2H6^+']
 C3H6_plus = df_sp['C3H6^+']
 C3H8_plus = df_sp['C3H8^+']
 
-all_sp = df_sp.sum(axis=1) - df_sp['E']
-
-t0 = abs(df_sp['Time [s]']-2).argmin()
-t1 = abs(df_sp['Time [s]']-5.654867).argmin()
-t2 = abs(df_sp['Time [s]']-7.270543).argmin()
-t3 = abs(df_sp['Time [s]']-10.17876).argmin()
-t4 = abs(df_sp['Time [s]']-16.9646).argmin()
-t5 = abs(df_sp['Time [s]']-20).argmin()
-t6 = abs(df_sp['Time [s]']-30).argmin()
-t7 = abs(df_sp['Time [s]']-40).argmin()
-t8 = abs(df_sp['Time [s]']-50).argmin()
-t9 = abs(df_sp['Time [s]']-60).argmin()
-t10 = abs(df_sp['Time [s]']-70).argmin()
-
+t0 = abs(df_sp['Time [s]']-5.654867).argmin()
+t1 = abs(df_sp['Time [s]']-7.270543).argmin()
+t2 = abs(df_sp['Time [s]']-10.17876).argmin()
+t3 = abs(df_sp['Time [s]']-16.9646).argmin()
 
 sim = []
-for t in [t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10]:
-    sim_H2 = float(format(H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH4 = float(format(CH4.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H2 = float(format(C2H2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H4 = float(format(C2H4.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H6 = float(format(C2H6.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C3H6 = float(format(C3H6.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C3H8 = float(format(C3H8.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C4H10 = float(format(C4H10.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C5H12 = float(format(C5H12.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C = float(format(C.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH = float(format(CH.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH2 = float(format(CH2.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH3 = float(format(CH3.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H3 = float(format(C2H3.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H5 = float(format(C2H5.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C3H7 = float(format(C3H7.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_H = float(format(H.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH3_plus = float(format(CH3_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH4_plus = float(format(CH4_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_CH5_plus = float(format(CH5_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H2_plus = float(format(C2H2_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H4_plus = float(format(C2H4_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H5_plus = float(format(C2H5_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C2H6_plus = float(format(C2H6_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C3H6_plus = float(format(C3H6_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
-    sim_C3H8_plus = float(format(C3H8_plus.iloc[t]/all_sp.iloc[t]*100, '.6f'))
+for t in [t0, t1, t2, t3]:
+    sim_H2 = float(format(H2.iloc[t], '.6f'))
+    sim_CH4 = float(format(CH4.iloc[t], '.6f'))
+    sim_C2H2 = float(format(C2H2.iloc[t], '.6f'))
+    sim_C2H4 = float(format(C2H4.iloc[t], '.6f'))
+    sim_C2H6 = float(format(C2H6.iloc[t], '.6f'))
+    sim_C3H6 = float(format(C3H6.iloc[t], '.6f'))
+    sim_C3H8 = float(format(C3H8.iloc[t], '.6f'))
+    sim_C4H10 = float(format(C4H10.iloc[t], '.6f'))
+    sim_C5H12 = float(format(C5H12.iloc[t], '.6f'))
+    sim_C = float(format(C.iloc[t], '.6f'))
+    sim_CH = float(format(CH.iloc[t], '.6f'))
+    sim_CH2 = float(format(CH2.iloc[t], '.6f'))
+    sim_CH3 = float(format(CH3.iloc[t], '.6f'))
+    sim_C2H3 = float(format(C2H3.iloc[t], '.6f'))
+    sim_C2H5 = float(format(C2H5.iloc[t], '.6f'))
+    sim_C3H7 = float(format(C3H7.iloc[t], '.6f'))
+    sim_H = float(format(H.iloc[t], '.6f'))
+    sim_CH3_plus = float(format(CH3_plus.iloc[t], '.6f'))
+    sim_CH4_plus = float(format(CH4_plus.iloc[t], '.6f'))
+    sim_CH5_plus = float(format(CH5_plus.iloc[t], '.6f'))
+    sim_C2H2_plus = float(format(C2H2_plus.iloc[t], '.6f'))
+    sim_C2H4_plus = float(format(C2H4_plus.iloc[t], '.6f'))
+    sim_C2H5_plus = float(format(C2H5_plus.iloc[t], '.6f'))
+    sim_C2H6_plus = float(format(C2H6_plus.iloc[t], '.6f'))
+    sim_C3H6_plus = float(format(C3H6_plus.iloc[t], '.6f'))
+    sim_C3H8_plus = float(format(C3H8_plus.iloc[t], '.6f'))
 
-    out_H2 = sim_H2 - 0.5*sim_CH3 - 0.5*sim_CH3_plus - sim_CH2 - 0.5*sim_C2H3 + 0.5*sim_C2H5 + 0.5*sim_C2H5_plus + 0.5*sim_H + 0.5*sim_C3H7 + 0.5*sim_CH5_plus - 1.5*sim_CH
-    out_CH4 = sim_CH4 + sim_CH3 + sim_CH2 + sim_CH + sim_CH5_plus + sim_CH3_plus + sim_CH4_plus
+    out_H2 = sim_H2 + 0.5*sim_CH - sim_CH2 - 0.5*sim_CH3 - 0.5*sim_CH3_plus + 0.5*sim_CH5_plus - 0.5*sim_C2H3 + 0.5*sim_C2H5 + 0.5*sim_C2H5_plus + 0.5*sim_C3H7 + 0.5*sim_H
+    out_CH4 = sim_CH4 + sim_CH2 + sim_CH3 + sim_CH3_plus + sim_CH4_plus + sim_CH5_plus
     out_C2H6 = sim_C2H6 + sim_C2H6_plus
-    out_C2H4 = sim_C2H4 + sim_C2H4_plus + sim_C2H3 + sim_C2H5 + sim_C2H5_plus
+    out_C2H4 = sim_C2H4 + sim_C2H3 + sim_C2H5 + sim_C2H4_plus + sim_C2H5_plus
     out_C2H2 = sim_C2H2 + sim_C2H2_plus
     out_C3H8 = sim_C3H8 + sim_C3H8_plus
-    out_C3H6 = sim_C3H6 + sim_C3H6_plus + sim_C3H7
+    out_C3H6 = sim_C3H6 + sim_C3H7 + sim_C3H6_plus
     out_C4H10 = sim_C4H10
     out_C5H12 = sim_C5H12
-    out_C = sim_C
-    newsim = [out_H2, out_CH4, out_C2H6, out_C2H4, out_C2H2, out_C3H8, out_C3H6, out_C4H10, out_C5H12, out_C]
+    out_C = sim_C + sim_CH
+    
+    out_total = out_H2 + out_CH4 + out_C2H6 + out_C2H4 + out_C2H2 + out_C3H8 + out_C3H6 + out_C4H10 + out_C5H12 + out_C
+    newsim = [out_H2/out_total*100, out_CH4/out_total*100, out_C2H6/out_total*100, out_C2H4/out_total*100, out_C2H2/out_total*100, out_C3H8/out_total*100, out_C3H6/out_total*100, out_C4H10/out_total*100, out_C5H12/out_total*100, out_C/out_total*100]
     sim.append(newsim)
 
 
@@ -210,21 +196,14 @@ def compare_results(exp_data, sim_data, residence_time):
     print(f'\nMSE (excluding C5H12, C): {mse:.6f}')
     return mse
 
-t0 = abs(df_sp['Time [s]']-2).argmin()
-t1 = abs(df_sp['Time [s]']-5.654867).argmin()
-t2 = abs(df_sp['Time [s]']-7.270543).argmin()
-t3 = abs(df_sp['Time [s]']-10.17876).argmin()
-t4 = abs(df_sp['Time [s]']-16.9646).argmin()
-t5 = abs(df_sp['Time [s]']-20).argmin()
-t6 = abs(df_sp['Time [s]']-30).argmin()
-t7 = abs(df_sp['Time [s]']-40).argmin()
-t8 = abs(df_sp['Time [s]']-50).argmin()
-t9 = abs(df_sp['Time [s]']-60).argmin()
-t10 = abs(df_sp['Time [s]']-70).argmin()
+t0 = abs(df_sp['Time [s]']-5.654867).argmin()
+t1 = abs(df_sp['Time [s]']-7.270543).argmin()
+t2 = abs(df_sp['Time [s]']-10.17876).argmin()
+t3 = abs(df_sp['Time [s]']-16.9646).argmin()
 
 
 # 각 체류시간별 결과 비교
-residence_times = [2, 5.654867, 7.270543, 10.17876, 16.9646, 20, 30, 40, 50, 60, 70]
+residence_times = [5.654867, 7.270543, 10.17876, 16.9646]
 for i, (e, s, rt) in enumerate(zip(exp, sim, residence_times)):
     compare_results(e, s, rt)
 
