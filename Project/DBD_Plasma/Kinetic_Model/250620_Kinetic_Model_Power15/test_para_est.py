@@ -35,7 +35,7 @@ class ParameterOptimizer:
 
         # define manipulated variables
         self.max_error = 1000000
-        self.lr = 2  # bounds learning rate
+        self.lr = 0.1  # bounds learning rate
         self.n_trials = 100000  # number of optimization trials
         
         # dynamic bounds for parameters
@@ -54,8 +54,8 @@ class ParameterOptimizer:
         """Initialize parameter bounds based on original values and learning rate"""
         for param_name, value in self.original_parameters.items():
             self.current_bounds[param_name] = {
-                'low': value * (1/self.lr),
-                'high': value * (self.lr)
+                'low': value * (1 - self.lr),
+                'high': value * (1 + self.lr)
             }
     
     def update_bounds(self, best_params):
@@ -63,8 +63,8 @@ class ParameterOptimizer:
         for param_name in self.current_bounds.keys():
             if param_name in best_params:
                 value = best_params[param_name]
-                new_low = value * (1/self.lr)
-                new_high = value * (self.lr)
+                new_low = value * (1 - self.lr)
+                new_high = value * (1 + self.lr)
                 
                 # 기존 범위와 새로운 범위를 비교하여 더 넓은 범위로 업데이트
                 self.current_bounds[param_name] = {
@@ -263,6 +263,8 @@ class ParameterOptimizer:
                 
                 if not output:
                     break
+
+                print(f'\r{output.strip()}                                                                              ',end='',flush=True)
                     
                 if "PRESS ENTER TO EXIT" in output:
                     process.kill()
@@ -507,7 +509,7 @@ class ParameterOptimizer:
         # Create study with TPE sampler and SQLite storage
         study = optuna.create_study(
             direction='minimize',
-            sampler=TPESampler(seed=42),
+            sampler=TPESampler(seed=42, n_startup_trials=10),
             storage=f"sqlite:///{self.optuna_db_path}",
             study_name='parameter_optimization',
             load_if_exists=True
@@ -527,23 +529,23 @@ class ParameterOptimizer:
             except:
                 print("기존 Optuna 결과에서 best params를 가져올 수 없습니다.")
         
-        # Run initial evaluation only if no trials exist
-        if n_existing_trials == 0:
-            print("초기 평가를 실행합니다...")
-            for param_name, value in self.original_parameters.items():
-                self.modify_parameter(param_name, value)
+        # # Run initial evaluation only if no trials exist
+        # if n_existing_trials == 0:
+        #     print("초기 평가를 실행합니다...")
+        #     for param_name, value in self.original_parameters.items():
+        #         self.modify_parameter(param_name, value)
             
-            self.run_preprocessor()
-            self.compile_zdp() 
-            self.run_simulation()
+        #     self.run_preprocessor()
+        #     self.compile_zdp() 
+        #     self.run_simulation()
             
-            initial_error, sim_time = self.err_calculation()
-            status = "success" if sim_time >= 17.0 else "simulation_incomplete"
+        #     initial_error, sim_time = self.err_calculation()
+        #     status = "success" if sim_time >= 17.0 else "simulation_incomplete"
             
-            self.save_to_database(0, self.original_parameters, initial_error, sim_time, "initial_evaluation")
-            print(f"초기 평가 완료: error = {initial_error}")
-        else:
-            print("기존 결과가 있으므로 초기 평가를 건너뜁니다.")
+        #     self.save_to_database(0, self.original_parameters, initial_error, sim_time, "initial_evaluation")
+        #     print(f"초기 평가 완료: error = {initial_error}")
+        # else:
+        #     print("기존 결과가 있으므로 초기 평가를 건너뜁니다.")
         
         # Optimize with callback for dynamic bounds update
         study.optimize(

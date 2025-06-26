@@ -273,3 +273,34 @@ for i, (e, s, rt) in enumerate(zip(exp, sim, residence_times)):
 
 # # 그래프 데이터 CSV 저장 함수 호출
 # save_results_to_csv(exp, sim, residence_times, exp_list)
+
+
+rx = []
+with open('qt_reactions_list.txt','r') as f:
+    for line in f:
+        comp = line[3:]
+        rx.append(comp.strip())
+    f.close()
+
+# Create column names using reaction numbers (001, 002, etc.)
+rx_numbers = [f"{i:03d}" for i in range(1, len(rx)+1)]
+
+df_rx = pd.read_csv('qt_rates.txt', sep=r'\s+', header=0, names=['Time [s]']+rx_numbers)
+
+reaction_extents = {}
+reaction_extents['Time [s]'] = df_rx['Time [s]']
+for i in range(len(rx)):
+    reaction = []
+    for j in range(len(df_rx)):
+        if j == 0:
+            reaction.append(0)
+        else:
+            reaction.append(reaction[j-1] +df_rx[rx_numbers[i]].iloc[j-1]*(df_rx['Time [s]'].iloc[j]-df_rx['Time [s]'].iloc[j-1]))
+    reaction_extents[rx[i]] = reaction
+
+df_rex = pd.DataFrame(reaction_extents)
+rx_end = df_rex.iloc[-1].sort_values(ascending=False)
+
+print(rx_end.head(20))
+
+print(df_sp.iloc[-1].sort_values(ascending=False).head(20))
