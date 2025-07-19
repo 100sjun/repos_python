@@ -16,12 +16,11 @@ class ParameterOptimizer:
     def __init__(self):
         # define the experimental data
         self.exp_list = ['H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'C3H8', 'C3H6', 'C4H10', 'C5H12', 
-                        'C', 'CH', 'CH2', 'CH3', 'C2H3', 'C2H5', 'C3H7', 'H',
-                        'CH3^+', 'CH4^+', 'CH5^+', 'C2H2^+', 'C2H4^+', 'C2H5^+', 'C2H6^+', 'C3H6^+', 'C3H8^+']
-        self.exp_values = [df_mol.iloc[0].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[1].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[2].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                           df_mol.iloc[3].tolist() + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+                        'C', 'IT']
+        self.exp_values = [df_mol.iloc[0].tolist() + [0],
+                           df_mol.iloc[1].tolist() + [0],
+                           df_mol.iloc[2].tolist() + [0],
+                           df_mol.iloc[3].tolist() + [0]]
         
         # define the file path
         self.kinet_path = 'kinet.inp'
@@ -34,7 +33,7 @@ class ParameterOptimizer:
         self.original_parameters = self.current_parameters.copy()
 
         # define manipulated variables
-        self.max_error = 100
+        self.max_error = 1000
         self.lr = 0.05  # bounds learning rate
         self.n_trials = 100000  # number of optimization trials
         
@@ -43,8 +42,8 @@ class ParameterOptimizer:
         self.initialize_bounds()
         
         # SQLite database setup (separate from Optuna's database)
-        self.db_path = 'detailed_results3.db'  # 별도의 상세 결과 저장용 DB
-        self.optuna_db_path = 'optuna_study3.db'  # Optuna 전용 DB
+        self.db_path = 'detailed_results.db'  # 별도의 상세 결과 저장용 DB
+        self.optuna_db_path = 'optuna_study.db'  # Optuna 전용 DB
         self.setup_database()
         
         # 기존 최적화 결과가 있으면 bounds 업데이트
@@ -299,7 +298,6 @@ class ParameterOptimizer:
         C4H10 = (df_sp['C4H9H'])
         C5H12 = (df_sp['C5H12'])
         C = (df_sp['C'])
-        CH = (df_sp['CH'])
         CH2 = (df_sp['CH2'])
         CH3 = (df_sp['CH3'])
         C2H3 = (df_sp['C2H3'])
@@ -336,7 +334,6 @@ class ParameterOptimizer:
             sim_C4H10 = float(format(C4H10.iloc[t], '.6f'))
             sim_C5H12 = float(format(C5H12.iloc[t], '.6f'))
             sim_C = float(format(C.iloc[t], '.6f'))
-            sim_CH = float(format(CH.iloc[t], '.6f'))
             sim_CH2 = float(format(CH2.iloc[t], '.6f'))
             sim_CH3 = float(format(CH3.iloc[t], '.6f'))
             sim_C2H3 = float(format(C2H3.iloc[t], '.6f'))
@@ -353,7 +350,7 @@ class ParameterOptimizer:
             sim_C3H6_plus = float(format(C3H6_plus.iloc[t], '.6f'))
             sim_C3H8_plus = float(format(C3H8_plus.iloc[t], '.6f'))
 
-            out_H2 = sim_H2 + 0.5*sim_CH - sim_CH2 - 0.5*sim_CH3 - 0.5*sim_CH3_plus + 0.5*sim_CH5_plus - 0.5*sim_C2H3 + 0.5*sim_C2H5 + 0.5*sim_C2H5_plus + 0.5*sim_C3H7 + 0.5*sim_H
+            out_H2 = sim_H2 - sim_CH2 - 0.5*sim_CH3 - 0.5*sim_CH3_plus + 0.5*sim_CH5_plus - 0.5*sim_C2H3 + 0.5*sim_C2H5 + 0.5*sim_C2H5_plus + 0.5*sim_C3H7 + 0.5*sim_H
             out_CH4 = sim_CH4 + sim_CH2 + sim_CH3 + sim_CH3_plus + sim_CH4_plus + sim_CH5_plus
             out_C2H6 = sim_C2H6 + sim_C2H6_plus
             out_C2H4 = sim_C2H4 + sim_C2H3 + sim_C2H5 + sim_C2H4_plus + sim_C2H5_plus
@@ -362,9 +359,10 @@ class ParameterOptimizer:
             out_C3H6 = sim_C3H6 + sim_C3H7 + sim_C3H6_plus
             out_C4H10 = sim_C4H10
             out_C5H12 = sim_C5H12
-            out_C = sim_C + sim_CH
+            out_C = sim_C
+            out_IT = sim_CH3 + sim_CH2 + sim_H + sim_C2H3 + sim_C2H5 + sim_C3H7 + sim_CH3_plus + sim_CH4_plus + sim_CH5_plus + sim_C2H2_plus + sim_C2H4_plus + sim_C2H5_plus + sim_C2H6_plus + sim_C3H6_plus + sim_C3H8_plus
             out_total = out_H2 + out_CH4 + out_C2H6 + out_C2H4 + out_C2H2 + out_C3H8 + out_C3H6 + out_C4H10 + out_C5H12 + out_C
-            newsim = [out_H2/out_total*100, out_CH4/out_total*100, out_C2H6/out_total*100, out_C2H4/out_total*100, out_C2H2/out_total*100, out_C3H8/out_total*100, out_C3H6/out_total*100, out_C4H10/out_total*100, out_C5H12/out_total*100, out_C/out_total*100]
+            newsim = [out_H2/out_total*100, out_CH4/out_total*100, out_C2H6/out_total*100, out_C2H4/out_total*100, out_C2H2/out_total*100, out_C3H8/out_total*100, out_C3H6/out_total*100, out_C4H10/out_total*100, out_C5H12/out_total*100, out_C/out_total*100, out_IT/out_total*100]
             sim.append(newsim)
             
             # Store output values for each time point
@@ -379,18 +377,15 @@ class ParameterOptimizer:
                 'out_C3H6': out_C3H6/out_total*100,
                 'out_C4H10': out_C4H10/out_total*100,
                 'out_C5H12': out_C5H12/out_total*100,
-                'out_C': out_C/out_total*100
+                'out_C': out_C/out_total*100,
+                'out_IT': out_IT/out_total*100
             })
             
-        w_factor = [0, 1, 10, 100, 10, 10, 10, 10, 1, 0]
+        w_factor = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         err = 0
         for i in range(len(self.exp_values)):
             for j in range(len(self.exp_values[i])):
-                if j < 10:
-                    #err += w_factor[j] * ((self.exp_values[i][j] - sim[i][j])/self.exp_values[i][j])**2
-                    err += w_factor[j] * ((self.exp_values[i][j] - sim[i][j]))**2
-                else:
-                    err += 0
+                err += w_factor[j] * ((self.exp_values[i][j] - sim[i][j]))**2
 
         # Print the output values and experimental values for all time points
         print("\n모든 시간대의 출력값 비교:")
@@ -400,7 +395,7 @@ class ParameterOptimizer:
         print()  # New line
         print("-" * (10 + 11 * len(final_out_values)))
 
-        species_names = ['H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'C3H8', 'C3H6', 'C4H10', 'C5H12', 'C']
+        species_names = ['H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'C3H8', 'C3H6', 'C4H10', 'C5H12', 'C', 'IT']
         
         for i, species in enumerate(species_names):
             print(f"{species:>10}", end='')
