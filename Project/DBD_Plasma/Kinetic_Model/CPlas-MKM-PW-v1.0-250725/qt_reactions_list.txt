@@ -1,0 +1,70 @@
+ 1 bolsig:CH4->CH4(V24)     
+ 2 bolsig:CH4->CH4(V13)     
+ 3 bolsig:CH4(V24)->CH4     
+ 4 bolsig:CH4(V13)->CH4     
+ 5 bolsig:C2H6->C2H6(V24)   
+ 6 bolsig:C2H6->C2H6(V13)   
+ 7 bolsig:C2H6(V24)->C2H6   
+ 8 bolsig:C2H6(V13)->C2H6   
+ 9 bolsig:C2H4->C2H4(V2)    
+10 bolsig:C2H4->C2H4(V1)    
+11 bolsig:C2H4(V2)->C2H4    
+12 bolsig:C2H4(V1)->C2H4    
+13 bolsig:C2H2->C2H2(V2)    
+14 bolsig:C2H2->C2H2(V5)    
+15 bolsig:C2H2->C2H2(V13)   
+16 bolsig:C2H2(V2)->C2H2    
+17 bolsig:C2H2(V5)->C2H2    
+18 bolsig:C2H2(V13)->C2H2   
+19 bolsig:C3H8->C3H8(V2)    
+20 bolsig:C3H8->C3H8(V1)    
+21 bolsig:C3H8(V2)->C3H8    
+22 bolsig:C3H8(V1)->C3H8    
+23 bolsig:C3H6->C3H6(V)     
+24 bolsig:C3H6(V)->C3H6     
+25 bolsig:CH3->CH3^+        
+26 bolsig:CH4->CH4^+        
+27 bolsig:C2H6->C2H6^+      
+28 bolsig:C2H4->C2H4^+      
+29 bolsig:C2H2->C2H2^+      
+30 bolsig:C3H8->C3H8^+      
+31 bolsig:C3H6->C3H6^+      
+32 bolsig:CH3^+->CH3        
+33 bolsig:CH4^+->CH4        
+34 bolsig:C2H6^+->C2H6      
+35 bolsig:C2H4^+->C2H4      
+36 bolsig:C2H2^+->C2H2      
+37 bolsig:C3H8^+->C3H8      
+38 bolsig:C3H6^+->C3H6      
+39 bolsig:CH4->CH3H         
+40 bolsig:CH4->CH2H2        
+41 bolsig:C2H6->C2H4H2      
+42 E+C2H5^+=>C2H3+H+H       
+43 bolsig:C2H4->C2H2H2      
+44 E+C2H5^+=>C2H2+H2+H      
+45 bolsig:C3H6->C2H2CH4     
+46 E+C2H5^+=>C2H2+H+H+H     
+47 bolsig:C2H4->C2H3H       
+48 bolsig:C3H8->C3H6H2      
+49 bolsig:CH4->CH2H2        
+50 CH3+H=>CH4               
+51 CH3+CH3=>C2H6            
+52 C2H4+H=>C2H5             
+53 C2H2+H2=>C2H4            
+54 C2H5+H=>C2H6             
+55 C2H5+C2H5=>C4H9H         
+56 CH2+CH3=>C2H4+H          
+57 C2H5+H=>CH3+CH3          
+58 CH4+CH4^+=>CH3+CH5^+     
+59 CH3+C2H5=>C3H8           
+60 CH3+C2H3=>C3H6           
+61 C3H6+H=>C3H7             
+62 C4H9H+CH2=>C5H12         
+63 C3H7+H2=>C3H8+H          
+64 C2H6+CH5^+=>CH4+H2+C2H5^+
+65 C2H4+CH5^+=>CH4+C2H5^+   
+66 C3H7+H=>C3H8             
+67 C2H3+H=>C2H2+H2          
+68 C3H8+CH2=>C4H9H          
+69 CH4+CH3^+=>H2+C2H5^+     
+70 H+H=>H2                  
