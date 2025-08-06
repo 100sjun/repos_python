@@ -1,0 +1,2750 @@
+{
+  "study_name": "bmed_autoregressive_optimization",
+  "model_type": "BMED_Autoregressive",
+  "optimization_method": "K-fold_Cross_Validation",
+  "best_params": {
+    "hidden_size": 32,
+    "num_layers": 5,
+    "extractor_dropout": 0.48869274761994175,
+    "decoder_layers": 9,
+    "decoder_nodes": 64,
+    "decoder_dropout": 0.27176120230778256,
+    "learning_rate": 0.0049560524197560475,
+    "weight_decay": 2.2868619170568046e-05
+  },
+  "best_value": 0.0033419551327824593,
+  "n_trials": 182,
+  "timestamp": "2025-08-06T14:45:21.884936",
+  "trials": [
+    {
+      "number": 0,
+      "value": 1866667799347.2358,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 10,
+        "extractor_dropout": 0.39279757672456206,
+        "decoder_layers": 6,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.16239780813448107,
+        "learning_rate": 0.00014936568554617635,
+        "weight_decay": 0.0003967605077052988
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 1,
+      "value": 0.10221595764160156,
+      "params": {
+        "hidden_size": 160,
+        "num_layers": 8,
+        "extractor_dropout": 0.10823379771832098,
+        "decoder_layers": 10,
+        "decoder_nodes": 224,
+        "decoder_dropout": 0.18493564427131048,
+        "learning_rate": 0.0003511356313970409,
+        "weight_decay": 3.549878832196506e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 2,
+      "value": 0.02619367646984756,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 6,
+        "extractor_dropout": 0.2727780074568463,
+        "decoder_layers": 3,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.15579754426081674,
+        "learning_rate": 0.0007523742884534858,
+        "weight_decay": 1.2562773503807034e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 3,
+      "value": 0.03729489902034402,
+      "params": {
+        "hidden_size": 128,
+        "num_layers": 8,
+        "extractor_dropout": 0.1798695128633439,
+        "decoder_layers": 6,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.1185801650879991,
+        "learning_rate": 0.006647135865318031,
+        "weight_decay": 3.247673570627449e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 4,
+      "value": 0.027075217897072436,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 10,
+        "extractor_dropout": 0.4862528132298237,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.13906884560255356,
+        "learning_rate": 0.01129013355909268,
+        "weight_decay": 2.091498132903561e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 5,
+      "value": 0.04189055422320962,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.11375540844608736,
+        "decoder_layers": 10,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.36500891374159283,
+        "learning_rate": 0.0008612579192594886,
+        "weight_decay": 3.632486956676606e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 6,
+      "value": 0.00730496235191822,
+      "params": {
+        "hidden_size": 144,
+        "num_layers": 2,
+        "extractor_dropout": 0.48783385110582345,
+        "decoder_layers": 8,
+        "decoder_nodes": 256,
+        "decoder_dropout": 0.4579309401710595,
+        "learning_rate": 0.00621870472776908,
+        "weight_decay": 0.0005829384542994739
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 7,
+      "value": 0.008407878410071134,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 2,
+        "extractor_dropout": 0.11809091556421523,
+        "decoder_layers": 4,
+        "decoder_nodes": 112,
+        "decoder_dropout": 0.20853961270955837,
+        "learning_rate": 0.030634622106220845,
+        "weight_decay": 1.1756010900231857e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 8,
+      "value": 326259520307.20374,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 6,
+        "extractor_dropout": 0.15636968998990508,
+        "decoder_layers": 9,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.4947547746402069,
+        "learning_rate": 0.020736445177905044,
+        "weight_decay": 3.945908811099999e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 9,
+      "value": 0.022461131447926164,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 9,
+        "extractor_dropout": 0.38274293753904687,
+        "decoder_layers": 8,
+        "decoder_nodes": 208,
+        "decoder_dropout": 0.12961786069363615,
+        "learning_rate": 0.0011895896737553553,
+        "weight_decay": 2.2264204303769692e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 10,
+      "value": 0.03019346985965967,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 1,
+        "extractor_dropout": 0.48781484431514643,
+        "decoder_layers": 1,
+        "decoder_nodes": 256,
+        "decoder_dropout": 0.4630659181130071,
+        "learning_rate": 0.0757377218848391,
+        "weight_decay": 0.0008517331879297487
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 11,
+      "value": 0.007036263169720769,
+      "params": {
+        "hidden_size": 192,
+        "num_layers": 1,
+        "extractor_dropout": 0.2527101425807377,
+        "decoder_layers": 4,
+        "decoder_nodes": 112,
+        "decoder_dropout": 0.2617207209490812,
+        "learning_rate": 0.0533106153764641,
+        "weight_decay": 0.00011792677496716178
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 12,
+      "value": 0.0053709297440946106,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 3,
+        "extractor_dropout": 0.25878515956818615,
+        "decoder_layers": 7,
+        "decoder_nodes": 128,
+        "decoder_dropout": 0.2930088973821733,
+        "learning_rate": 0.0035724709440007633,
+        "weight_decay": 0.0001341017473098278
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 13,
+      "value": 0.00835801106877625,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 4,
+        "extractor_dropout": 0.26457235285924413,
+        "decoder_layers": 4,
+        "decoder_nodes": 128,
+        "decoder_dropout": 0.28250766312602676,
+        "learning_rate": 0.09956055660659023,
+        "weight_decay": 0.00011995107128150254
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 14,
+      "value": 0.021274387184530497,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 3,
+        "extractor_dropout": 0.22489397436884656,
+        "decoder_layers": 5,
+        "decoder_nodes": 176,
+        "decoder_dropout": 0.2949329944144157,
+        "learning_rate": 0.0024341328374260524,
+        "weight_decay": 0.00012700676905718947
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 15,
+      "value": 0.007307657273486257,
+      "params": {
+        "hidden_size": 192,
+        "num_layers": 1,
+        "extractor_dropout": 0.3417103502329081,
+        "decoder_layers": 2,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.3636114419235895,
+        "learning_rate": 0.035075078168853836,
+        "weight_decay": 0.0001358816657412604
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 16,
+      "value": 0.0049968183971941475,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 3,
+        "extractor_dropout": 0.22213695872281497,
+        "decoder_layers": 7,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.24487264389356359,
+        "learning_rate": 0.0018607954377198633,
+        "weight_decay": 5.357029539298503e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 17,
+      "value": 0.010031567793339491,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 4,
+        "extractor_dropout": 0.20383906626892542,
+        "decoder_layers": 7,
+        "decoder_nodes": 192,
+        "decoder_dropout": 0.236620037974197,
+        "learning_rate": 0.002658158319816049,
+        "weight_decay": 4.637960683091793e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 18,
+      "value": 0.019343353528529405,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 3,
+        "extractor_dropout": 0.328311268965197,
+        "decoder_layers": 7,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.3484118021488386,
+        "learning_rate": 0.0016502199017014402,
+        "weight_decay": 0.00027954884687924453
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 19,
+      "value": 0.0037658204790204765,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 5,
+        "extractor_dropout": 0.3016488733169474,
+        "decoder_layers": 7,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.33660706839829024,
+        "learning_rate": 0.004919535479856803,
+        "weight_decay": 5.9696668392468704e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 20,
+      "value": 530573839564.8961,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 7,
+        "extractor_dropout": 0.3120187885786949,
+        "decoder_layers": 5,
+        "decoder_nodes": 16,
+        "decoder_dropout": 0.4051771264602821,
+        "learning_rate": 0.00046855963237495975,
+        "weight_decay": 5.8882500443269286e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 21,
+      "value": 0.004931360669434071,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 4,
+        "extractor_dropout": 0.23626228973078428,
+        "decoder_layers": 7,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.32589216101245205,
+        "learning_rate": 0.004435178472102768,
+        "weight_decay": 6.741789475444935e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 22,
+      "value": 829562.2747371573,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 5,
+        "extractor_dropout": 0.21647261352568037,
+        "decoder_layers": 8,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.338817870015776,
+        "learning_rate": 0.005043328068501559,
+        "weight_decay": 1.9495019626560355e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 23,
+      "value": 2083102515.225249,
+      "params": {
+        "hidden_size": 176,
+        "num_layers": 4,
+        "extractor_dropout": 0.1781872111836746,
+        "decoder_layers": 6,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.32912663907853806,
+        "learning_rate": 0.01377662317692245,
+        "weight_decay": 6.465270789583692e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 24,
+      "value": 0.007187684625387191,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 5,
+        "extractor_dropout": 0.35920607241824337,
+        "decoder_layers": 7,
+        "decoder_nodes": 16,
+        "decoder_dropout": 0.3910950214684843,
+        "learning_rate": 0.008348153002665934,
+        "weight_decay": 0.00026424391508253036
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 25,
+      "value": 0.02311509642750025,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 4,
+        "extractor_dropout": 0.2918741238210792,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.2447921642171304,
+        "learning_rate": 0.0018683714064747432,
+        "weight_decay": 8.331110358585076e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 26,
+      "value": 0.025325832329690455,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 6,
+        "extractor_dropout": 0.433977695405836,
+        "decoder_layers": 8,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.31983172474883664,
+        "learning_rate": 0.0038119666250461875,
+        "weight_decay": 6.65125486763301e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 27,
+      "value": 0.008429497387260199,
+      "params": {
+        "hidden_size": 176,
+        "num_layers": 2,
+        "extractor_dropout": 0.22950441623256232,
+        "decoder_layers": 5,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.4064406701000566,
+        "learning_rate": 0.014418804008957944,
+        "weight_decay": 2.8264170018298986e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 28,
+      "value": 0.03908906294964254,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 3,
+        "extractor_dropout": 0.29901780346673923,
+        "decoder_layers": 6,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.2658756078217074,
+        "learning_rate": 0.00023964483219461968,
+        "weight_decay": 1.1912030201239182e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 29,
+      "value": 648821606.4070203,
+      "params": {
+        "hidden_size": 128,
+        "num_layers": 7,
+        "extractor_dropout": 0.1499715835100203,
+        "decoder_layers": 7,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.23951095478631734,
+        "learning_rate": 0.0012467810354544829,
+        "weight_decay": 0.0002330134964230944
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 30,
+      "value": 7493961860275.2,
+      "params": {
+        "hidden_size": 112,
+        "num_layers": 5,
+        "extractor_dropout": 0.2411919176155241,
+        "decoder_layers": 6,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.21288971794298972,
+        "learning_rate": 0.00013434934091716434,
+        "weight_decay": 9.080450737405684e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 31,
+      "value": 0.006061467994004488,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 3,
+        "extractor_dropout": 0.2733022451796757,
+        "decoder_layers": 7,
+        "decoder_nodes": 128,
+        "decoder_dropout": 0.30436857576933224,
+        "learning_rate": 0.0038227782555352702,
+        "weight_decay": 0.00018764228318346975
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 32,
+      "value": 0.035467051435261965,
+      "params": {
+        "hidden_size": 192,
+        "num_layers": 4,
+        "extractor_dropout": 0.19177711720282692,
+        "decoder_layers": 8,
+        "decoder_nodes": 112,
+        "decoder_dropout": 0.28078739239607736,
+        "learning_rate": 0.0036422249038834103,
+        "weight_decay": 3.507659757058793e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 33,
+      "value": 0.0541654986795038,
+      "params": {
+        "hidden_size": 160,
+        "num_layers": 3,
+        "extractor_dropout": 0.2840901853566506,
+        "decoder_layers": 7,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.1778685819484894,
+        "learning_rate": 0.0006306975151899757,
+        "weight_decay": 7.874979465539345e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 34,
+      "value": 0.041384109668433665,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 2,
+        "extractor_dropout": 0.2530202214856194,
+        "decoder_layers": 6,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.31021943818861203,
+        "learning_rate": 0.0017616446598910799,
+        "weight_decay": 2.3401236858456488e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 35,
+      "value": 0.008506550081074237,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 4,
+        "extractor_dropout": 0.3250725901607552,
+        "decoder_layers": 9,
+        "decoder_nodes": 176,
+        "decoder_dropout": 0.37451843186341516,
+        "learning_rate": 0.007820274405764143,
+        "weight_decay": 0.0003971907954167575
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 36,
+      "value": 0.005606936989352107,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 5,
+        "extractor_dropout": 0.16699241970301223,
+        "decoder_layers": 8,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2137666750066931,
+        "learning_rate": 0.009185757933166859,
+        "weight_decay": 4.5010811502914824e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 37,
+      "value": 0.007005970738828182,
+      "params": {
+        "hidden_size": 176,
+        "num_layers": 7,
+        "extractor_dropout": 0.20365958021175912,
+        "decoder_layers": 10,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.3475463680905797,
+        "learning_rate": 0.0051194536868368005,
+        "weight_decay": 0.0001721136747664389
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 38,
+      "value": 0.0667999287135899,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 3,
+        "extractor_dropout": 0.13406542633516144,
+        "decoder_layers": 7,
+        "decoder_nodes": 224,
+        "decoder_dropout": 0.10106718451091254,
+        "learning_rate": 0.0010161249843095351,
+        "weight_decay": 1.7175084060753313e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 39,
+      "value": 0.004431941546499729,
+      "params": {
+        "hidden_size": 160,
+        "num_layers": 6,
+        "extractor_dropout": 0.35874949973773274,
+        "decoder_layers": 9,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.26768352690344344,
+        "learning_rate": 0.002720159561525753,
+        "weight_decay": 7.334478889974781e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 40,
+      "value": 0.03841099119745195,
+      "params": {
+        "hidden_size": 144,
+        "num_layers": 6,
+        "extractor_dropout": 0.42607486956014096,
+        "decoder_layers": 9,
+        "decoder_nodes": 176,
+        "decoder_dropout": 0.15587482187424587,
+        "learning_rate": 0.0002400588038548308,
+        "weight_decay": 8.208701388885175e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 41,
+      "value": 0.04576670238748193,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 6,
+        "extractor_dropout": 0.3675757882158554,
+        "decoder_layers": 8,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.2617606669769318,
+        "learning_rate": 0.0026236554070544417,
+        "weight_decay": 4.138683659359315e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 42,
+      "value": 0.047424953524023296,
+      "params": {
+        "hidden_size": 160,
+        "num_layers": 8,
+        "extractor_dropout": 0.40982528969242066,
+        "decoder_layers": 10,
+        "decoder_nodes": 128,
+        "decoder_dropout": 0.294119482538889,
+        "learning_rate": 0.005562132908823833,
+        "weight_decay": 5.120279120637519e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 43,
+      "value": 0.00656560119241476,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 5,
+        "extractor_dropout": 0.3458743017478414,
+        "decoder_layers": 9,
+        "decoder_nodes": 192,
+        "decoder_dropout": 0.18954458665965015,
+        "learning_rate": 0.001954823912807903,
+        "weight_decay": 9.580355527993857e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 44,
+      "value": 0.02249772837385535,
+      "params": {
+        "hidden_size": 192,
+        "num_layers": 2,
+        "extractor_dropout": 0.30744851844123633,
+        "decoder_layers": 6,
+        "decoder_nodes": 112,
+        "decoder_dropout": 0.3248535639786923,
+        "learning_rate": 0.0030014434265743244,
+        "weight_decay": 1.3172703047874436e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 45,
+      "value": 0.09615111383609473,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 4,
+        "extractor_dropout": 0.27273758230147255,
+        "decoder_layers": 5,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.27596533355858205,
+        "learning_rate": 0.0007441878728340465,
+        "weight_decay": 2.8293929334272082e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 46,
+      "value": 413715404.8209782,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 9,
+        "extractor_dropout": 0.24148264201653077,
+        "decoder_layers": 8,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.22960964102954595,
+        "learning_rate": 0.004556932865966539,
+        "weight_decay": 5.208137801318505e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 47,
+      "value": 0.008455386478453874,
+      "params": {
+        "hidden_size": 160,
+        "num_layers": 6,
+        "extractor_dropout": 0.38571659919521106,
+        "decoder_layers": 3,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.25412318690997504,
+        "learning_rate": 0.019884000976379178,
+        "weight_decay": 0.000457171832562605
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 48,
+      "value": 0.01084299674257636,
+      "params": {
+        "hidden_size": 192,
+        "num_layers": 7,
+        "extractor_dropout": 0.4640160150363127,
+        "decoder_layers": 7,
+        "decoder_nodes": 224,
+        "decoder_dropout": 0.2872441073849107,
+        "learning_rate": 0.006655652429838385,
+        "weight_decay": 1.9372209227244225e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 49,
+      "value": 0.01987955728545785,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 5,
+        "extractor_dropout": 0.2540994576157837,
+        "decoder_layers": 6,
+        "decoder_nodes": 192,
+        "decoder_dropout": 0.43206556492761916,
+        "learning_rate": 0.0012704893155656672,
+        "weight_decay": 9.119578868861928e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 50,
+      "value": 0.04718114407733083,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 2,
+        "extractor_dropout": 0.31965842880166995,
+        "decoder_layers": 8,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.31241854087206816,
+        "learning_rate": 0.010518218074832691,
+        "weight_decay": 0.0001698254839663684
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 51,
+      "value": 0.029069630429148674,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 5,
+        "extractor_dropout": 0.17145261736317025,
+        "decoder_layers": 8,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2131877213068895,
+        "learning_rate": 0.011112890777033885,
+        "weight_decay": 4.188351216800011e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 52,
+      "value": 0.004594599409028888,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 4,
+        "extractor_dropout": 0.21472334594351164,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.20364267482761614,
+        "learning_rate": 0.00768332868489228,
+        "weight_decay": 5.748797550869055e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 53,
+      "value": 0.023038730025291443,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 4,
+        "extractor_dropout": 0.22124741966961856,
+        "decoder_layers": 10,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.18419321460965427,
+        "learning_rate": 0.0024985373011383307,
+        "weight_decay": 7.334390997927466e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 54,
+      "value": 0.0034108621068298815,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 3,
+        "extractor_dropout": 0.20514209121778584,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.36317598936828277,
+        "learning_rate": 0.0032483110337101374,
+        "weight_decay": 0.0001224895946495031
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 55,
+      "value": 0.018945582024753094,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 3,
+        "extractor_dropout": 0.1934357997232023,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.36663007793142693,
+        "learning_rate": 0.006383424018119767,
+        "weight_decay": 5.759270913558891e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 56,
+      "value": 1792116736.0281594,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 4,
+        "extractor_dropout": 0.2355968782006043,
+        "decoder_layers": 10,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.38637646466612113,
+        "learning_rate": 0.002106147860692536,
+        "weight_decay": 0.00011274145862148677
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 57,
+      "value": 0.0047343472018837925,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 4,
+        "extractor_dropout": 0.2036256591771627,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.34897630967583304,
+        "learning_rate": 0.0013885582043332502,
+        "weight_decay": 3.238960621204032e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 58,
+      "value": 0.004157320037484169,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 6,
+        "extractor_dropout": 0.20712140115889813,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.34074745148580116,
+        "learning_rate": 0.0042856429114648325,
+        "weight_decay": 1.6177846455966965e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 59,
+      "value": 0.08900125669315458,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 6,
+        "extractor_dropout": 0.14571867132778837,
+        "decoder_layers": 9,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.34969797310066997,
+        "learning_rate": 0.0014071305260794653,
+        "weight_decay": 8.1411555927656e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 60,
+      "value": 0.004903023317456246,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 7,
+        "extractor_dropout": 0.1059664025512694,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.4149661941994701,
+        "learning_rate": 0.0033090449881735345,
+        "weight_decay": 1.4678985853550929e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 61,
+      "value": 0.017280264291912317,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 7,
+        "extractor_dropout": 0.1053193347219905,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.43397315606921794,
+        "learning_rate": 0.003110986929431654,
+        "weight_decay": 1.3060834400792607e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 62,
+      "value": 20.15521243615076,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 6,
+        "extractor_dropout": 0.1367677311477424,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.4084875092205345,
+        "learning_rate": 0.007443884222355447,
+        "weight_decay": 6.583420253742564e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 63,
+      "value": 20467902054.428757,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 8,
+        "extractor_dropout": 0.12233335419605468,
+        "decoder_layers": 10,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.4876060277528006,
+        "learning_rate": 0.004554488718315411,
+        "weight_decay": 1.681994148529449e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 64,
+      "value": 0.006314409198239446,
+      "params": {
+        "hidden_size": 112,
+        "num_layers": 8,
+        "extractor_dropout": 0.20381797797003426,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3375849593023591,
+        "learning_rate": 0.016795490627065698,
+        "weight_decay": 1.069025480305843e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 65,
+      "value": 0.06571502881124616,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 7,
+        "extractor_dropout": 0.1592831047051479,
+        "decoder_layers": 10,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.38340372934646205,
+        "learning_rate": 0.0009890039046310981,
+        "weight_decay": 2.4229851216757275e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 66,
+      "value": 0.04816626133397221,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.18077351872470054,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.3591449559154739,
+        "learning_rate": 0.0032122412213085676,
+        "weight_decay": 2.9427499541563758e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 67,
+      "value": 10331924070.412693,
+      "params": {
+        "hidden_size": 112,
+        "num_layers": 6,
+        "extractor_dropout": 0.21290773463543883,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.4269222981252697,
+        "learning_rate": 0.0022419449735933523,
+        "weight_decay": 3.2027153258780284e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 68,
+      "value": 1463301963776.0122,
+      "params": {
+        "hidden_size": 128,
+        "num_layers": 5,
+        "extractor_dropout": 0.1892204439325314,
+        "decoder_layers": 10,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.46033141169687586,
+        "learning_rate": 0.03238678061996063,
+        "weight_decay": 4.9802653505081735e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 69,
+      "value": 0.02241456680931151,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 7,
+        "extractor_dropout": 0.3362526120134259,
+        "decoder_layers": 8,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.33605764925889825,
+        "learning_rate": 0.003993239095433987,
+        "weight_decay": 1.6951028275630936e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 70,
+      "value": 31881.170594653395,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 6,
+        "extractor_dropout": 0.28918448122477636,
+        "decoder_layers": 9,
+        "decoder_nodes": 16,
+        "decoder_dropout": 0.14238777448145054,
+        "learning_rate": 0.001500506907239781,
+        "weight_decay": 1.104226093859554e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 71,
+      "value": 0.016129971435293555,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 4,
+        "extractor_dropout": 0.36045938413684603,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.3712164182463939,
+        "learning_rate": 0.005746647725958932,
+        "weight_decay": 3.698459801263218e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 72,
+      "value": 0.01817942690104246,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 4,
+        "extractor_dropout": 0.26779166107775215,
+        "decoder_layers": 8,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3527132120983836,
+        "learning_rate": 0.004356475918048474,
+        "weight_decay": 2.144425411232567e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 73,
+      "value": 0.011102650593966246,
+      "params": {
+        "hidden_size": 144,
+        "num_layers": 4,
+        "extractor_dropout": 0.20999106189204794,
+        "decoder_layers": 10,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.32031821072419403,
+        "learning_rate": 0.0028598812439672786,
+        "weight_decay": 2.839778932767766e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 74,
+      "value": 0.01249258928000927,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 3,
+        "extractor_dropout": 0.2315349167549657,
+        "decoder_layers": 9,
+        "decoder_nodes": 112,
+        "decoder_dropout": 0.3939609894426915,
+        "learning_rate": 0.008658865775496724,
+        "weight_decay": 1.4354353899745026e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 75,
+      "value": 0.02186843305826187,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 9,
+        "extractor_dropout": 0.24249879955390302,
+        "decoder_layers": 8,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3069269536276106,
+        "learning_rate": 0.003538705352693774,
+        "weight_decay": 7.231087765190588e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 76,
+      "value": 2181986099.2385635,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 5,
+        "extractor_dropout": 0.19978575528314232,
+        "decoder_layers": 10,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.41741169394911004,
+        "learning_rate": 0.013261051834013975,
+        "weight_decay": 9.639951170290302e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 77,
+      "value": 0.006318602990359068,
+      "params": {
+        "hidden_size": 112,
+        "num_layers": 4,
+        "extractor_dropout": 0.18431230816181074,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3317736497966618,
+        "learning_rate": 0.005239131294049168,
+        "weight_decay": 6.508744596917333e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 78,
+      "value": 0.005163711402565241,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.15910607278117175,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.44251287261052824,
+        "learning_rate": 0.007071789206964882,
+        "weight_decay": 0.00014446288051880429
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 79,
+      "value": 648821606.4034728,
+      "params": {
+        "hidden_size": 176,
+        "num_layers": 3,
+        "extractor_dropout": 0.2810337912237973,
+        "decoder_layers": 8,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.34391168677941686,
+        "learning_rate": 0.0021735310584324956,
+        "weight_decay": 0.0001111192100686048
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 80,
+      "value": 0.03523716856725514,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 6,
+        "extractor_dropout": 0.3028217462430552,
+        "decoder_layers": 7,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.357788786651002,
+        "learning_rate": 0.0016922311608971803,
+        "weight_decay": 5.2287505592420126e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 81,
+      "value": 0.023677616752684115,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 3,
+        "extractor_dropout": 0.222389211282364,
+        "decoder_layers": 7,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.22980393799247678,
+        "learning_rate": 0.0024612155835622546,
+        "weight_decay": 8.295415209263827e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 82,
+      "value": 0.08626732481643558,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 3,
+        "extractor_dropout": 0.24708193496777303,
+        "decoder_layers": 8,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.2520801318584518,
+        "learning_rate": 0.0011167949793898016,
+        "weight_decay": 6.28139444760248e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 83,
+      "value": 0.0512370334006846,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 4,
+        "extractor_dropout": 0.169123762847959,
+        "decoder_layers": 4,
+        "decoder_nodes": 128,
+        "decoder_dropout": 0.2727440717879489,
+        "learning_rate": 0.0038210909478434336,
+        "weight_decay": 4.813689296680917e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 84,
+      "value": 0.01778298378922045,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 2,
+        "extractor_dropout": 0.21396785923576772,
+        "decoder_layers": 7,
+        "decoder_nodes": 112,
+        "decoder_dropout": 0.299581095592327,
+        "learning_rate": 0.0008039694273601735,
+        "weight_decay": 3.674141571358358e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 85,
+      "value": 0.03127821162343025,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 5,
+        "extractor_dropout": 0.25979205544308076,
+        "decoder_layers": 8,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.3156156802009388,
+        "learning_rate": 0.0006293304172814189,
+        "weight_decay": 2.496132304156585e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 86,
+      "value": 0.02859427724033594,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 4,
+        "extractor_dropout": 0.2291809902596676,
+        "decoder_layers": 1,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.204618371855056,
+        "learning_rate": 0.0018134167920606167,
+        "weight_decay": 0.00010152539241917147
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 87,
+      "value": 0.02697653048671782,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 7,
+        "extractor_dropout": 0.37562890141497085,
+        "decoder_layers": 5,
+        "decoder_nodes": 176,
+        "decoder_dropout": 0.3754938595171649,
+        "learning_rate": 0.004852513074626138,
+        "weight_decay": 0.00023292594918675237
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 88,
+      "value": 0.017054614424705506,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 3,
+        "extractor_dropout": 0.1930824641407898,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.28705404369163956,
+        "learning_rate": 0.003150988075859919,
+        "weight_decay": 6.165863883507826e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 89,
+      "value": 0.046937266131863,
+      "params": {
+        "hidden_size": 128,
+        "num_layers": 2,
+        "extractor_dropout": 0.21919975264912653,
+        "decoder_layers": 10,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.16844303772894823,
+        "learning_rate": 0.009198441499924801,
+        "weight_decay": 0.0008890498986514732
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 90,
+      "value": 0.03727885829284787,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 1,
+        "extractor_dropout": 0.40631715571744975,
+        "decoder_layers": 8,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.32870543842303795,
+        "learning_rate": 0.006100927901153749,
+        "weight_decay": 1.9111519824368457e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 91,
+      "value": 0.024971077172085642,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.1596476529963816,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.4491801795647018,
+        "learning_rate": 0.00703122671001493,
+        "weight_decay": 0.00014283364872005728
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 92,
+      "value": 0.005472867283970118,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.12033783385774682,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.47503528706597753,
+        "learning_rate": 0.0026630888212605956,
+        "weight_decay": 0.00014104374405399914
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 93,
+      "value": 0.004593835398554802,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 6,
+        "extractor_dropout": 0.13836702102736861,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3946615621619759,
+        "learning_rate": 0.004186489102967648,
+        "weight_decay": 0.00020624640356705742
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 94,
+      "value": 0.013548754574730992,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 6,
+        "extractor_dropout": 0.11151423160303349,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3980917205163229,
+        "learning_rate": 0.0014009305449565084,
+        "weight_decay": 0.0003088018662701595
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 95,
+      "value": 0.032552831806242466,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 6,
+        "extractor_dropout": 0.1279067068207279,
+        "decoder_layers": 6,
+        "decoder_nodes": 16,
+        "decoder_dropout": 0.40322710350554053,
+        "learning_rate": 0.003320053156340364,
+        "weight_decay": 4.194677262110171e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 96,
+      "value": 0.014744313014671207,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 7,
+        "extractor_dropout": 0.10035432996275667,
+        "decoder_layers": 8,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.3805012849830457,
+        "learning_rate": 0.004211031892817027,
+        "weight_decay": 5.281059751998573e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 97,
+      "value": 0.00713984938338399,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 6,
+        "extractor_dropout": 0.14571791024861944,
+        "decoder_layers": 10,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.3663673139221737,
+        "learning_rate": 0.005268673166940616,
+        "weight_decay": 0.0001864294926213528
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 98,
+      "value": 0.029945670440793038,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 4,
+        "extractor_dropout": 0.1764832115499412,
+        "decoder_layers": 9,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.2020562489667485,
+        "learning_rate": 0.0021999261668960036,
+        "weight_decay": 3.184251469714906e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 99,
+      "value": 0.02371389325708151,
+      "params": {
+        "hidden_size": 144,
+        "num_layers": 7,
+        "extractor_dropout": 0.31579602944036694,
+        "decoder_layers": 8,
+        "decoder_nodes": 176,
+        "decoder_dropout": 0.41957017202336516,
+        "learning_rate": 0.001540932519584174,
+        "weight_decay": 0.0006798567158836477
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 100,
+      "value": 0.0595760986674577,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 3,
+        "extractor_dropout": 0.2021691692101212,
+        "decoder_layers": 7,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.3422993200725505,
+        "learning_rate": 0.0028005492652172005,
+        "weight_decay": 8.162868521186877e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 101,
+      "value": 0.006106876069679856,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.13694064506883283,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.22289609462539373,
+        "learning_rate": 0.010372414840717084,
+        "weight_decay": 0.00013659450737313336
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 102,
+      "value": 0.024650728981941938,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 6,
+        "extractor_dropout": 0.15243727937235424,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.4414640090576838,
+        "learning_rate": 0.006945575902650479,
+        "weight_decay": 0.0001701313524424095
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 103,
+      "value": 0.061281930189579725,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.16641108805635652,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.4136175196644133,
+        "learning_rate": 0.005929860205591676,
+        "weight_decay": 9.434656158147174e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 104,
+      "value": 0.005458410130813718,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 4,
+        "extractor_dropout": 0.23616710342765146,
+        "decoder_layers": 10,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3547446049104719,
+        "learning_rate": 0.008442429963023704,
+        "weight_decay": 0.00021708222938569022
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 105,
+      "value": 117475560652.82454,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.20878317643455496,
+        "decoder_layers": 9,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.2453800487957268,
+        "learning_rate": 0.0042115785343782314,
+        "weight_decay": 0.0002805046366033658
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 106,
+      "value": 0.003430750360712409,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 6,
+        "extractor_dropout": 0.49964278409878693,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2700895152071224,
+        "learning_rate": 0.0035993376626814993,
+        "weight_decay": 1.4796744471641273e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 107,
+      "value": 0.044909357698634265,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 6,
+        "extractor_dropout": 0.44424210988222135,
+        "decoder_layers": 10,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.27903913693934634,
+        "learning_rate": 0.003600146854776348,
+        "weight_decay": 1.4275798259079715e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 108,
+      "value": 0.02606771751306951,
+      "params": {
+        "hidden_size": 192,
+        "num_layers": 6,
+        "extractor_dropout": 0.25025281721693265,
+        "decoder_layers": 8,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.2608439150966589,
+        "learning_rate": 0.002910167848424002,
+        "weight_decay": 9.59539822436977e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 109,
+      "value": 0.004229490133002401,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 7,
+        "extractor_dropout": 0.4620511618782756,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.289051130774304,
+        "learning_rate": 0.002051293677238882,
+        "weight_decay": 6.6291575433033825e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 110,
+      "value": 0.02332566580735147,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 7,
+        "extractor_dropout": 0.4609351703808995,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.30450145657071725,
+        "learning_rate": 0.0019340991586048691,
+        "weight_decay": 6.217496435757794e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 111,
+      "value": 0.0037789121735841034,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 8,
+        "extractor_dropout": 0.48092355202541137,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2699346305864944,
+        "learning_rate": 0.0024425662019063018,
+        "weight_decay": 5.838363235525997e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 112,
+      "value": 0.010888950107619167,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 7,
+        "extractor_dropout": 0.48008110793045145,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.32319772744324127,
+        "learning_rate": 0.0023591897413046243,
+        "weight_decay": 3.955614585109022e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 113,
+      "value": 0.028032538294792176,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 8,
+        "extractor_dropout": 0.48895580379205045,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.29090054161626955,
+        "learning_rate": 0.004600036426296394,
+        "weight_decay": 7.200708872813561e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 114,
+      "value": 0.020393157470971347,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 8,
+        "extractor_dropout": 0.4964258556920735,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.268699492077991,
+        "learning_rate": 0.003482766344720084,
+        "weight_decay": 3.9830127805663855e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 115,
+      "value": 0.006756305787712335,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 10,
+        "extractor_dropout": 0.4696896155607666,
+        "decoder_layers": 9,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.3173007586446451,
+        "learning_rate": 0.0025876376592985527,
+        "weight_decay": 5.451943163995693e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 116,
+      "value": 0.014714726014062762,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 8,
+        "extractor_dropout": 0.49946591383952016,
+        "decoder_layers": 10,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.36074138593661226,
+        "learning_rate": 0.003927875041996808,
+        "weight_decay": 3.1105446033852287e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 117,
+      "value": 0.008809165470302105,
+      "params": {
+        "hidden_size": 160,
+        "num_layers": 9,
+        "extractor_dropout": 0.4770791541851296,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.331769409038441,
+        "learning_rate": 0.0020495013671028546,
+        "weight_decay": 9.688575413446703e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 118,
+      "value": 235822082521.60297,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 6,
+        "extractor_dropout": 0.3503145171169162,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.29767143107908683,
+        "learning_rate": 0.00010234015734873722,
+        "weight_decay": 1.2218434703283739e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 119,
+      "value": 0.03100007176399231,
+      "params": {
+        "hidden_size": 176,
+        "num_layers": 9,
+        "extractor_dropout": 0.45650401405801183,
+        "decoder_layers": 10,
+        "decoder_nodes": 240,
+        "decoder_dropout": 0.34803211231230297,
+        "learning_rate": 0.004829466217231153,
+        "weight_decay": 7.642408360646241e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 120,
+      "value": 0.04758346630260348,
+      "params": {
+        "hidden_size": 96,
+        "num_layers": 7,
+        "extractor_dropout": 0.4488179960368082,
+        "decoder_layers": 8,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3099812475006376,
+        "learning_rate": 0.0031620263676065204,
+        "weight_decay": 1.5107975408060353e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 121,
+      "value": 0.0700362266972661,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 6,
+        "extractor_dropout": 0.22595754024797615,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.25619618541700645,
+        "learning_rate": 0.0017105445543973787,
+        "weight_decay": 2.6060002744967276e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 122,
+      "value": 0.023365648882463574,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 7,
+        "extractor_dropout": 0.47858241788807865,
+        "decoder_layers": 7,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.24829535841153044,
+        "learning_rate": 0.0012568915790004077,
+        "weight_decay": 4.56950433269126e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 123,
+      "value": 0.021222272515296937,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 6,
+        "extractor_dropout": 0.49231482391478576,
+        "decoder_layers": 6,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.236215845798183,
+        "learning_rate": 0.0023820944593621004,
+        "weight_decay": 6.712644621508286e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 124,
+      "value": 0.045873952889814974,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 4,
+        "extractor_dropout": 0.19747923673772372,
+        "decoder_layers": 8,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2715058072898703,
+        "learning_rate": 0.0009874523802047707,
+        "weight_decay": 2.0607570231601854e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 125,
+      "value": 0.018965828558430077,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 3,
+        "extractor_dropout": 0.4254193432839679,
+        "decoder_layers": 9,
+        "decoder_nodes": 128,
+        "decoder_dropout": 0.28319030691463276,
+        "learning_rate": 0.0018677958808618015,
+        "weight_decay": 2.2063862437426212e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 126,
+      "value": 0.025793359708040954,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 7,
+        "extractor_dropout": 0.20720880285766385,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.26106619771299716,
+        "learning_rate": 0.002933904707320118,
+        "weight_decay": 5.94495535327552e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 127,
+      "value": 0.04666818622499704,
+      "params": {
+        "hidden_size": 224,
+        "num_layers": 8,
+        "extractor_dropout": 0.18826218936089573,
+        "decoder_layers": 10,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.38669018926942944,
+        "learning_rate": 0.005743018469180382,
+        "weight_decay": 4.7144468142032844e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 128,
+      "value": 0.02972053303383291,
+      "params": {
+        "hidden_size": 112,
+        "num_layers": 4,
+        "extractor_dropout": 0.33067264302479804,
+        "decoder_layers": 8,
+        "decoder_nodes": 144,
+        "decoder_dropout": 0.33815079517985674,
+        "learning_rate": 0.0038839693219099003,
+        "weight_decay": 3.961706301167988e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 129,
+      "value": 2181986099.219816,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 6,
+        "extractor_dropout": 0.27613183907428707,
+        "decoder_layers": 3,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.27827543121140985,
+        "learning_rate": 0.00330903087569692,
+        "weight_decay": 8.769941310800154e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 130,
+      "value": 0.08586782915517688,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 3,
+        "extractor_dropout": 0.39840341567235266,
+        "decoder_layers": 4,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.23922966273916932,
+        "learning_rate": 0.0014889198900640737,
+        "weight_decay": 3.1906547930184964e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 131,
+      "value": 0.015603115642443299,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.12862786787595387,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.42517932431014355,
+        "learning_rate": 0.0071193513159141086,
+        "weight_decay": 5.865668013425615e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 132,
+      "value": 0.007892584428191185,
+      "params": {
+        "hidden_size": 256,
+        "num_layers": 5,
+        "extractor_dropout": 0.21677485818822734,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.4688986815055067,
+        "learning_rate": 0.005479730386805042,
+        "weight_decay": 7.553897415320417e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 133,
+      "value": 0.0041620034724473955,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 5,
+        "extractor_dropout": 0.18126578916857772,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2963929419754715,
+        "learning_rate": 0.012400140201577802,
+        "weight_decay": 0.00012263409436873154
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 134,
+      "value": 0.00522435181774199,
+      "params": {
+        "hidden_size": 80,
+        "num_layers": 6,
+        "extractor_dropout": 0.4837086977105073,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.29070751200247286,
+        "learning_rate": 0.01655810585327673,
+        "weight_decay": 0.00011725643466153207
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 135,
+      "value": 0.00692935697734356,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 4,
+        "extractor_dropout": 0.19538919117174242,
+        "decoder_layers": 5,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.30032429883824113,
+        "learning_rate": 0.04240137180807463,
+        "weight_decay": 1.8140204185643307e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 136,
+      "value": 0.008365569822490215,
+      "params": {
+        "hidden_size": 64,
+        "num_layers": 6,
+        "extractor_dropout": 0.18078758545458656,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2672456626523253,
+        "learning_rate": 0.025411043900194556,
+        "weight_decay": 4.508751574422204e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 137,
+      "value": 0.011392985424026846,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 5,
+        "extractor_dropout": 0.2369935069941263,
+        "decoder_layers": 8,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.3205216441628074,
+        "learning_rate": 0.004298975492463501,
+        "weight_decay": 1.0902945769721814e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 138,
+      "value": 0.011038291780278087,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 6,
+        "extractor_dropout": 0.22252056494992184,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.373195772121646,
+        "learning_rate": 0.0026583192321206588,
+        "weight_decay": 0.00010418136781662583
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 139,
+      "value": 0.021582431998103856,
+      "params": {
+        "hidden_size": 208,
+        "num_layers": 4,
+        "extractor_dropout": 0.4673738643421116,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3270960187584069,
+        "learning_rate": 0.012472531908828608,
+        "weight_decay": 0.00034711275261094016
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 140,
+      "value": 0.008630331233143806,
+      "params": {
+        "hidden_size": 240,
+        "num_layers": 5,
+        "extractor_dropout": 0.11398356168807751,
+        "decoder_layers": 10,
+        "decoder_nodes": 160,
+        "decoder_dropout": 0.309962831900339,
+        "learning_rate": 0.009803539739840444,
+        "weight_decay": 8.82252389516039e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 141,
+      "value": 0.004942538263276219,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.1753089610349923,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.4528170678649724,
+        "learning_rate": 0.004805311450758864,
+        "weight_decay": 0.00020760372793898974
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 142,
+      "value": 0.004307629726827145,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.18637672253578547,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2818516737548185,
+        "learning_rate": 0.004993727838891393,
+        "weight_decay": 0.0001953341975997898
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 143,
+      "value": 0.004667202569544315,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.1742565403486618,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.34481051031673327,
+        "learning_rate": 0.0051963098686919834,
+        "weight_decay": 0.00025953977005633314
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 144,
+      "value": 0.005168151669204235,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.16477135801814677,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.34308533856744483,
+        "learning_rate": 0.005993650087332036,
+        "weight_decay": 0.00024637125949198243
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 145,
+      "value": 0.02079851836897433,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.18928098722391767,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.3648439427381566,
+        "learning_rate": 0.004850542860327733,
+        "weight_decay": 0.00015498038677941553
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 146,
+      "value": 0.17470407374203206,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 5,
+        "extractor_dropout": 0.20123516424609975,
+        "decoder_layers": 9,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.29438836040619415,
+        "learning_rate": 0.003722041554338359,
+        "weight_decay": 0.00019994384336707516
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 147,
+      "value": 0.022464017523452638,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 6,
+        "extractor_dropout": 0.14755271734250733,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.33552573566773786,
+        "learning_rate": 0.007632381873874373,
+        "weight_decay": 0.00032657073994790686
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 148,
+      "value": 0.0353441777639091,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.18718263378322741,
+        "decoder_layers": 10,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.11917809681756311,
+        "learning_rate": 0.0033802063962199555,
+        "weight_decay": 0.0004285891440472588
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 149,
+      "value": 0.023568009352311493,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 6,
+        "extractor_dropout": 0.13990316547070356,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.35235021966895824,
+        "learning_rate": 0.006369161265018679,
+        "weight_decay": 0.00026910133162785067
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 150,
+      "value": 0.003921440290287137,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.296875342327903,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.28105062837016537,
+        "learning_rate": 0.004229804067352972,
+        "weight_decay": 1.6074297383316745e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 151,
+      "value": 0.02118391147814691,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.29501562070812565,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.2838011428482809,
+        "learning_rate": 0.00417192866932971,
+        "weight_decay": 1.4525907751037067e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 152,
+      "value": 0.005049640452489257,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.1743709072664355,
+        "decoder_layers": 9,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.3022564128019341,
+        "learning_rate": 0.005333416312840603,
+        "weight_decay": 2.104146054315015e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 153,
+      "value": 0.02234382159076631,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.21054528799786384,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2764424000899495,
+        "learning_rate": 0.0043191551951304984,
+        "weight_decay": 0.0001258700306874625
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 154,
+      "value": 0.003461831761524081,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 4,
+        "extractor_dropout": 0.19770900793344293,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3982614569490712,
+        "learning_rate": 0.0031427178394964916,
+        "weight_decay": 1.6433210773448377e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 155,
+      "value": 0.021143714478239418,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 4,
+        "extractor_dropout": 0.18409005817706542,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3965512267844592,
+        "learning_rate": 0.0031585683184476936,
+        "weight_decay": 1.3069544413664575e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 156,
+      "value": 0.009308541379868984,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 6,
+        "extractor_dropout": 0.3846961431011231,
+        "decoder_layers": 9,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.40562574249004024,
+        "learning_rate": 0.0022309895917962974,
+        "weight_decay": 1.6003270038258074e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 157,
+      "value": 0.006499161943793297,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 4,
+        "extractor_dropout": 0.3730524720527311,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3814571422525503,
+        "learning_rate": 0.002641550084651679,
+        "weight_decay": 7.101102624070517e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 158,
+      "value": 0.0037720141932368278,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.19509653455331186,
+        "decoder_layers": 10,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.2880103520954472,
+        "learning_rate": 0.0037279104497591024,
+        "weight_decay": 2.286635481232412e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 159,
+      "value": 0.005189046822488308,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.19348152901957433,
+        "decoder_layers": 10,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.286200410147003,
+        "learning_rate": 0.003738684465889747,
+        "weight_decay": 2.4386409164896006e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 160,
+      "value": 0.008476478746160865,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.1987327341795541,
+        "decoder_layers": 10,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.26713609662995386,
+        "learning_rate": 0.002929234387289812,
+        "weight_decay": 1.856819289422651e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 161,
+      "value": 0.004858657112345099,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.20418067629340428,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.272692146786837,
+        "learning_rate": 0.0036055829508742643,
+        "weight_decay": 2.2291170377418293e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 162,
+      "value": 0.004388469457626343,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.20529846187124828,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.25721416437490696,
+        "learning_rate": 0.0048475424535639935,
+        "weight_decay": 2.644506911315706e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 163,
+      "value": 0.05757971443235874,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.18080553135562674,
+        "decoder_layers": 10,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.25689423740842215,
+        "learning_rate": 0.0052834400835589145,
+        "weight_decay": 3.0161532217898596e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 164,
+      "value": 0.007941699959337712,
+      "params": {
+        "hidden_size": 128,
+        "num_layers": 5,
+        "extractor_dropout": 0.21699445896021383,
+        "decoder_layers": 9,
+        "decoder_nodes": 96,
+        "decoder_dropout": 0.2933117641837915,
+        "learning_rate": 0.004616432716608718,
+        "weight_decay": 0.00016449467607015342
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 165,
+      "value": 0.023318779515102507,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 4,
+        "extractor_dropout": 0.21160520504290722,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.28525194972502615,
+        "learning_rate": 0.006311205129786117,
+        "weight_decay": 2.6463477696323904e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 166,
+      "value": 0.020909326430410147,
+      "params": {
+        "hidden_size": 144,
+        "num_layers": 6,
+        "extractor_dropout": 0.16678815724603846,
+        "decoder_layers": 8,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.27844134925371267,
+        "learning_rate": 0.007915849660985649,
+        "weight_decay": 1.1628473727197201e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 167,
+      "value": 0.03652842091396451,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 5,
+        "extractor_dropout": 0.3540262550920301,
+        "decoder_layers": 10,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.26371706857369737,
+        "learning_rate": 0.0038278964964589875,
+        "weight_decay": 1.6328774741762392e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 168,
+      "value": 0.006396668124943971,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 6,
+        "extractor_dropout": 0.3380946074038531,
+        "decoder_layers": 8,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.2524443340027229,
+        "learning_rate": 0.011631923562410586,
+        "weight_decay": 0.0005102204943157996
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 169,
+      "value": 0.026592813525348903,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 4,
+        "extractor_dropout": 0.1920147135710896,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.3052117292039129,
+        "learning_rate": 0.014926725529405905,
+        "weight_decay": 1.8645928888518538e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 170,
+      "value": 0.0033419551327824593,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.48869274761994175,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.27176120230778256,
+        "learning_rate": 0.0049560524197560475,
+        "weight_decay": 2.2868619170568046e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 171,
+      "value": 0.019041390670463443,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.4759019268608229,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2735004863315426,
+        "learning_rate": 0.004879093488084747,
+        "weight_decay": 2.382989816280483e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 172,
+      "value": 0.003343919804319739,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.49172186589463,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.29572423511146406,
+        "learning_rate": 0.004318411867489717,
+        "weight_decay": 2.044079266436067e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 173,
+      "value": 0.014374106330797077,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.4885093338101807,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2965955412591648,
+        "learning_rate": 0.00408000312220796,
+        "weight_decay": 2.0701837440022046e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 174,
+      "value": 0.0431907573249191,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 5,
+        "extractor_dropout": 0.4930483995318373,
+        "decoder_layers": 9,
+        "decoder_nodes": 80,
+        "decoder_dropout": 0.2803190945781376,
+        "learning_rate": 0.005639244319818937,
+        "weight_decay": 1.7656740754381e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 175,
+      "value": 0.0034092893358319996,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.48360572835885474,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.290542194538224,
+        "learning_rate": 0.0031666968820351026,
+        "weight_decay": 2.914318876678817e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 176,
+      "value": 0.030715730134397747,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.4703213112115761,
+        "decoder_layers": 9,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.26493261159183645,
+        "learning_rate": 0.0029458884005521577,
+        "weight_decay": 2.8429336707389592e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 177,
+      "value": 0.06752148382365704,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.4997266524606411,
+        "decoder_layers": 2,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.2895881216575254,
+        "learning_rate": 0.0023758808774412116,
+        "weight_decay": 2.2344527694034355e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 178,
+      "value": 0.0294511157553643,
+      "params": {
+        "hidden_size": 48,
+        "num_layers": 6,
+        "extractor_dropout": 0.48461928584805974,
+        "decoder_layers": 9,
+        "decoder_nodes": 48,
+        "decoder_dropout": 0.31305377783406857,
+        "learning_rate": 0.0034032641599178806,
+        "weight_decay": 3.684051530002368e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 179,
+      "value": 0.006192527059465647,
+      "params": {
+        "hidden_size": 16,
+        "num_layers": 5,
+        "extractor_dropout": 0.4734330735689492,
+        "decoder_layers": 10,
+        "decoder_nodes": 32,
+        "decoder_dropout": 0.286614104413153,
+        "learning_rate": 0.004261453671102272,
+        "weight_decay": 2.853176687302518e-05
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 180,
+      "value": 0.0066238904371857645,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 6,
+        "extractor_dropout": 0.4889500130409336,
+        "decoder_layers": 9,
+        "decoder_nodes": 208,
+        "decoder_dropout": 0.2981131613481285,
+        "learning_rate": 0.0027062420916485097,
+        "weight_decay": 5.749933418460346e-06
+      },
+      "state": "COMPLETE"
+    },
+    {
+      "number": 181,
+      "value": 0.025332384230569004,
+      "params": {
+        "hidden_size": 32,
+        "num_layers": 5,
+        "extractor_dropout": 0.4812250104527083,
+        "decoder_layers": 9,
+        "decoder_nodes": 64,
+        "decoder_dropout": 0.2728738198593959,
+        "learning_rate": 0.004749838151445898,
+        "weight_decay": 0.000183061851048341
+      },
+      "state": "COMPLETE"
+    }
+  ]
+}
