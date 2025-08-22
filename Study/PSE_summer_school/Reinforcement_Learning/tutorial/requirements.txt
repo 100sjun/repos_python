@@ -1,0 +1,11 @@
+numpy<2
+scipy
+matplotlib
+casadi==3.6.5
+opencv-python
+moviepy>=1.0.3
+imageio
+imageio-ffmpeg
+mediapy
+gymnasium[toy-text]>=0.29
+torch
