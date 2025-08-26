@@ -174,10 +174,10 @@ class ParameterOptmizer:
 
         all_sp = df_sp.sum(axis=1) - df_sp['E']
 
-        t0 = abs(df_sp['Time [s]']-5.654867).argmin()
-        t1 = abs(df_sp['Time [s]']-7.270543).argmin()
-        t2 = abs(df_sp['Time [s]']-10.17876).argmin()
-        t3 = abs(df_sp['Time [s]']-16.9646).argmin()
+        t0 = abs(df_sp['Time [s]']-4.295445815).argmin()
+        t1 = abs(df_sp['Time [s]']-5.522716048).argmin()
+        t2 = abs(df_sp['Time [s]']-7.731802468).argmin()
+        t3 = abs(df_sp['Time [s]']-12.88633745).argmin()
 
 
         sim = []
@@ -284,7 +284,7 @@ class ParameterOptmizer:
             y_next, t_time = self.err_calculation()
 
             # update dataset
-            if t_time > 17.0:
+            if t_time > 13.0:
                 if len(X) >= self.max_dsize:
                     X = np.vstack([X[-(self.max_dsize-1):],x_next])
                     y = np.append(y[-(self.max_dsize-1):], y_next)
@@ -347,13 +347,13 @@ if __name__ == "__main__":
         res = optimizer.current_parameters.copy()
         total_time = optimizer.err_calculation()[1]
         
-        if total_time > 17.0:
-            res['err'] = optimizer.err_calculation()[0]  
+        if total_time > 13.0:
+            err_LH = optimizer.err_calculation()[0]  
         else:
-            res['err'] = optimizer.max_error
+            err_LH = optimizer.max_error
         res['index'] = f'LH pre-train {j}'
     
-        print(f'State: LH pre-train, iteration: {j}, error = {res['err']}, t_time = {total_time}')
+        print(f'State: LH pre-train, iteration: {j}, error = {err_LH}, t_time = {total_time}')
         df_set = pd.concat([df_set, pd.DataFrame([res])], ignore_index=True)
         df_set.to_csv('db_set.csv', index=False)
 
