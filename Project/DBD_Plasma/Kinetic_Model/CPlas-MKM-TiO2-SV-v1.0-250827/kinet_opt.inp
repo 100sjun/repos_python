@@ -1,0 +1,147 @@
+ELEMENTS
+e C H
+END
+
+SPECIES
+e C CH2 CH3 CH3^+ CH4 CH4(v13) CH4(v24) CH4^+ CH5^+ C2H2 C2H2(v13) C2H2(v2) C2H2(v5) C2H2^+ C2H3 C2H4 C2H4(v1) C2H4(v2) C2H4^+ C2H5 C2H5^+ 
+C2H6 C2H6(v13) C2H6(v24) C2H6^+ C3H6 C3H6(v) C3H6^+ C3H7 C3H8 C3H8(v1) C3H8(v2) C3H8^+ C4H9H C5H12 H H2
+END
+
+BOLSIG
+CH3 CH3^+ CH4 CH4(v13) CH4(v24) CH4^+ C2H2 C2H2(v13) C2H2(v2) C2H2(v5) C2H2^+ C2H4 C2H4(v1) C2H4(v2) C2H4^+ C2H5^+ 
+C2H6 C2H6(v13) C2H6(v24) C2H6^+ C3H6 C3H6(v) C3H6^+ C3H8 C3H8(v1) C3H8(v2) C3H8^+
+END
+
+REACTIONS
+# Gas Constant
+$ double precision, parameter :: R = 8.314d-3
+
+# Compensation Parameters
+$ double precision, parameter :: f0 = 4.9542d-03
+$ double precision, parameter :: f1 = 2.6432d-10
+$ double precision, parameter :: f2 = 6.8978d-07
+$ double precision, parameter :: f3 = 1.5512d-05
+$ double precision, parameter :: f4 = 7.5699d-08
+$ double precision, parameter :: f5 = 6.1383d-08
+$ double precision, parameter :: f6 = 5.4511d-07
+$ double precision, parameter :: f7 = 7.6382d-06
+$ double precision, parameter :: f8 = 2.1952d-06
+$ double precision, parameter :: f9 = 4.6959d-07
+$ double precision, parameter :: f10 = 1.7124d-07
+$ double precision, parameter :: f11 = 1.7918d-06
+$ double precision, parameter :: f12 = 3.4302d-02
+$ double precision, parameter :: f13 = 7.8657d-01
+$ double precision, parameter :: f14 = 4.3818d+20
+$ double precision, parameter :: f15 = 3.0690d-03
+$ double precision, parameter :: f16 = 5.2008d-02
+$ double precision, parameter :: f17 = 7.2230d-02
+$ double precision, parameter :: f18 = 9.0019d+00
+$ double precision, parameter :: f19 = 4.6774d-03
+$ double precision, parameter :: f20 = 3.9829d-03
+$ double precision, parameter :: f21 = 5.0746d+02
+$ double precision, parameter :: f22 = 7.9017d-03
+$ double precision, parameter :: f23 = 1.0377d+01
+$ double precision, parameter :: f24 = 3.1378d+16
+$ double precision, parameter :: f25 = 1.0474d+00
+$ double precision, parameter :: f26 = 4.1486d+01
+$ double precision, parameter :: f27 = 1.8110d+01
+$ double precision, parameter :: f28 = 6.1083d-02
+$ double precision, parameter :: f29 = 2.2263d+00
+$ double precision, parameter :: f30 = 1.2422d+00
+$ double precision, parameter :: f31 = 1.4830d+01
+$ double precision, parameter :: f32 = 1.9438d+01
+$ double precision, parameter :: f33 = 5.5941d+00
+$ double precision, parameter :: f34 = 1.7540d-02
+$ double precision, parameter :: f35 = 2.8048d+01
+$ double precision, parameter :: f36 = 1.5483d+01
+$ double precision, parameter :: f37 = 8.5290d+00
+$ double precision, parameter :: f38 = 1.0138d-03
+$ double precision, parameter :: f39 = 1.2215d-01
+$ double precision, parameter :: f40 = 1.3851d+02
+$ double precision, parameter :: f41 = 2.2532d+02
+$ double precision, parameter :: f42 = 1.6831d+02
+$ double precision, parameter :: f43 = 5.3603d-02
+$ double precision, parameter :: f44 = 4.7552d+19
+$ double precision, parameter :: f45 = 1.3225d-09
+
+# Vibrational Excitation Reaction
+e + CH4 => e + CH4(v24)		            ! f0 * Bolsig+ CH4 -> CH4(v24)
+e + CH4 => e + CH4(v13)		            ! f0 * Bolsig+ CH4 -> CH4(v13)
+e + CH4(v24) => e + CH4		            ! f1 * Bolsig+ CH4(v24) -> CH4
+e + CH4(v13) => e + CH4		            ! f1 * Bolsig+ CH4(v13) -> CH4
+e + C2H6 => e + C2H6(v24)		        ! f2 * Bolsig+ C2H6 -> C2H6(v24)
+e + C2H6 => e + C2H6(v13)		        ! f2 * Bolsig+ C2H6 -> C2H6(v13)
+e + C2H6(v24) => e + C2H6		        ! f3 * Bolsig+ C2H6(v24) -> C2H6
+e + C2H6(v13) => e + C2H6		        ! f3 * Bolsig+ C2H6(v13) -> C2H6
+e + C2H4 => e + C2H4(v2)		        ! f4 * Bolsig+ C2H4 -> C2H4(v2)
+e + C2H4 => e + C2H4(v1)		        ! f4 * Bolsig+ C2H4 -> C2H4(v1)
+e + C2H4(v2) => e + C2H4		        ! f5 * Bolsig+ C2H4(v2) -> C2H4
+e + C2H4(v1) => e + C2H4		        ! f5 * Bolsig+ C2H4(v1) -> C2H4
+e + C2H2 => e + C2H2(v2)		        ! f6 * Bolsig+ C2H2 -> C2H2(v2)
+e + C2H2 => e + C2H2(v5)		        ! f6 * Bolsig+ C2H2 -> C2H2(v5)
+e + C2H2 => e + C2H2(v13)		        ! f6 * Bolsig+ C2H2 -> C2H2(v13)
+e + C2H2(v2) => e + C2H2		        ! f7 * Bolsig+ C2H2(v2) -> C2H2
+e + C2H2(v5) => e + C2H2		        ! f7 * Bolsig+ C2H2(v5) -> C2H2
+e + C2H2(v13) => e + C2H2		        ! f7 * Bolsig+ C2H2(v13) -> C2H2
+e + C3H8 => e + C3H8(v2)		        ! f8 * Bolsig+ C3H8 -> C3H8(v2)
+e + C3H8 => e + C3H8(v1)		        ! f8 * Bolsig+ C3H8 -> C3H8(v1)
+e + C3H8(v2) => e + C3H8		        ! f9 * Bolsig+ C3H8(v2) -> C3H8
+e + C3H8(v1) => e + C3H8		        ! f9 * Bolsig+ C3H8(v1) -> C3H8
+e + C3H6 => e + C3H6(v)		            ! f10 * Bolsig+ C3H6 -> C3H6(v)
+e + C3H6(v) => e + C3H6		            ! f11 * Bolsig+ C3H6(v) -> C3H6
+
+# Ionization Reaction
+e + CH3 => e + e + CH3^+		                ! f45 * Bolsig+ CH3 -> CH3^+ 
+e + CH4 => e + e + CH4^+		                ! f45 * Bolsig+ CH4 -> CH4^+
+e + C2H6 => e + e + C2H6^+		                ! f45 * Bolsig+ C2H6 -> C2H6^+
+e + C2H4 => e + e + C2H4^+		                ! f45 * Bolsig+ C2H4 -> C2H4^+
+e + C2H2 => e + e + C2H2^+		                ! f45 * Bolsig+ C2H2 -> C2H2^+
+e + C3H8 => e + e + C3H8^+		                ! f45 * Bolsig+ C3H8 -> C3H8^+
+e + C3H6 => e + e + C3H6^+		                ! f45 * Bolsig+ C3H6 -> C3H6^+
+e + e + CH3^+ => e + CH3                        ! f45 * Bolsig+ CH3^+ -> CH3
+e + e + CH4^+ => e + CH4                        ! f45 * Bolsig+ CH4^+ -> CH4
+e + e + C2H6^+ => e + C2H6                      ! f45 * Bolsig+ C2H6^+ -> C2H6
+e + e + C2H4^+ => e + C2H4                      ! f45 * Bolsig+ C2H4^+ -> C2H4
+e + e + C2H2^+ => e + C2H2                      ! f45 * Bolsig+ C2H2^+ -> C2H2
+e + e + C3H8^+ => e + C3H8                      ! f45 * Bolsig+ C3H8^+ -> C3H8
+e + e + C3H6^+ => e + C3H6                      ! f45 * Bolsig+ C3H6^+ -> C3H6
+
+# Dissociative Excitation Reaction
+e + CH4 => e + CH3 + H                         ! f12 * Bolsig+ CH4 -> CH3 H
+e + CH4 => e + CH2 + H2                        ! f16 * Bolsig+ CH4 -> CH2 H2
+e + C2H6 => e + C2H4 + H2                        ! f17 * Bolsig+ C2H6 -> C2H4 H2
+e + C2H5^+ => C2H3 + H + H                    ! f25 * 1.92d-08 * (300./Tgas)**0.71
+e + C2H4 => e + C2H2 + H2                       ! f30 * Bolsig+ C2H4 -> C2H2 H2
+e + C2H5^+ => C2H2 + H2 + H                    ! f33 * 1.60d-08 * (300./Tgas)**0.71
+e + C3H6 => e + C2H2 + CH4                     ! f34 * Bolsig+ C3H6 -> C2H2 CH4
+e + C2H5^+ => C2H2 + H + H + H               ! f37 * 8.98d-09 * (300./Tgas)**0.71
+e + C2H4 => e + C2H3 + H                     ! f39 * Bolsig+ C2H4 -> C2H3 H
+e + C3H8 => e + C3H6 + H2                    ! f41 * Bolsig+ C3H8 -> C3H6 H2
+e + CH4 => e + C + H2 + H2                    ! f43 * Bolsig+ CH4 -> C H2 H2
+
+# Neutral-Neutral Reaction
+CH3 + H => CH4                                 ! f13 * 1.44d-14 * Tgas**(-4.76) * exp(-1227.98/Tgas)
+CH3 + CH3 => C2H6                              ! f14 * 1.87d-6 * Tgas**(-7.03) * exp(-1390.54/Tgas)
+C2H4 + H => C2H5                               ! f15 * 9.68d-12 * (Tgas/298.)**1.28 * exp(-5.40/(R*Tgas))
+C2H2 + H2 => C2H4                                ! f18 * 5.00d-13*exp(-163.00/(R*Tgas))
+C2H5 + H => C2H6                               ! f19 * 8.65d-7 * Tgas**(-0.99) * exp(-795.17/Tgas)
+C2H5 + C2H5 => C4H9H                            ! f20 * 9.55d-12
+CH2 + CH3 => C2H4 + H                           ! f21 * 7.10d-11
+C2H5 + H => CH3 + CH3                           ! f22 * 5.99d-11
+CH4 + CH4^+ => CH3 + CH5^+                      ! f23 * 1.50d-9
+CH3 + C2H5 => C3H8                              ! f24 * 1.49d27 *  Tgas ** (-16.82) * exp(-6575.24/Tgas)
+CH3 + C2H3 => C3H6                              ! f26 * 3.8d-29
+C3H6 + H => C3H7                                ! f27 * 1.29d-11*(Tgas/298.)**0.51*exp(-5.15/(R*Tgas))
+C4H9H + CH2 => C5H12                            ! f28 * 9.61d-13
+C3H7 + H2 => C3H8 + H                          ! f29 * 6.00d-11
+C2H6 + CH5^+ => CH4 + H2 + C2H5^+              ! f31 * 2.25d-10
+C2H4 + CH5^+ => CH4 + C2H5^+                    ! f32 * 1.50d-9
+C3H7 + H => C3H8                              ! f35 * 6.00d-11
+C2H3 + H => C2H2 + H2                           ! f36 * 1.60d-10
+C3H8 + CH2 => C4H9H                             ! f38 * 4.42d-12
+CH4 + CH3^+ => H2 + C2H5^+                     ! f40 * 1.20d-9
+H + H => H2                                      ! f44 * 5.52d-30*Tgas**(-1.00)
+
+
+
+END
