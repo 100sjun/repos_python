@@ -357,17 +357,17 @@ def objective(trial):
     
     # 1. 하이퍼파라미터 제안
     # LSTM StateExtractor 파라미터
-    lstm_hidden_size = trial.suggest_categorical('lstm_hidden_size', [32, 48, 64, 96, 128])
+    lstm_hidden_size = trial.suggest_categorical('lstm_hidden_size', [16, 32, 48, 64])
     lstm_n_layers = trial.suggest_int('lstm_n_layers', 2, 6)
     lstm_dropout = trial.suggest_float('lstm_dropout', 0.1, 0.5, step=0.1)
     
     # PhysicalChangeDecoder 파라미터
-    decoder_hidden_size = trial.suggest_categorical('decoder_hidden_size', [32, 48, 64, 96, 128])
+    decoder_hidden_size = trial.suggest_categorical('decoder_hidden_size', [16, 32, 48, 64])
     decoder_n_layers = trial.suggest_int('decoder_n_layers', 2, 6)
     decoder_dropout = trial.suggest_float('decoder_dropout', 0.1, 0.6, step=0.1)
     
     # CurrentPredictor 파라미터
-    current_hidden_size = trial.suggest_categorical('current_hidden_size', [32, 48, 64, 96, 128])
+    current_hidden_size = trial.suggest_categorical('current_hidden_size', [16, 32, 48, 64])
     current_n_layers = trial.suggest_int('current_n_layers', 2, 6)
     current_dropout = trial.suggest_float('current_dropout', 0.1, 0.6, step=0.1)
     
@@ -376,7 +376,7 @@ def objective(trial):
     warmup_ratio = trial.suggest_float('warmup_ratio', 0.05, 0.3, step=0.05)
     
     # Batch size 파라미터
-    batch_size = trial.suggest_categorical('batch_size', [4, 8, 16])
+    batch_size = trial.suggest_categorical('batch_size', [2, 4, 8])
     
     # 2. K-fold Cross Validation
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -546,7 +546,7 @@ def run_optuna_optimization():
     global dataset, range_mm
     
     print("📋 데이터 로드 중...")
-    df, ndf, range_mm, exp_num_list = df_treat('BMED_DATA_AG_treated.csv')
+    df, ndf, range_mm, exp_num_list = df_treat('BMED_DATA_AG.csv')
     seq = seq_data(ndf, exp_num_list)
     pad, seq_len, max_len = pad_seq(seq)
     dataset = gen_dataset(pad, seq_len)
