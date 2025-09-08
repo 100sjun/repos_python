@@ -568,30 +568,6 @@ def run_optuna_optimization():
         load_if_exists=True
     )
     
-    print(f"📊 최적화 설정:")
-    print(f"   - 최적화 방향: minimize")
-    print(f"   - 샘플러: TPESampler")
-    print(f"   - Pruner: None (disabled for K-fold)")
-    print(f"   - K-fold: 5-fold cross validation")
-    print(f"   - SQLite DB: {db_url}")
-    print(f"   - 중간 결과 자동 저장: 활성화")
-    
-    # 최적화 파라미터 범위 출력
-    print(f"🎯 하이퍼파라미터 탐색 범위:")
-    print(f"   LSTM Hidden Size: [32, 48, 64, 96, 128]")
-    print(f"   LSTM Layers: [2, 6]")
-    print(f"   LSTM Dropout: [0.1, 0.5]")
-    print(f"   Decoder Hidden Size: [32, 48, 64, 96, 128]")
-    print(f"   Decoder Layers: [2, 6]")
-    print(f"   Decoder Dropout: [0.1, 0.6]")
-    print(f"   Current Predictor Hidden Size: [32, 48, 64, 96, 128]")
-    print(f"   Current Predictor Layers: [2, 6]")
-    print(f"   Current Predictor Dropout: [0.1, 0.6]")
-    print(f"   Noam Factor: [0.5, 2.0]")
-    print(f"   Warmup Ratio: [0.05, 0.3]")
-    print(f"   Batch Size: [4, 8, 16]")
-    print("="*80)
-    
     # 최적화 실행
     n_trials = 100
     print(f"🔍 최적화 시작 (총 {n_trials} trials)")
