@@ -1,0 +1,14 @@
+{
+  "lstm_hidden_size": 64,
+  "lstm_n_layers": 5,
+  "lstm_dropout": 0.4,
+  "decoder_hidden_size": 64,
+  "decoder_n_layers": 6,
+  "decoder_dropout": 0.1,
+  "current_hidden_size": 32,
+  "current_n_layers": 2,
+  "current_dropout": 0.1,
+  "noam_factor": 1.6,
+  "warmup_ratio": 0.3,
+  "batch_size": 4
+}
