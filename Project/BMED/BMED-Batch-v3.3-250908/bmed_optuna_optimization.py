@@ -203,6 +203,14 @@ class PhysicsConstraintLayer(nn.Module):
         NFK = CFK * VF
         NBK = CBK * VB
 
+        if VF < dVA + dVB:
+            dVA = 0
+            dVB = 0
+        if NFLA < dNALA:
+            dNALA = 0
+        if NFK < dNBK:
+            dNBK = 0
+
         nVF = VF - dVA - dVB
         nVA = VA + dVA
         nVB = VB + dVB
@@ -211,15 +219,10 @@ class PhysicsConstraintLayer(nn.Module):
         nVA = torch.clamp(nVA, min=self.sps)
         nVB = torch.clamp(nVB, min=self.sps)
         
-        nNFLA = NFLA - torch.clamp(dNALA, min=0.0)
-        nNALA = NALA + torch.clamp(dNALA, min=0.0)
-        nNFK = NFK - torch.clamp(dNBK, min=0.0)
-        nNBK = NBK + torch.clamp(dNBK, min=0.0)
-
-        nNFLA = torch.clamp(nNFLA, min=0.0)
-        nNALA = torch.clamp(nNALA, min=0.0)
-        nNFK = torch.clamp(nNFK, min=0.0)
-        nNBK = torch.clamp(nNBK, min=0.0)
+        nNFLA = NFLA - dNALA
+        nNALA = NALA + dNALA
+        nNFK = NFK - dNBK
+        nNBK = NBK + dNBK
 
         nCFLA = nNFLA / nVF
         nCALA = nNALA / nVA
