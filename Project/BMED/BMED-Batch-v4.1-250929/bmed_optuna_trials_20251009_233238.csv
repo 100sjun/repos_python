@@ -1,0 +1,3 @@
+number,value,datetime_start,datetime_complete,duration,params_current_dropout,params_current_hidden_size,params_current_n_layers,params_decoder_dropout,params_decoder_hidden_size,params_decoder_n_layers,params_lstm_dropout,params_lstm_hidden_size,params_lstm_n_layers,state
+0,0.017264788830652834,2025-10-09 23:27:57.851678,2025-10-09 23:30:14.878093,0 days 00:02:17.026415,0.30000000000000004,72,3,0.2,64,2,0.5,32,2,COMPLETE
+1,,2025-10-09 23:30:14.903589,2025-10-09 23:32:38.129967,0 days 00:02:23.226378,0.4,64,3,0.30000000000000004,48,5,0.1,32,5,FAIL
