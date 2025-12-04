@@ -9,7 +9,7 @@ Reactor configurations:
 '''
 
 # Libraries
-import numpy as np
+import torch
 import matplotlib.pyplot as plt
 
 # ====================================================================
@@ -21,7 +21,7 @@ class ReactorGeometry:
         self.id = inner_diameter
         self.od = outer_diameter
         self.L = length
-        self.tc_pos = np.array([35e-3, 48e-3, 64e-3, 83e-3, 105e-3, 130e-3, 158e-3, 189.6e-3, 241e-3, 272e-3, 300e-3,
+        self.tc_pos = torch.tensor([35e-3, 48e-3, 64e-3, 83e-3, 105e-3, 130e-3, 158e-3, 189.6e-3, 241e-3, 272e-3, 300e-3,
         325e-3, 347e-3, 366e-3, 382e-3, 395e-3])
 
         self._calculate_derived()
@@ -36,13 +36,13 @@ class ReactorGeometry:
         self.tkn = self.ro - self.ri
 
         # Cross-sectional areas
-        self.Ai = np.pi * self.ri**2
-        self.Ao = np.pi * self.ro**2
+        self.Ai = torch.pi * self.ri**2
+        self.Ao = torch.pi * self.ro**2
         self.Aw = self.Ao - self.Ai
 
         # Perimeters
-        self.pri = np.pi * self.id
-        self.pro = np.pi * self.od
+        self.pri = torch.pi * self.id
+        self.pro = torch.pi * self.od
 
         # Surface ares (total tube)
         self.Si = self.pri * self.L
@@ -58,7 +58,7 @@ class ReactorGeometry:
         return len(self.tc_pos)
 
     @property
-    def tc_pos_mm(self) -> np.ndarray:
+    def tc_pos_mm(self) -> torch.tensor:
         '''TC positions in mm for convenience'''
         return self.tc_pos * 1000
 
@@ -105,21 +105,21 @@ class Mesh1D:
 
     def _generate_uniform_mesh(self):
         """Generate uniform mesh with specified spacing"""
-        self.n_nodes = int(np.ceil(self.geometry.L / self.dz)) + 1
-        self.z = np.linspace(0, self.geometry.L, self.n_nodes)
+        self.n_nodes = int(torch.ceil(torch.tensor(self.geometry.L) / torch.tensor(self.dz)) + 1)
+        self.z = torch.linspace(0, self.geometry.L, self.n_nodes)
         self.dz_actual = self.z[1] - self.z[0]
 
     def _find_tc_indices(self):
         """Find mesh indices closest to TC positions"""
-        self.tc_indices = np.zeros(self.geometry.n_tc, dtype = int)
+        self.tc_indices = torch.zeros(self.geometry.n_tc, dtype = int)
         for i, tc_pos in enumerate(self.geometry.tc_pos):
-            self.tc_indices[i] = np.argmin(np.abs(self.z - tc_pos))
+            self.tc_indices[i] = torch.argmin(torch.abs(self.z - tc_pos))
         
         # Also store the actual z positiions at TC indices
         self.tc_z = self.z[self.tc_indices]
 
     @property
-    def z_mm(self) -> np.ndarray:
+    def z_mm(self) -> torch.tensor:
         '''Mesh positions in mm'''
         return self.z * 1000
     

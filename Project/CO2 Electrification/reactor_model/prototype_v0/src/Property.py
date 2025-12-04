@@ -5,11 +5,11 @@ Physical properties module for heat balance calculation.
 """
 
 # Libraries
-import numpy as np
+import torch
 import json
 import os
 
-ArrayLike = float | np.ndarray
+ArrayLike = float | torch.Tensor
 BASE_DIR = os.path.dirname(__file__)
 DATA_PATH = os.path.join(BASE_DIR, "..", "data", "property.json")
 
@@ -25,7 +25,7 @@ class Prop_He:
     Mw = 4.0026
 
     @staticmethod
-    def rho(T: ArrayLike) -> ArrayLike:
+    def rho(T: torch.Tensor) -> torch.Tensor:
         """
         Mass density from property data [kg/m3]
 
@@ -39,16 +39,16 @@ class Prop_He:
         function = json.load(open(DATA_PATH))['helium']['rho']['function']
 
         if function == 'inverse':
-            return a / (T + b)
+            return a / (T + b) * 1000 # g/ml to kg/m3
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
 
     @staticmethod
-    def cp(T: ArrayLike) -> ArrayLike:
+    def cp(T: torch.Tensor) -> torch.Tensor:
         """
         Specific heat capacity at constant pressure [J/mol*K]
         
@@ -66,12 +66,12 @@ class Prop_He:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
     
     @staticmethod
-    def mu(T: ArrayLike) -> ArrayLike:
+    def mu(T: torch.Tensor) -> torch.Tensor:
         """
         Dynamic viscosity [Pa*s]
         
@@ -89,12 +89,12 @@ class Prop_He:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
     
     @staticmethod
-    def k(T: ArrayLike) -> ArrayLike:
+    def k(T: torch.Tensor) -> torch.Tensor:
         """
         Thermal conductivity [W/m/K]
         
@@ -112,12 +112,12 @@ class Prop_He:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
     
     @staticmethod
-    def prandtl(T: ArrayLike) -> ArrayLike:
+    def prandtl(T: torch.Tensor) -> torch.Tensor:
         """Prandtl number [-]"""
         cp = Prop_He.cp(T) / (Prop_He.Mw/1000)
         mu = Prop_He.mu(T)
@@ -125,7 +125,7 @@ class Prop_He:
         return cp * mu / k
 
     @classmethod
-    def all_properties(cls, T: ArrayLike) -> dict:
+    def all_properties(cls, T: torch.Tensor) -> dict:
         """Return all properties as dictionary"""
         return {
             'rho': cls.rho(T),
@@ -148,7 +148,7 @@ class Prop_kanthal:
     """
 
     @staticmethod
-    def rho(T: ArrayLike) -> ArrayLike:
+    def rho(T: torch.Tensor) -> torch.Tensor:
         """
         Mass density from property data [kg/m3]
 
@@ -166,15 +166,15 @@ class Prop_kanthal:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
     
     @staticmethod
-    def cp(T: ArrayLike) -> ArrayLike:
+    def cp(T: torch.Tensor) -> torch.Tensor:
         """
         Specific heat capacity at constant pressure [kJ/kg/K]
-        
+
         Args:
             T: Temperature [C]
         Returns:
@@ -189,12 +189,14 @@ class Prop_kanthal:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            # Clamp temperature to avoid log(0) or log(negative)
+            T_safe = torch.clamp(T, min=1.0)  # Minimum 1°C for log safety
+            return a + b * torch.log(T_safe)
         else:
             return a
 
     @staticmethod
-    def k(T: ArrayLike) -> ArrayLike:
+    def k(T: torch.Tensor) -> torch.Tensor:
         """
         Thermal conductivity [W/m/K]
         
@@ -212,12 +214,12 @@ class Prop_kanthal:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
     
     @staticmethod
-    def er(T: ArrayLike) -> ArrayLike:
+    def er(T: torch.Tensor) -> torch.Tensor:
         """
         Resistivity [ohm*m2/m]
         
@@ -235,12 +237,12 @@ class Prop_kanthal:
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
-            return a + b * np.log(T)
+            return a + b * torch.log(T)
         else:
             return a
     
     @classmethod
-    def all_properties(cls, T: ArrayLike) -> dict:
+    def all_properties(cls, T: torch.Tensor) -> dict:
         """Return all properties as dictionary"""
         return {
             'rho': cls.rho(T),
@@ -253,7 +255,7 @@ class Prop_kanthal:
 # Heat Transfer Correlations
 # ====================================================================
 
-def Nu_laminar(Re: ArrayLike, Pr: ArrayLike, L_D: float) -> ArrayLike:
+def Nu_laminar(Re: torch.Tensor, Pr: torch.Tensor, L_D: float) -> torch.Tensor:
     """
     Nusselt number for laminar flow in circular tube
     """
@@ -264,9 +266,9 @@ def Nu_laminar(Re: ArrayLike, Pr: ArrayLike, L_D: float) -> ArrayLike:
     Nu_developed = 4.36
 
     # Take maximum (developing region has higher Nu)
-    return np.maximum(Nu_developing, Nu_developed)
+    return torch.maximum(torch.tensor(Nu_developing), torch.tensor(Nu_developed))
 
-def h_coeff(T_gas: ArrayLike, T_wall: ArrayLike, D_inner: float, mass_flow: float, L: float = None) -> ArrayLike:
+def h_coeff(T_gas: torch.Tensor, T_wall: torch.Tensor, D_inner: float, mass_flow: float, L: float = None) -> torch.Tensor:
     """
     Calculate convective heat transfer coefficient [W/m2*K]
 
@@ -287,7 +289,7 @@ def h_coeff(T_gas: ArrayLike, T_wall: ArrayLike, D_inner: float, mass_flow: floa
     props_film = Prop_He.all_properties(T_film)
 
     # Cross-sectional area
-    A_cs = np.pi * (D_inner**2) / 4
+    A_cs = torch.pi * (D_inner**2) / 4
 
     # Velocity and Reynolds number
     velocity = mass_flow / (props_film['rho'] * A_cs)
@@ -296,7 +298,7 @@ def h_coeff(T_gas: ArrayLike, T_wall: ArrayLike, D_inner: float, mass_flow: floa
 
     # Nusselt number
     L_D = L / D_inner
-    Nu = Nu_laminar(Re, Pr, L_D)
+    Nu = Nu_laminar(torch.tensor(Re), torch.tensor(Pr), L_D)
 
     # Heat transfer coefficient
     h = Nu * props_film['k'] / D_inner
@@ -339,7 +341,7 @@ if __name__ == "__main__":
     print("=" * 60)
     
     # Test temperatures
-    T_test = np.array([300, 500, 700, 900, 1100])  # K
+    T_test = torch.tensor([300, 500, 700, 900, 1100])  # K
     
     print("\n--- Helium Properties ---")
     print(f"{'T [C]':>8} {'rho [kg/m³]':>12} {'cp [J/kgK]':>12} {'μ [Pa·s]':>12} {'k [W/mK]':>10} {'Pr':>8}")
@@ -372,7 +374,7 @@ if __name__ == "__main__":
     
     # Reynolds number check
     props = Prop_He.all_properties((T_gas + T_wall)/2)
-    A_cs = np.pi * D_i**2 / 4
+    A_cs = torch.pi * D_i**2 / 4
     v = mdot / (props['rho'] * A_cs)
     Re = props['rho'] * v * D_i / props['mu']
     print(f"  Re = {Re:.1f} ({'laminar' if Re < 2300 else 'turbulent'})")
