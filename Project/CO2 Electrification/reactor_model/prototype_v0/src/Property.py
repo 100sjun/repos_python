@@ -39,7 +39,7 @@ class Prop_He:
         function = json.load(open(DATA_PATH))['helium']['rho']['function']
 
         if function == 'inverse':
-            return a / (T + b) * 1000 # g/ml to kg/m3
+            return a / (T + b)
         elif function == 'linear':
             return a + b * T
         elif function == 'log':
@@ -250,7 +250,7 @@ class Prop_kanthal:
             'k': cls.k(T),
             'er': cls.er(T)
         }
-
+        
 # ====================================================================
 # Heat Transfer Correlations
 # ====================================================================
@@ -260,7 +260,7 @@ def Nu_laminar(Re: torch.Tensor, Pr: torch.Tensor, L_D: float) -> torch.Tensor:
     Nusselt number for laminar flow in circular tube
     """
     # Sieder-Tate for developing region
-    Nu_developing = 1.86 * Re * Pr / L_D
+    Nu_developing = 1.86 * Re ** (1.0 / 3.0) * Pr / L_D ** (1.0 / 3.0)
 
     # Fully developed (constant heat flux)
     Nu_developed = 4.36
@@ -304,32 +304,6 @@ def h_coeff(T_gas: torch.Tensor, T_wall: torch.Tensor, D_inner: float, mass_flow
     h = Nu * props_film['k'] / D_inner
 
     return h
-
-# ====================================================================
-# Utility Functions
-# ====================================================================
-
-def sccm_to_kg_per_s(sccm: float, M: float = 4.0026) -> float:
-    """
-    Convert sccm to kg/s
-
-    Args:
-        sccm: Flow rate in standard mL/min (at 0 C, 1atm)
-        M: Molecular weight [g/mol]
-    
-    Returns:
-        Mass flow rate [kg/s]
-    """
-
-    mL_per_s = sccm / 60.0 # mL/s
-    m3_per_s = mL_per_s * 1e-6 # m3/s
-
-    # Molar volume at STP
-    V_m = 8.314 * 273.15 / 101325 # m3/mol = 0.02241 m3/mol
-    mol_per_s = m3_per_s / V_m
-    kg_per_s = mol_per_s * M / 1000 # kg/s
-
-    return kg_per_s
 
 # ====================================================================
 # Test / Example Usage

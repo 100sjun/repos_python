@@ -108,6 +108,7 @@ class Mesh1D:
         self.n_nodes = int(torch.ceil(torch.tensor(self.geometry.L) / torch.tensor(self.dz)) + 1)
         self.z = torch.linspace(0, self.geometry.L, self.n_nodes)
         self.dz_actual = self.z[1] - self.z[0]
+        return self.n_nodes, self.z, self.dz_actual
 
     def _find_tc_indices(self):
         """Find mesh indices closest to TC positions"""
